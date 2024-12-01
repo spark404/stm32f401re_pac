@@ -7,6 +7,8 @@ use core::marker::PhantomData;
 use core::ops::Deref;
 #[doc = r"Number available in the NVIC for configuring priority"]
 pub const NVIC_PRIO_BITS: u8 = 4;
+pub use cortex_m::peripheral::Peripherals as CorePeripherals;
+pub use cortex_m::peripheral::{CBP, CPUID, DCB, DWT, FPB, FPU, ITM, MPU, NVIC, SCB, SYST, TPIU};
 #[allow(unused_imports)]
 use generic::*;
 #[doc = r"Common register and bit access and modify traits"]
@@ -2458,97 +2460,97 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[allow(non_snake_case)]
 pub struct Peripherals {
     #[doc = "ADC_Common"]
-    pub adc_common: AdcCommon,
+    pub ADC_COMMON: AdcCommon,
     #[doc = "ADC1"]
-    pub adc1: Adc1,
+    pub ADC1: Adc1,
     #[doc = "CRC"]
-    pub crc: Crc,
+    pub CRC: Crc,
     #[doc = "DBG"]
-    pub dbg: Dbg,
+    pub DBG: Dbg,
     #[doc = "EXTI"]
-    pub exti: Exti,
+    pub EXTI: Exti,
     #[doc = "FLASH"]
-    pub flash: Flash,
+    pub FLASH: Flash,
     #[doc = "IWDG"]
-    pub iwdg: Iwdg,
+    pub IWDG: Iwdg,
     #[doc = "OTG_FS_DEVICE"]
-    pub otg_fs_device: OtgFsDevice,
+    pub OTG_FS_DEVICE: OtgFsDevice,
     #[doc = "OTG_FS_GLOBAL"]
-    pub otg_fs_global: OtgFsGlobal,
+    pub OTG_FS_GLOBAL: OtgFsGlobal,
     #[doc = "OTG_FS_HOST"]
-    pub otg_fs_host: OtgFsHost,
+    pub OTG_FS_HOST: OtgFsHost,
     #[doc = "OTG_FS_PWRCLK"]
-    pub otg_fs_pwrclk: OtgFsPwrclk,
+    pub OTG_FS_PWRCLK: OtgFsPwrclk,
     #[doc = "PWR"]
-    pub pwr: Pwr,
+    pub PWR: Pwr,
     #[doc = "RCC"]
-    pub rcc: Rcc,
+    pub RCC: Rcc,
     #[doc = "RTC"]
-    pub rtc: Rtc,
+    pub RTC: Rtc,
     #[doc = "SDIO"]
-    pub sdio: Sdio,
+    pub SDIO: Sdio,
     #[doc = "SYSCFG"]
-    pub syscfg: Syscfg,
+    pub SYSCFG: Syscfg,
     #[doc = "TIM1"]
-    pub tim1: Tim1,
+    pub TIM1: Tim1,
     #[doc = "TIM8"]
-    pub tim8: Tim8,
+    pub TIM8: Tim8,
     #[doc = "TIM10"]
-    pub tim10: Tim10,
+    pub TIM10: Tim10,
     #[doc = "TIM11"]
-    pub tim11: Tim11,
+    pub TIM11: Tim11,
     #[doc = "TIM2"]
-    pub tim2: Tim2,
+    pub TIM2: Tim2,
     #[doc = "TIM3"]
-    pub tim3: Tim3,
+    pub TIM3: Tim3,
     #[doc = "TIM4"]
-    pub tim4: Tim4,
+    pub TIM4: Tim4,
     #[doc = "TIM5"]
-    pub tim5: Tim5,
+    pub TIM5: Tim5,
     #[doc = "TIM9"]
-    pub tim9: Tim9,
+    pub TIM9: Tim9,
     #[doc = "USART1"]
-    pub usart1: Usart1,
+    pub USART1: Usart1,
     #[doc = "USART2"]
-    pub usart2: Usart2,
+    pub USART2: Usart2,
     #[doc = "USART6"]
-    pub usart6: Usart6,
+    pub USART6: Usart6,
     #[doc = "WWDG"]
-    pub wwdg: Wwdg,
+    pub WWDG: Wwdg,
     #[doc = "DMA2"]
-    pub dma2: Dma2,
+    pub DMA2: Dma2,
     #[doc = "DMA1"]
-    pub dma1: Dma1,
+    pub DMA1: Dma1,
     #[doc = "GPIOH"]
-    pub gpioh: Gpioh,
+    pub GPIOH: Gpioh,
     #[doc = "GPIOE"]
-    pub gpioe: Gpioe,
+    pub GPIOE: Gpioe,
     #[doc = "GPIOD"]
-    pub gpiod: Gpiod,
+    pub GPIOD: Gpiod,
     #[doc = "GPIOC"]
-    pub gpioc: Gpioc,
+    pub GPIOC: Gpioc,
     #[doc = "GPIOB"]
-    pub gpiob: Gpiob,
+    pub GPIOB: Gpiob,
     #[doc = "GPIOA"]
-    pub gpioa: Gpioa,
+    pub GPIOA: Gpioa,
     #[doc = "I2C3"]
-    pub i2c3: I2c3,
+    pub I2C3: I2c3,
     #[doc = "I2C2"]
-    pub i2c2: I2c2,
+    pub I2C2: I2c2,
     #[doc = "I2C1"]
-    pub i2c1: I2c1,
+    pub I2C1: I2c1,
     #[doc = "I2S2ext"]
-    pub i2s2ext: I2s2ext,
+    pub I2S2EXT: I2s2ext,
     #[doc = "I2S3ext"]
-    pub i2s3ext: I2s3ext,
+    pub I2S3EXT: I2s3ext,
     #[doc = "SPI1"]
-    pub spi1: Spi1,
+    pub SPI1: Spi1,
     #[doc = "SPI2"]
-    pub spi2: Spi2,
+    pub SPI2: Spi2,
     #[doc = "SPI3"]
-    pub spi3: Spi3,
+    pub SPI3: Spi3,
     #[doc = "SPI4"]
-    pub spi4: Spi4,
+    pub SPI4: Spi4,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*."]
@@ -2571,52 +2573,52 @@ impl Peripherals {
     pub unsafe fn steal() -> Self {
         DEVICE_PERIPHERALS = true;
         Peripherals {
-            adc_common: AdcCommon::steal(),
-            adc1: Adc1::steal(),
-            crc: Crc::steal(),
-            dbg: Dbg::steal(),
-            exti: Exti::steal(),
-            flash: Flash::steal(),
-            iwdg: Iwdg::steal(),
-            otg_fs_device: OtgFsDevice::steal(),
-            otg_fs_global: OtgFsGlobal::steal(),
-            otg_fs_host: OtgFsHost::steal(),
-            otg_fs_pwrclk: OtgFsPwrclk::steal(),
-            pwr: Pwr::steal(),
-            rcc: Rcc::steal(),
-            rtc: Rtc::steal(),
-            sdio: Sdio::steal(),
-            syscfg: Syscfg::steal(),
-            tim1: Tim1::steal(),
-            tim8: Tim8::steal(),
-            tim10: Tim10::steal(),
-            tim11: Tim11::steal(),
-            tim2: Tim2::steal(),
-            tim3: Tim3::steal(),
-            tim4: Tim4::steal(),
-            tim5: Tim5::steal(),
-            tim9: Tim9::steal(),
-            usart1: Usart1::steal(),
-            usart2: Usart2::steal(),
-            usart6: Usart6::steal(),
-            wwdg: Wwdg::steal(),
-            dma2: Dma2::steal(),
-            dma1: Dma1::steal(),
-            gpioh: Gpioh::steal(),
-            gpioe: Gpioe::steal(),
-            gpiod: Gpiod::steal(),
-            gpioc: Gpioc::steal(),
-            gpiob: Gpiob::steal(),
-            gpioa: Gpioa::steal(),
-            i2c3: I2c3::steal(),
-            i2c2: I2c2::steal(),
-            i2c1: I2c1::steal(),
-            i2s2ext: I2s2ext::steal(),
-            i2s3ext: I2s3ext::steal(),
-            spi1: Spi1::steal(),
-            spi2: Spi2::steal(),
-            spi3: Spi3::steal(),
-            spi4: Spi4::steal(),
+            ADC_COMMON: AdcCommon::steal(),
+            ADC1: Adc1::steal(),
+            CRC: Crc::steal(),
+            DBG: Dbg::steal(),
+            EXTI: Exti::steal(),
+            FLASH: Flash::steal(),
+            IWDG: Iwdg::steal(),
+            OTG_FS_DEVICE: OtgFsDevice::steal(),
+            OTG_FS_GLOBAL: OtgFsGlobal::steal(),
+            OTG_FS_HOST: OtgFsHost::steal(),
+            OTG_FS_PWRCLK: OtgFsPwrclk::steal(),
+            PWR: Pwr::steal(),
+            RCC: Rcc::steal(),
+            RTC: Rtc::steal(),
+            SDIO: Sdio::steal(),
+            SYSCFG: Syscfg::steal(),
+            TIM1: Tim1::steal(),
+            TIM8: Tim8::steal(),
+            TIM10: Tim10::steal(),
+            TIM11: Tim11::steal(),
+            TIM2: Tim2::steal(),
+            TIM3: Tim3::steal(),
+            TIM4: Tim4::steal(),
+            TIM5: Tim5::steal(),
+            TIM9: Tim9::steal(),
+            USART1: Usart1::steal(),
+            USART2: Usart2::steal(),
+            USART6: Usart6::steal(),
+            WWDG: Wwdg::steal(),
+            DMA2: Dma2::steal(),
+            DMA1: Dma1::steal(),
+            GPIOH: Gpioh::steal(),
+            GPIOE: Gpioe::steal(),
+            GPIOD: Gpiod::steal(),
+            GPIOC: Gpioc::steal(),
+            GPIOB: Gpiob::steal(),
+            GPIOA: Gpioa::steal(),
+            I2C3: I2c3::steal(),
+            I2C2: I2c2::steal(),
+            I2C1: I2c1::steal(),
+            I2S2EXT: I2s2ext::steal(),
+            I2S3EXT: I2s3ext::steal(),
+            SPI1: Spi1::steal(),
+            SPI2: Spi2::steal(),
+            SPI3: Spi3::steal(),
+            SPI4: Spi4::steal(),
         }
     }
 }

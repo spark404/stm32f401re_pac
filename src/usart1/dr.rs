@@ -1,39 +1,44 @@
 #[doc = "Register `DR` reader"]
-pub type R = crate::R<DrSpec>;
+pub type R = crate::R<DRrs>;
 #[doc = "Register `DR` writer"]
-pub type W = crate::W<DrSpec>;
+pub type W = crate::W<DRrs>;
 #[doc = "Field `DR` reader - Data value"]
-pub type DrR = crate::FieldReader<u16>;
+pub type DR_R = crate::FieldReader<u16>;
 #[doc = "Field `DR` writer - Data value"]
-pub type DrW<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
+pub type DR_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 impl R {
     #[doc = "Bits 0:8 - Data value"]
     #[inline(always)]
-    pub fn dr(&self) -> DrR {
-        DrR::new((self.bits & 0x01ff) as u16)
+    pub fn dr(&self) -> DR_R {
+        DR_R::new((self.bits & 0x01ff) as u16)
+    }
+}
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DR").field("dr", &self.dr()).finish()
     }
 }
 impl W {
     #[doc = "Bits 0:8 - Data value"]
     #[inline(always)]
-    pub fn dr(&mut self) -> DrW<DrSpec> {
-        DrW::new(self, 0)
+    pub fn dr(&mut self) -> DR_W<DRrs> {
+        DR_W::new(self, 0)
     }
 }
 #[doc = "Data register\n\nYou can [`read`](crate::Reg::read) this register and get [`dr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct DrSpec;
-impl crate::RegisterSpec for DrSpec {
+pub struct DRrs;
+impl crate::RegisterSpec for DRrs {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`dr::R`](R) reader structure"]
-impl crate::Readable for DrSpec {}
+impl crate::Readable for DRrs {}
 #[doc = "`write(|w| ..)` method takes [`dr::W`](W) writer structure"]
-impl crate::Writable for DrSpec {
+impl crate::Writable for DRrs {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DR to value 0"]
-impl crate::Resettable for DrSpec {
+impl crate::Resettable for DRrs {
     const RESET_VALUE: u32 = 0;
 }

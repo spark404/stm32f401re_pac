@@ -1,22 +1,29 @@
 #[doc = "Register `JDR1` reader"]
-pub type R = crate::R<Jdr1Spec>;
+pub type R = crate::R<JDR1rs>;
 #[doc = "Field `JDATA` reader - Injected data"]
-pub type JdataR = crate::FieldReader<u16>;
+pub type JDATA_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - Injected data"]
     #[inline(always)]
-    pub fn jdata(&self) -> JdataR {
-        JdataR::new((self.bits & 0xffff) as u16)
+    pub fn jdata(&self) -> JDATA_R {
+        JDATA_R::new((self.bits & 0xffff) as u16)
+    }
+}
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("JDR1")
+            .field("jdata", &self.jdata())
+            .finish()
     }
 }
 #[doc = "injected data register x\n\nYou can [`read`](crate::Reg::read) this register and get [`jdr1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct Jdr1Spec;
-impl crate::RegisterSpec for Jdr1Spec {
+pub struct JDR1rs;
+impl crate::RegisterSpec for JDR1rs {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`jdr1::R`](R) reader structure"]
-impl crate::Readable for Jdr1Spec {}
+impl crate::Readable for JDR1rs {}
 #[doc = "`reset()` method sets JDR1 to value 0"]
-impl crate::Resettable for Jdr1Spec {
+impl crate::Resettable for JDR1rs {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,155 +1,181 @@
 #[doc = "Register `HISR` reader"]
-pub type R = crate::R<HisrSpec>;
+pub type R = crate::R<HISRrs>;
 #[doc = "Field `FEIF4` reader - Stream x FIFO error interrupt flag (x=7..4)"]
-pub type Feif4R = crate::BitReader;
+pub type FEIF4_R = crate::BitReader;
 #[doc = "Field `DMEIF4` reader - Stream x direct mode error interrupt flag (x=7..4)"]
-pub type Dmeif4R = crate::BitReader;
+pub type DMEIF4_R = crate::BitReader;
 #[doc = "Field `TEIF4` reader - Stream x transfer error interrupt flag (x=7..4)"]
-pub type Teif4R = crate::BitReader;
+pub type TEIF4_R = crate::BitReader;
 #[doc = "Field `HTIF4` reader - Stream x half transfer interrupt flag (x=7..4)"]
-pub type Htif4R = crate::BitReader;
+pub type HTIF4_R = crate::BitReader;
 #[doc = "Field `TCIF4` reader - Stream x transfer complete interrupt flag (x=7..4)"]
-pub type Tcif4R = crate::BitReader;
+pub type TCIF4_R = crate::BitReader;
 #[doc = "Field `FEIF5` reader - Stream x FIFO error interrupt flag (x=7..4)"]
-pub type Feif5R = crate::BitReader;
+pub type FEIF5_R = crate::BitReader;
 #[doc = "Field `DMEIF5` reader - Stream x direct mode error interrupt flag (x=7..4)"]
-pub type Dmeif5R = crate::BitReader;
+pub type DMEIF5_R = crate::BitReader;
 #[doc = "Field `TEIF5` reader - Stream x transfer error interrupt flag (x=7..4)"]
-pub type Teif5R = crate::BitReader;
+pub type TEIF5_R = crate::BitReader;
 #[doc = "Field `HTIF5` reader - Stream x half transfer interrupt flag (x=7..4)"]
-pub type Htif5R = crate::BitReader;
+pub type HTIF5_R = crate::BitReader;
 #[doc = "Field `TCIF5` reader - Stream x transfer complete interrupt flag (x=7..4)"]
-pub type Tcif5R = crate::BitReader;
+pub type TCIF5_R = crate::BitReader;
 #[doc = "Field `FEIF6` reader - Stream x FIFO error interrupt flag (x=7..4)"]
-pub type Feif6R = crate::BitReader;
+pub type FEIF6_R = crate::BitReader;
 #[doc = "Field `DMEIF6` reader - Stream x direct mode error interrupt flag (x=7..4)"]
-pub type Dmeif6R = crate::BitReader;
+pub type DMEIF6_R = crate::BitReader;
 #[doc = "Field `TEIF6` reader - Stream x transfer error interrupt flag (x=7..4)"]
-pub type Teif6R = crate::BitReader;
+pub type TEIF6_R = crate::BitReader;
 #[doc = "Field `HTIF6` reader - Stream x half transfer interrupt flag (x=7..4)"]
-pub type Htif6R = crate::BitReader;
+pub type HTIF6_R = crate::BitReader;
 #[doc = "Field `TCIF6` reader - Stream x transfer complete interrupt flag (x=7..4)"]
-pub type Tcif6R = crate::BitReader;
+pub type TCIF6_R = crate::BitReader;
 #[doc = "Field `FEIF7` reader - Stream x FIFO error interrupt flag (x=7..4)"]
-pub type Feif7R = crate::BitReader;
+pub type FEIF7_R = crate::BitReader;
 #[doc = "Field `DMEIF7` reader - Stream x direct mode error interrupt flag (x=7..4)"]
-pub type Dmeif7R = crate::BitReader;
+pub type DMEIF7_R = crate::BitReader;
 #[doc = "Field `TEIF7` reader - Stream x transfer error interrupt flag (x=7..4)"]
-pub type Teif7R = crate::BitReader;
+pub type TEIF7_R = crate::BitReader;
 #[doc = "Field `HTIF7` reader - Stream x half transfer interrupt flag (x=7..4)"]
-pub type Htif7R = crate::BitReader;
+pub type HTIF7_R = crate::BitReader;
 #[doc = "Field `TCIF7` reader - Stream x transfer complete interrupt flag (x=7..4)"]
-pub type Tcif7R = crate::BitReader;
+pub type TCIF7_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Stream x FIFO error interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn feif4(&self) -> Feif4R {
-        Feif4R::new((self.bits & 1) != 0)
+    pub fn feif4(&self) -> FEIF4_R {
+        FEIF4_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 2 - Stream x direct mode error interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn dmeif4(&self) -> Dmeif4R {
-        Dmeif4R::new(((self.bits >> 2) & 1) != 0)
+    pub fn dmeif4(&self) -> DMEIF4_R {
+        DMEIF4_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Stream x transfer error interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn teif4(&self) -> Teif4R {
-        Teif4R::new(((self.bits >> 3) & 1) != 0)
+    pub fn teif4(&self) -> TEIF4_R {
+        TEIF4_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Stream x half transfer interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn htif4(&self) -> Htif4R {
-        Htif4R::new(((self.bits >> 4) & 1) != 0)
+    pub fn htif4(&self) -> HTIF4_R {
+        HTIF4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Stream x transfer complete interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn tcif4(&self) -> Tcif4R {
-        Tcif4R::new(((self.bits >> 5) & 1) != 0)
+    pub fn tcif4(&self) -> TCIF4_R {
+        TCIF4_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Stream x FIFO error interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn feif5(&self) -> Feif5R {
-        Feif5R::new(((self.bits >> 6) & 1) != 0)
+    pub fn feif5(&self) -> FEIF5_R {
+        FEIF5_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 8 - Stream x direct mode error interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn dmeif5(&self) -> Dmeif5R {
-        Dmeif5R::new(((self.bits >> 8) & 1) != 0)
+    pub fn dmeif5(&self) -> DMEIF5_R {
+        DMEIF5_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Stream x transfer error interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn teif5(&self) -> Teif5R {
-        Teif5R::new(((self.bits >> 9) & 1) != 0)
+    pub fn teif5(&self) -> TEIF5_R {
+        TEIF5_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Stream x half transfer interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn htif5(&self) -> Htif5R {
-        Htif5R::new(((self.bits >> 10) & 1) != 0)
+    pub fn htif5(&self) -> HTIF5_R {
+        HTIF5_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Stream x transfer complete interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn tcif5(&self) -> Tcif5R {
-        Tcif5R::new(((self.bits >> 11) & 1) != 0)
+    pub fn tcif5(&self) -> TCIF5_R {
+        TCIF5_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 16 - Stream x FIFO error interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn feif6(&self) -> Feif6R {
-        Feif6R::new(((self.bits >> 16) & 1) != 0)
+    pub fn feif6(&self) -> FEIF6_R {
+        FEIF6_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 18 - Stream x direct mode error interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn dmeif6(&self) -> Dmeif6R {
-        Dmeif6R::new(((self.bits >> 18) & 1) != 0)
+    pub fn dmeif6(&self) -> DMEIF6_R {
+        DMEIF6_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Stream x transfer error interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn teif6(&self) -> Teif6R {
-        Teif6R::new(((self.bits >> 19) & 1) != 0)
+    pub fn teif6(&self) -> TEIF6_R {
+        TEIF6_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Stream x half transfer interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn htif6(&self) -> Htif6R {
-        Htif6R::new(((self.bits >> 20) & 1) != 0)
+    pub fn htif6(&self) -> HTIF6_R {
+        HTIF6_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Stream x transfer complete interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn tcif6(&self) -> Tcif6R {
-        Tcif6R::new(((self.bits >> 21) & 1) != 0)
+    pub fn tcif6(&self) -> TCIF6_R {
+        TCIF6_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Stream x FIFO error interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn feif7(&self) -> Feif7R {
-        Feif7R::new(((self.bits >> 22) & 1) != 0)
+    pub fn feif7(&self) -> FEIF7_R {
+        FEIF7_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 24 - Stream x direct mode error interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn dmeif7(&self) -> Dmeif7R {
-        Dmeif7R::new(((self.bits >> 24) & 1) != 0)
+    pub fn dmeif7(&self) -> DMEIF7_R {
+        DMEIF7_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Stream x transfer error interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn teif7(&self) -> Teif7R {
-        Teif7R::new(((self.bits >> 25) & 1) != 0)
+    pub fn teif7(&self) -> TEIF7_R {
+        TEIF7_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Stream x half transfer interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn htif7(&self) -> Htif7R {
-        Htif7R::new(((self.bits >> 26) & 1) != 0)
+    pub fn htif7(&self) -> HTIF7_R {
+        HTIF7_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Stream x transfer complete interrupt flag (x=7..4)"]
     #[inline(always)]
-    pub fn tcif7(&self) -> Tcif7R {
-        Tcif7R::new(((self.bits >> 27) & 1) != 0)
+    pub fn tcif7(&self) -> TCIF7_R {
+        TCIF7_R::new(((self.bits >> 27) & 1) != 0)
+    }
+}
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HISR")
+            .field("tcif7", &self.tcif7())
+            .field("htif7", &self.htif7())
+            .field("teif7", &self.teif7())
+            .field("dmeif7", &self.dmeif7())
+            .field("feif7", &self.feif7())
+            .field("tcif6", &self.tcif6())
+            .field("htif6", &self.htif6())
+            .field("teif6", &self.teif6())
+            .field("dmeif6", &self.dmeif6())
+            .field("feif6", &self.feif6())
+            .field("tcif5", &self.tcif5())
+            .field("htif5", &self.htif5())
+            .field("teif5", &self.teif5())
+            .field("dmeif5", &self.dmeif5())
+            .field("feif5", &self.feif5())
+            .field("tcif4", &self.tcif4())
+            .field("htif4", &self.htif4())
+            .field("teif4", &self.teif4())
+            .field("dmeif4", &self.dmeif4())
+            .field("feif4", &self.feif4())
+            .finish()
     }
 }
 #[doc = "high interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`hisr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct HisrSpec;
-impl crate::RegisterSpec for HisrSpec {
+pub struct HISRrs;
+impl crate::RegisterSpec for HISRrs {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`hisr::R`](R) reader structure"]
-impl crate::Readable for HisrSpec {}
+impl crate::Readable for HISRrs {}
 #[doc = "`reset()` method sets HISR to value 0"]
-impl crate::Resettable for HisrSpec {
+impl crate::Resettable for HISRrs {
     const RESET_VALUE: u32 = 0;
 }

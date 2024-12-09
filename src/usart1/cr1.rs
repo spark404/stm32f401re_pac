@@ -1,235 +1,256 @@
 #[doc = "Register `CR1` reader"]
-pub type R = crate::R<Cr1Spec>;
+pub type R = crate::R<CR1rs>;
 #[doc = "Register `CR1` writer"]
-pub type W = crate::W<Cr1Spec>;
+pub type W = crate::W<CR1rs>;
 #[doc = "Field `SBK` reader - Send break"]
-pub type SbkR = crate::BitReader;
+pub type SBK_R = crate::BitReader;
 #[doc = "Field `SBK` writer - Send break"]
-pub type SbkW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SBK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RWU` reader - Receiver wakeup"]
-pub type RwuR = crate::BitReader;
+pub type RWU_R = crate::BitReader;
 #[doc = "Field `RWU` writer - Receiver wakeup"]
-pub type RwuW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type RWU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RE` reader - Receiver enable"]
-pub type ReR = crate::BitReader;
+pub type RE_R = crate::BitReader;
 #[doc = "Field `RE` writer - Receiver enable"]
-pub type ReW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type RE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TE` reader - Transmitter enable"]
-pub type TeR = crate::BitReader;
+pub type TE_R = crate::BitReader;
 #[doc = "Field `TE` writer - Transmitter enable"]
-pub type TeW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IDLEIE` reader - IDLE interrupt enable"]
-pub type IdleieR = crate::BitReader;
+pub type IDLEIE_R = crate::BitReader;
 #[doc = "Field `IDLEIE` writer - IDLE interrupt enable"]
-pub type IdleieW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type IDLEIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXNEIE` reader - RXNE interrupt enable"]
-pub type RxneieR = crate::BitReader;
+pub type RXNEIE_R = crate::BitReader;
 #[doc = "Field `RXNEIE` writer - RXNE interrupt enable"]
-pub type RxneieW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type RXNEIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TCIE` reader - Transmission complete interrupt enable"]
-pub type TcieR = crate::BitReader;
+pub type TCIE_R = crate::BitReader;
 #[doc = "Field `TCIE` writer - Transmission complete interrupt enable"]
-pub type TcieW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TCIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXEIE` reader - TXE interrupt enable"]
-pub type TxeieR = crate::BitReader;
+pub type TXEIE_R = crate::BitReader;
 #[doc = "Field `TXEIE` writer - TXE interrupt enable"]
-pub type TxeieW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TXEIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PEIE` reader - PE interrupt enable"]
-pub type PeieR = crate::BitReader;
+pub type PEIE_R = crate::BitReader;
 #[doc = "Field `PEIE` writer - PE interrupt enable"]
-pub type PeieW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type PEIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PS` reader - Parity selection"]
-pub type PsR = crate::BitReader;
+pub type PS_R = crate::BitReader;
 #[doc = "Field `PS` writer - Parity selection"]
-pub type PsW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type PS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCE` reader - Parity control enable"]
-pub type PceR = crate::BitReader;
+pub type PCE_R = crate::BitReader;
 #[doc = "Field `PCE` writer - Parity control enable"]
-pub type PceW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type PCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WAKE` reader - Wakeup method"]
-pub type WakeR = crate::BitReader;
+pub type WAKE_R = crate::BitReader;
 #[doc = "Field `WAKE` writer - Wakeup method"]
-pub type WakeW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type WAKE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `M` reader - Word length"]
-pub type MR = crate::BitReader;
+pub type M_R = crate::BitReader;
 #[doc = "Field `M` writer - Word length"]
-pub type MW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type M_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UE` reader - USART enable"]
-pub type UeR = crate::BitReader;
+pub type UE_R = crate::BitReader;
 #[doc = "Field `UE` writer - USART enable"]
-pub type UeW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type UE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVER8` reader - Oversampling mode"]
-pub type Over8R = crate::BitReader;
+pub type OVER8_R = crate::BitReader;
 #[doc = "Field `OVER8` writer - Oversampling mode"]
-pub type Over8W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type OVER8_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Send break"]
     #[inline(always)]
-    pub fn sbk(&self) -> SbkR {
-        SbkR::new((self.bits & 1) != 0)
+    pub fn sbk(&self) -> SBK_R {
+        SBK_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Receiver wakeup"]
     #[inline(always)]
-    pub fn rwu(&self) -> RwuR {
-        RwuR::new(((self.bits >> 1) & 1) != 0)
+    pub fn rwu(&self) -> RWU_R {
+        RWU_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Receiver enable"]
     #[inline(always)]
-    pub fn re(&self) -> ReR {
-        ReR::new(((self.bits >> 2) & 1) != 0)
+    pub fn re(&self) -> RE_R {
+        RE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Transmitter enable"]
     #[inline(always)]
-    pub fn te(&self) -> TeR {
-        TeR::new(((self.bits >> 3) & 1) != 0)
+    pub fn te(&self) -> TE_R {
+        TE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - IDLE interrupt enable"]
     #[inline(always)]
-    pub fn idleie(&self) -> IdleieR {
-        IdleieR::new(((self.bits >> 4) & 1) != 0)
+    pub fn idleie(&self) -> IDLEIE_R {
+        IDLEIE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - RXNE interrupt enable"]
     #[inline(always)]
-    pub fn rxneie(&self) -> RxneieR {
-        RxneieR::new(((self.bits >> 5) & 1) != 0)
+    pub fn rxneie(&self) -> RXNEIE_R {
+        RXNEIE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Transmission complete interrupt enable"]
     #[inline(always)]
-    pub fn tcie(&self) -> TcieR {
-        TcieR::new(((self.bits >> 6) & 1) != 0)
+    pub fn tcie(&self) -> TCIE_R {
+        TCIE_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - TXE interrupt enable"]
     #[inline(always)]
-    pub fn txeie(&self) -> TxeieR {
-        TxeieR::new(((self.bits >> 7) & 1) != 0)
+    pub fn txeie(&self) -> TXEIE_R {
+        TXEIE_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - PE interrupt enable"]
     #[inline(always)]
-    pub fn peie(&self) -> PeieR {
-        PeieR::new(((self.bits >> 8) & 1) != 0)
+    pub fn peie(&self) -> PEIE_R {
+        PEIE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Parity selection"]
     #[inline(always)]
-    pub fn ps(&self) -> PsR {
-        PsR::new(((self.bits >> 9) & 1) != 0)
+    pub fn ps(&self) -> PS_R {
+        PS_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Parity control enable"]
     #[inline(always)]
-    pub fn pce(&self) -> PceR {
-        PceR::new(((self.bits >> 10) & 1) != 0)
+    pub fn pce(&self) -> PCE_R {
+        PCE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Wakeup method"]
     #[inline(always)]
-    pub fn wake(&self) -> WakeR {
-        WakeR::new(((self.bits >> 11) & 1) != 0)
+    pub fn wake(&self) -> WAKE_R {
+        WAKE_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Word length"]
     #[inline(always)]
-    pub fn m(&self) -> MR {
-        MR::new(((self.bits >> 12) & 1) != 0)
+    pub fn m(&self) -> M_R {
+        M_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - USART enable"]
     #[inline(always)]
-    pub fn ue(&self) -> UeR {
-        UeR::new(((self.bits >> 13) & 1) != 0)
+    pub fn ue(&self) -> UE_R {
+        UE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 15 - Oversampling mode"]
     #[inline(always)]
-    pub fn over8(&self) -> Over8R {
-        Over8R::new(((self.bits >> 15) & 1) != 0)
+    pub fn over8(&self) -> OVER8_R {
+        OVER8_R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CR1")
+            .field("over8", &self.over8())
+            .field("ue", &self.ue())
+            .field("m", &self.m())
+            .field("wake", &self.wake())
+            .field("pce", &self.pce())
+            .field("ps", &self.ps())
+            .field("peie", &self.peie())
+            .field("txeie", &self.txeie())
+            .field("tcie", &self.tcie())
+            .field("rxneie", &self.rxneie())
+            .field("idleie", &self.idleie())
+            .field("te", &self.te())
+            .field("re", &self.re())
+            .field("rwu", &self.rwu())
+            .field("sbk", &self.sbk())
+            .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - Send break"]
     #[inline(always)]
-    pub fn sbk(&mut self) -> SbkW<Cr1Spec> {
-        SbkW::new(self, 0)
+    pub fn sbk(&mut self) -> SBK_W<CR1rs> {
+        SBK_W::new(self, 0)
     }
     #[doc = "Bit 1 - Receiver wakeup"]
     #[inline(always)]
-    pub fn rwu(&mut self) -> RwuW<Cr1Spec> {
-        RwuW::new(self, 1)
+    pub fn rwu(&mut self) -> RWU_W<CR1rs> {
+        RWU_W::new(self, 1)
     }
     #[doc = "Bit 2 - Receiver enable"]
     #[inline(always)]
-    pub fn re(&mut self) -> ReW<Cr1Spec> {
-        ReW::new(self, 2)
+    pub fn re(&mut self) -> RE_W<CR1rs> {
+        RE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Transmitter enable"]
     #[inline(always)]
-    pub fn te(&mut self) -> TeW<Cr1Spec> {
-        TeW::new(self, 3)
+    pub fn te(&mut self) -> TE_W<CR1rs> {
+        TE_W::new(self, 3)
     }
     #[doc = "Bit 4 - IDLE interrupt enable"]
     #[inline(always)]
-    pub fn idleie(&mut self) -> IdleieW<Cr1Spec> {
-        IdleieW::new(self, 4)
+    pub fn idleie(&mut self) -> IDLEIE_W<CR1rs> {
+        IDLEIE_W::new(self, 4)
     }
     #[doc = "Bit 5 - RXNE interrupt enable"]
     #[inline(always)]
-    pub fn rxneie(&mut self) -> RxneieW<Cr1Spec> {
-        RxneieW::new(self, 5)
+    pub fn rxneie(&mut self) -> RXNEIE_W<CR1rs> {
+        RXNEIE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Transmission complete interrupt enable"]
     #[inline(always)]
-    pub fn tcie(&mut self) -> TcieW<Cr1Spec> {
-        TcieW::new(self, 6)
+    pub fn tcie(&mut self) -> TCIE_W<CR1rs> {
+        TCIE_W::new(self, 6)
     }
     #[doc = "Bit 7 - TXE interrupt enable"]
     #[inline(always)]
-    pub fn txeie(&mut self) -> TxeieW<Cr1Spec> {
-        TxeieW::new(self, 7)
+    pub fn txeie(&mut self) -> TXEIE_W<CR1rs> {
+        TXEIE_W::new(self, 7)
     }
     #[doc = "Bit 8 - PE interrupt enable"]
     #[inline(always)]
-    pub fn peie(&mut self) -> PeieW<Cr1Spec> {
-        PeieW::new(self, 8)
+    pub fn peie(&mut self) -> PEIE_W<CR1rs> {
+        PEIE_W::new(self, 8)
     }
     #[doc = "Bit 9 - Parity selection"]
     #[inline(always)]
-    pub fn ps(&mut self) -> PsW<Cr1Spec> {
-        PsW::new(self, 9)
+    pub fn ps(&mut self) -> PS_W<CR1rs> {
+        PS_W::new(self, 9)
     }
     #[doc = "Bit 10 - Parity control enable"]
     #[inline(always)]
-    pub fn pce(&mut self) -> PceW<Cr1Spec> {
-        PceW::new(self, 10)
+    pub fn pce(&mut self) -> PCE_W<CR1rs> {
+        PCE_W::new(self, 10)
     }
     #[doc = "Bit 11 - Wakeup method"]
     #[inline(always)]
-    pub fn wake(&mut self) -> WakeW<Cr1Spec> {
-        WakeW::new(self, 11)
+    pub fn wake(&mut self) -> WAKE_W<CR1rs> {
+        WAKE_W::new(self, 11)
     }
     #[doc = "Bit 12 - Word length"]
     #[inline(always)]
-    pub fn m(&mut self) -> MW<Cr1Spec> {
-        MW::new(self, 12)
+    pub fn m(&mut self) -> M_W<CR1rs> {
+        M_W::new(self, 12)
     }
     #[doc = "Bit 13 - USART enable"]
     #[inline(always)]
-    pub fn ue(&mut self) -> UeW<Cr1Spec> {
-        UeW::new(self, 13)
+    pub fn ue(&mut self) -> UE_W<CR1rs> {
+        UE_W::new(self, 13)
     }
     #[doc = "Bit 15 - Oversampling mode"]
     #[inline(always)]
-    pub fn over8(&mut self) -> Over8W<Cr1Spec> {
-        Over8W::new(self, 15)
+    pub fn over8(&mut self) -> OVER8_W<CR1rs> {
+        OVER8_W::new(self, 15)
     }
 }
 #[doc = "Control register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`cr1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cr1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct Cr1Spec;
-impl crate::RegisterSpec for Cr1Spec {
+pub struct CR1rs;
+impl crate::RegisterSpec for CR1rs {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`cr1::R`](R) reader structure"]
-impl crate::Readable for Cr1Spec {}
+impl crate::Readable for CR1rs {}
 #[doc = "`write(|w| ..)` method takes [`cr1::W`](W) writer structure"]
-impl crate::Writable for Cr1Spec {
+impl crate::Writable for CR1rs {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR1 to value 0"]
-impl crate::Resettable for Cr1Spec {
+impl crate::Resettable for CR1rs {
     const RESET_VALUE: u32 = 0;
 }

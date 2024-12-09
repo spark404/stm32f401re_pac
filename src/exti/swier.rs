@@ -1,347 +1,376 @@
 #[doc = "Register `SWIER` reader"]
-pub type R = crate::R<SwierSpec>;
+pub type R = crate::R<SWIERrs>;
 #[doc = "Register `SWIER` writer"]
-pub type W = crate::W<SwierSpec>;
+pub type W = crate::W<SWIERrs>;
 #[doc = "Field `SWIER0` reader - Software Interrupt on line 0"]
-pub type Swier0R = crate::BitReader;
+pub type SWIER0_R = crate::BitReader;
 #[doc = "Field `SWIER0` writer - Software Interrupt on line 0"]
-pub type Swier0W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER1` reader - Software Interrupt on line 1"]
-pub type Swier1R = crate::BitReader;
+pub type SWIER1_R = crate::BitReader;
 #[doc = "Field `SWIER1` writer - Software Interrupt on line 1"]
-pub type Swier1W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER2` reader - Software Interrupt on line 2"]
-pub type Swier2R = crate::BitReader;
+pub type SWIER2_R = crate::BitReader;
 #[doc = "Field `SWIER2` writer - Software Interrupt on line 2"]
-pub type Swier2W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER3` reader - Software Interrupt on line 3"]
-pub type Swier3R = crate::BitReader;
+pub type SWIER3_R = crate::BitReader;
 #[doc = "Field `SWIER3` writer - Software Interrupt on line 3"]
-pub type Swier3W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER4` reader - Software Interrupt on line 4"]
-pub type Swier4R = crate::BitReader;
+pub type SWIER4_R = crate::BitReader;
 #[doc = "Field `SWIER4` writer - Software Interrupt on line 4"]
-pub type Swier4W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER5` reader - Software Interrupt on line 5"]
-pub type Swier5R = crate::BitReader;
+pub type SWIER5_R = crate::BitReader;
 #[doc = "Field `SWIER5` writer - Software Interrupt on line 5"]
-pub type Swier5W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER6` reader - Software Interrupt on line 6"]
-pub type Swier6R = crate::BitReader;
+pub type SWIER6_R = crate::BitReader;
 #[doc = "Field `SWIER6` writer - Software Interrupt on line 6"]
-pub type Swier6W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER7` reader - Software Interrupt on line 7"]
-pub type Swier7R = crate::BitReader;
+pub type SWIER7_R = crate::BitReader;
 #[doc = "Field `SWIER7` writer - Software Interrupt on line 7"]
-pub type Swier7W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER8` reader - Software Interrupt on line 8"]
-pub type Swier8R = crate::BitReader;
+pub type SWIER8_R = crate::BitReader;
 #[doc = "Field `SWIER8` writer - Software Interrupt on line 8"]
-pub type Swier8W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER8_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER9` reader - Software Interrupt on line 9"]
-pub type Swier9R = crate::BitReader;
+pub type SWIER9_R = crate::BitReader;
 #[doc = "Field `SWIER9` writer - Software Interrupt on line 9"]
-pub type Swier9W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER9_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER10` reader - Software Interrupt on line 10"]
-pub type Swier10R = crate::BitReader;
+pub type SWIER10_R = crate::BitReader;
 #[doc = "Field `SWIER10` writer - Software Interrupt on line 10"]
-pub type Swier10W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER10_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER11` reader - Software Interrupt on line 11"]
-pub type Swier11R = crate::BitReader;
+pub type SWIER11_R = crate::BitReader;
 #[doc = "Field `SWIER11` writer - Software Interrupt on line 11"]
-pub type Swier11W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER11_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER12` reader - Software Interrupt on line 12"]
-pub type Swier12R = crate::BitReader;
+pub type SWIER12_R = crate::BitReader;
 #[doc = "Field `SWIER12` writer - Software Interrupt on line 12"]
-pub type Swier12W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER12_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER13` reader - Software Interrupt on line 13"]
-pub type Swier13R = crate::BitReader;
+pub type SWIER13_R = crate::BitReader;
 #[doc = "Field `SWIER13` writer - Software Interrupt on line 13"]
-pub type Swier13W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER13_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER14` reader - Software Interrupt on line 14"]
-pub type Swier14R = crate::BitReader;
+pub type SWIER14_R = crate::BitReader;
 #[doc = "Field `SWIER14` writer - Software Interrupt on line 14"]
-pub type Swier14W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER14_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER15` reader - Software Interrupt on line 15"]
-pub type Swier15R = crate::BitReader;
+pub type SWIER15_R = crate::BitReader;
 #[doc = "Field `SWIER15` writer - Software Interrupt on line 15"]
-pub type Swier15W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER15_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER16` reader - Software Interrupt on line 16"]
-pub type Swier16R = crate::BitReader;
+pub type SWIER16_R = crate::BitReader;
 #[doc = "Field `SWIER16` writer - Software Interrupt on line 16"]
-pub type Swier16W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER16_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER17` reader - Software Interrupt on line 17"]
-pub type Swier17R = crate::BitReader;
+pub type SWIER17_R = crate::BitReader;
 #[doc = "Field `SWIER17` writer - Software Interrupt on line 17"]
-pub type Swier17W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER17_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER18` reader - Software Interrupt on line 18"]
-pub type Swier18R = crate::BitReader;
+pub type SWIER18_R = crate::BitReader;
 #[doc = "Field `SWIER18` writer - Software Interrupt on line 18"]
-pub type Swier18W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER18_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER19` reader - Software Interrupt on line 19"]
-pub type Swier19R = crate::BitReader;
+pub type SWIER19_R = crate::BitReader;
 #[doc = "Field `SWIER19` writer - Software Interrupt on line 19"]
-pub type Swier19W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER19_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER20` reader - Software Interrupt on line 20"]
-pub type Swier20R = crate::BitReader;
+pub type SWIER20_R = crate::BitReader;
 #[doc = "Field `SWIER20` writer - Software Interrupt on line 20"]
-pub type Swier20W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER20_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER21` reader - Software Interrupt on line 21"]
-pub type Swier21R = crate::BitReader;
+pub type SWIER21_R = crate::BitReader;
 #[doc = "Field `SWIER21` writer - Software Interrupt on line 21"]
-pub type Swier21W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER21_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWIER22` reader - Software Interrupt on line 22"]
-pub type Swier22R = crate::BitReader;
+pub type SWIER22_R = crate::BitReader;
 #[doc = "Field `SWIER22` writer - Software Interrupt on line 22"]
-pub type Swier22W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SWIER22_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Software Interrupt on line 0"]
     #[inline(always)]
-    pub fn swier0(&self) -> Swier0R {
-        Swier0R::new((self.bits & 1) != 0)
+    pub fn swier0(&self) -> SWIER0_R {
+        SWIER0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Software Interrupt on line 1"]
     #[inline(always)]
-    pub fn swier1(&self) -> Swier1R {
-        Swier1R::new(((self.bits >> 1) & 1) != 0)
+    pub fn swier1(&self) -> SWIER1_R {
+        SWIER1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Software Interrupt on line 2"]
     #[inline(always)]
-    pub fn swier2(&self) -> Swier2R {
-        Swier2R::new(((self.bits >> 2) & 1) != 0)
+    pub fn swier2(&self) -> SWIER2_R {
+        SWIER2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Software Interrupt on line 3"]
     #[inline(always)]
-    pub fn swier3(&self) -> Swier3R {
-        Swier3R::new(((self.bits >> 3) & 1) != 0)
+    pub fn swier3(&self) -> SWIER3_R {
+        SWIER3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Software Interrupt on line 4"]
     #[inline(always)]
-    pub fn swier4(&self) -> Swier4R {
-        Swier4R::new(((self.bits >> 4) & 1) != 0)
+    pub fn swier4(&self) -> SWIER4_R {
+        SWIER4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Software Interrupt on line 5"]
     #[inline(always)]
-    pub fn swier5(&self) -> Swier5R {
-        Swier5R::new(((self.bits >> 5) & 1) != 0)
+    pub fn swier5(&self) -> SWIER5_R {
+        SWIER5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Software Interrupt on line 6"]
     #[inline(always)]
-    pub fn swier6(&self) -> Swier6R {
-        Swier6R::new(((self.bits >> 6) & 1) != 0)
+    pub fn swier6(&self) -> SWIER6_R {
+        SWIER6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Software Interrupt on line 7"]
     #[inline(always)]
-    pub fn swier7(&self) -> Swier7R {
-        Swier7R::new(((self.bits >> 7) & 1) != 0)
+    pub fn swier7(&self) -> SWIER7_R {
+        SWIER7_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Software Interrupt on line 8"]
     #[inline(always)]
-    pub fn swier8(&self) -> Swier8R {
-        Swier8R::new(((self.bits >> 8) & 1) != 0)
+    pub fn swier8(&self) -> SWIER8_R {
+        SWIER8_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Software Interrupt on line 9"]
     #[inline(always)]
-    pub fn swier9(&self) -> Swier9R {
-        Swier9R::new(((self.bits >> 9) & 1) != 0)
+    pub fn swier9(&self) -> SWIER9_R {
+        SWIER9_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Software Interrupt on line 10"]
     #[inline(always)]
-    pub fn swier10(&self) -> Swier10R {
-        Swier10R::new(((self.bits >> 10) & 1) != 0)
+    pub fn swier10(&self) -> SWIER10_R {
+        SWIER10_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Software Interrupt on line 11"]
     #[inline(always)]
-    pub fn swier11(&self) -> Swier11R {
-        Swier11R::new(((self.bits >> 11) & 1) != 0)
+    pub fn swier11(&self) -> SWIER11_R {
+        SWIER11_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Software Interrupt on line 12"]
     #[inline(always)]
-    pub fn swier12(&self) -> Swier12R {
-        Swier12R::new(((self.bits >> 12) & 1) != 0)
+    pub fn swier12(&self) -> SWIER12_R {
+        SWIER12_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Software Interrupt on line 13"]
     #[inline(always)]
-    pub fn swier13(&self) -> Swier13R {
-        Swier13R::new(((self.bits >> 13) & 1) != 0)
+    pub fn swier13(&self) -> SWIER13_R {
+        SWIER13_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Software Interrupt on line 14"]
     #[inline(always)]
-    pub fn swier14(&self) -> Swier14R {
-        Swier14R::new(((self.bits >> 14) & 1) != 0)
+    pub fn swier14(&self) -> SWIER14_R {
+        SWIER14_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Software Interrupt on line 15"]
     #[inline(always)]
-    pub fn swier15(&self) -> Swier15R {
-        Swier15R::new(((self.bits >> 15) & 1) != 0)
+    pub fn swier15(&self) -> SWIER15_R {
+        SWIER15_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Software Interrupt on line 16"]
     #[inline(always)]
-    pub fn swier16(&self) -> Swier16R {
-        Swier16R::new(((self.bits >> 16) & 1) != 0)
+    pub fn swier16(&self) -> SWIER16_R {
+        SWIER16_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Software Interrupt on line 17"]
     #[inline(always)]
-    pub fn swier17(&self) -> Swier17R {
-        Swier17R::new(((self.bits >> 17) & 1) != 0)
+    pub fn swier17(&self) -> SWIER17_R {
+        SWIER17_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Software Interrupt on line 18"]
     #[inline(always)]
-    pub fn swier18(&self) -> Swier18R {
-        Swier18R::new(((self.bits >> 18) & 1) != 0)
+    pub fn swier18(&self) -> SWIER18_R {
+        SWIER18_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Software Interrupt on line 19"]
     #[inline(always)]
-    pub fn swier19(&self) -> Swier19R {
-        Swier19R::new(((self.bits >> 19) & 1) != 0)
+    pub fn swier19(&self) -> SWIER19_R {
+        SWIER19_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Software Interrupt on line 20"]
     #[inline(always)]
-    pub fn swier20(&self) -> Swier20R {
-        Swier20R::new(((self.bits >> 20) & 1) != 0)
+    pub fn swier20(&self) -> SWIER20_R {
+        SWIER20_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Software Interrupt on line 21"]
     #[inline(always)]
-    pub fn swier21(&self) -> Swier21R {
-        Swier21R::new(((self.bits >> 21) & 1) != 0)
+    pub fn swier21(&self) -> SWIER21_R {
+        SWIER21_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Software Interrupt on line 22"]
     #[inline(always)]
-    pub fn swier22(&self) -> Swier22R {
-        Swier22R::new(((self.bits >> 22) & 1) != 0)
+    pub fn swier22(&self) -> SWIER22_R {
+        SWIER22_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SWIER")
+            .field("swier0", &self.swier0())
+            .field("swier1", &self.swier1())
+            .field("swier2", &self.swier2())
+            .field("swier3", &self.swier3())
+            .field("swier4", &self.swier4())
+            .field("swier5", &self.swier5())
+            .field("swier6", &self.swier6())
+            .field("swier7", &self.swier7())
+            .field("swier8", &self.swier8())
+            .field("swier9", &self.swier9())
+            .field("swier10", &self.swier10())
+            .field("swier11", &self.swier11())
+            .field("swier12", &self.swier12())
+            .field("swier13", &self.swier13())
+            .field("swier14", &self.swier14())
+            .field("swier15", &self.swier15())
+            .field("swier16", &self.swier16())
+            .field("swier17", &self.swier17())
+            .field("swier18", &self.swier18())
+            .field("swier19", &self.swier19())
+            .field("swier20", &self.swier20())
+            .field("swier21", &self.swier21())
+            .field("swier22", &self.swier22())
+            .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - Software Interrupt on line 0"]
     #[inline(always)]
-    pub fn swier0(&mut self) -> Swier0W<SwierSpec> {
-        Swier0W::new(self, 0)
+    pub fn swier0(&mut self) -> SWIER0_W<SWIERrs> {
+        SWIER0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Software Interrupt on line 1"]
     #[inline(always)]
-    pub fn swier1(&mut self) -> Swier1W<SwierSpec> {
-        Swier1W::new(self, 1)
+    pub fn swier1(&mut self) -> SWIER1_W<SWIERrs> {
+        SWIER1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Software Interrupt on line 2"]
     #[inline(always)]
-    pub fn swier2(&mut self) -> Swier2W<SwierSpec> {
-        Swier2W::new(self, 2)
+    pub fn swier2(&mut self) -> SWIER2_W<SWIERrs> {
+        SWIER2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Software Interrupt on line 3"]
     #[inline(always)]
-    pub fn swier3(&mut self) -> Swier3W<SwierSpec> {
-        Swier3W::new(self, 3)
+    pub fn swier3(&mut self) -> SWIER3_W<SWIERrs> {
+        SWIER3_W::new(self, 3)
     }
     #[doc = "Bit 4 - Software Interrupt on line 4"]
     #[inline(always)]
-    pub fn swier4(&mut self) -> Swier4W<SwierSpec> {
-        Swier4W::new(self, 4)
+    pub fn swier4(&mut self) -> SWIER4_W<SWIERrs> {
+        SWIER4_W::new(self, 4)
     }
     #[doc = "Bit 5 - Software Interrupt on line 5"]
     #[inline(always)]
-    pub fn swier5(&mut self) -> Swier5W<SwierSpec> {
-        Swier5W::new(self, 5)
+    pub fn swier5(&mut self) -> SWIER5_W<SWIERrs> {
+        SWIER5_W::new(self, 5)
     }
     #[doc = "Bit 6 - Software Interrupt on line 6"]
     #[inline(always)]
-    pub fn swier6(&mut self) -> Swier6W<SwierSpec> {
-        Swier6W::new(self, 6)
+    pub fn swier6(&mut self) -> SWIER6_W<SWIERrs> {
+        SWIER6_W::new(self, 6)
     }
     #[doc = "Bit 7 - Software Interrupt on line 7"]
     #[inline(always)]
-    pub fn swier7(&mut self) -> Swier7W<SwierSpec> {
-        Swier7W::new(self, 7)
+    pub fn swier7(&mut self) -> SWIER7_W<SWIERrs> {
+        SWIER7_W::new(self, 7)
     }
     #[doc = "Bit 8 - Software Interrupt on line 8"]
     #[inline(always)]
-    pub fn swier8(&mut self) -> Swier8W<SwierSpec> {
-        Swier8W::new(self, 8)
+    pub fn swier8(&mut self) -> SWIER8_W<SWIERrs> {
+        SWIER8_W::new(self, 8)
     }
     #[doc = "Bit 9 - Software Interrupt on line 9"]
     #[inline(always)]
-    pub fn swier9(&mut self) -> Swier9W<SwierSpec> {
-        Swier9W::new(self, 9)
+    pub fn swier9(&mut self) -> SWIER9_W<SWIERrs> {
+        SWIER9_W::new(self, 9)
     }
     #[doc = "Bit 10 - Software Interrupt on line 10"]
     #[inline(always)]
-    pub fn swier10(&mut self) -> Swier10W<SwierSpec> {
-        Swier10W::new(self, 10)
+    pub fn swier10(&mut self) -> SWIER10_W<SWIERrs> {
+        SWIER10_W::new(self, 10)
     }
     #[doc = "Bit 11 - Software Interrupt on line 11"]
     #[inline(always)]
-    pub fn swier11(&mut self) -> Swier11W<SwierSpec> {
-        Swier11W::new(self, 11)
+    pub fn swier11(&mut self) -> SWIER11_W<SWIERrs> {
+        SWIER11_W::new(self, 11)
     }
     #[doc = "Bit 12 - Software Interrupt on line 12"]
     #[inline(always)]
-    pub fn swier12(&mut self) -> Swier12W<SwierSpec> {
-        Swier12W::new(self, 12)
+    pub fn swier12(&mut self) -> SWIER12_W<SWIERrs> {
+        SWIER12_W::new(self, 12)
     }
     #[doc = "Bit 13 - Software Interrupt on line 13"]
     #[inline(always)]
-    pub fn swier13(&mut self) -> Swier13W<SwierSpec> {
-        Swier13W::new(self, 13)
+    pub fn swier13(&mut self) -> SWIER13_W<SWIERrs> {
+        SWIER13_W::new(self, 13)
     }
     #[doc = "Bit 14 - Software Interrupt on line 14"]
     #[inline(always)]
-    pub fn swier14(&mut self) -> Swier14W<SwierSpec> {
-        Swier14W::new(self, 14)
+    pub fn swier14(&mut self) -> SWIER14_W<SWIERrs> {
+        SWIER14_W::new(self, 14)
     }
     #[doc = "Bit 15 - Software Interrupt on line 15"]
     #[inline(always)]
-    pub fn swier15(&mut self) -> Swier15W<SwierSpec> {
-        Swier15W::new(self, 15)
+    pub fn swier15(&mut self) -> SWIER15_W<SWIERrs> {
+        SWIER15_W::new(self, 15)
     }
     #[doc = "Bit 16 - Software Interrupt on line 16"]
     #[inline(always)]
-    pub fn swier16(&mut self) -> Swier16W<SwierSpec> {
-        Swier16W::new(self, 16)
+    pub fn swier16(&mut self) -> SWIER16_W<SWIERrs> {
+        SWIER16_W::new(self, 16)
     }
     #[doc = "Bit 17 - Software Interrupt on line 17"]
     #[inline(always)]
-    pub fn swier17(&mut self) -> Swier17W<SwierSpec> {
-        Swier17W::new(self, 17)
+    pub fn swier17(&mut self) -> SWIER17_W<SWIERrs> {
+        SWIER17_W::new(self, 17)
     }
     #[doc = "Bit 18 - Software Interrupt on line 18"]
     #[inline(always)]
-    pub fn swier18(&mut self) -> Swier18W<SwierSpec> {
-        Swier18W::new(self, 18)
+    pub fn swier18(&mut self) -> SWIER18_W<SWIERrs> {
+        SWIER18_W::new(self, 18)
     }
     #[doc = "Bit 19 - Software Interrupt on line 19"]
     #[inline(always)]
-    pub fn swier19(&mut self) -> Swier19W<SwierSpec> {
-        Swier19W::new(self, 19)
+    pub fn swier19(&mut self) -> SWIER19_W<SWIERrs> {
+        SWIER19_W::new(self, 19)
     }
     #[doc = "Bit 20 - Software Interrupt on line 20"]
     #[inline(always)]
-    pub fn swier20(&mut self) -> Swier20W<SwierSpec> {
-        Swier20W::new(self, 20)
+    pub fn swier20(&mut self) -> SWIER20_W<SWIERrs> {
+        SWIER20_W::new(self, 20)
     }
     #[doc = "Bit 21 - Software Interrupt on line 21"]
     #[inline(always)]
-    pub fn swier21(&mut self) -> Swier21W<SwierSpec> {
-        Swier21W::new(self, 21)
+    pub fn swier21(&mut self) -> SWIER21_W<SWIERrs> {
+        SWIER21_W::new(self, 21)
     }
     #[doc = "Bit 22 - Software Interrupt on line 22"]
     #[inline(always)]
-    pub fn swier22(&mut self) -> Swier22W<SwierSpec> {
-        Swier22W::new(self, 22)
+    pub fn swier22(&mut self) -> SWIER22_W<SWIERrs> {
+        SWIER22_W::new(self, 22)
     }
 }
 #[doc = "Software interrupt event register (EXTI_SWIER)\n\nYou can [`read`](crate::Reg::read) this register and get [`swier::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`swier::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct SwierSpec;
-impl crate::RegisterSpec for SwierSpec {
+pub struct SWIERrs;
+impl crate::RegisterSpec for SWIERrs {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`swier::R`](R) reader structure"]
-impl crate::Readable for SwierSpec {}
+impl crate::Readable for SWIERrs {}
 #[doc = "`write(|w| ..)` method takes [`swier::W`](W) writer structure"]
-impl crate::Writable for SwierSpec {
+impl crate::Writable for SWIERrs {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SWIER to value 0"]
-impl crate::Resettable for SwierSpec {
+impl crate::Resettable for SWIERrs {
     const RESET_VALUE: u32 = 0;
 }

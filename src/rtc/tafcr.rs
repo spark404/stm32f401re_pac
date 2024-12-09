@@ -1,207 +1,226 @@
 #[doc = "Register `TAFCR` reader"]
-pub type R = crate::R<TafcrSpec>;
+pub type R = crate::R<TAFCRrs>;
 #[doc = "Register `TAFCR` writer"]
-pub type W = crate::W<TafcrSpec>;
+pub type W = crate::W<TAFCRrs>;
 #[doc = "Field `TAMP1E` reader - Tamper 1 detection enable"]
-pub type Tamp1eR = crate::BitReader;
+pub type TAMP1E_R = crate::BitReader;
 #[doc = "Field `TAMP1E` writer - Tamper 1 detection enable"]
-pub type Tamp1eW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TAMP1E_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TAMP1TRG` reader - Active level for tamper 1"]
-pub type Tamp1trgR = crate::BitReader;
+pub type TAMP1TRG_R = crate::BitReader;
 #[doc = "Field `TAMP1TRG` writer - Active level for tamper 1"]
-pub type Tamp1trgW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TAMP1TRG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TAMPIE` reader - Tamper interrupt enable"]
-pub type TampieR = crate::BitReader;
+pub type TAMPIE_R = crate::BitReader;
 #[doc = "Field `TAMPIE` writer - Tamper interrupt enable"]
-pub type TampieW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TAMPIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TAMP2E` reader - Tamper 2 detection enable"]
-pub type Tamp2eR = crate::BitReader;
+pub type TAMP2E_R = crate::BitReader;
 #[doc = "Field `TAMP2E` writer - Tamper 2 detection enable"]
-pub type Tamp2eW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TAMP2E_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TAMP2TRG` reader - Active level for tamper 2"]
-pub type Tamp2trgR = crate::BitReader;
+pub type TAMP2TRG_R = crate::BitReader;
 #[doc = "Field `TAMP2TRG` writer - Active level for tamper 2"]
-pub type Tamp2trgW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TAMP2TRG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TAMPTS` reader - Activate timestamp on tamper detection event"]
-pub type TamptsR = crate::BitReader;
+pub type TAMPTS_R = crate::BitReader;
 #[doc = "Field `TAMPTS` writer - Activate timestamp on tamper detection event"]
-pub type TamptsW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TAMPTS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TAMPFREQ` reader - Tamper sampling frequency"]
-pub type TampfreqR = crate::FieldReader;
+pub type TAMPFREQ_R = crate::FieldReader;
 #[doc = "Field `TAMPFREQ` writer - Tamper sampling frequency"]
-pub type TampfreqW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+pub type TAMPFREQ_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TAMPFLT` reader - Tamper filter count"]
-pub type TampfltR = crate::FieldReader;
+pub type TAMPFLT_R = crate::FieldReader;
 #[doc = "Field `TAMPFLT` writer - Tamper filter count"]
-pub type TampfltW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type TAMPFLT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TAMPPRCH` reader - Tamper precharge duration"]
-pub type TampprchR = crate::FieldReader;
+pub type TAMPPRCH_R = crate::FieldReader;
 #[doc = "Field `TAMPPRCH` writer - Tamper precharge duration"]
-pub type TampprchW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type TAMPPRCH_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TAMPPUDIS` reader - TAMPER pull-up disable"]
-pub type TamppudisR = crate::BitReader;
+pub type TAMPPUDIS_R = crate::BitReader;
 #[doc = "Field `TAMPPUDIS` writer - TAMPER pull-up disable"]
-pub type TamppudisW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TAMPPUDIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TAMP1INSEL` reader - TAMPER1 mapping"]
-pub type Tamp1inselR = crate::BitReader;
+pub type TAMP1INSEL_R = crate::BitReader;
 #[doc = "Field `TAMP1INSEL` writer - TAMPER1 mapping"]
-pub type Tamp1inselW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TAMP1INSEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSINSEL` reader - TIMESTAMP mapping"]
-pub type TsinselR = crate::BitReader;
+pub type TSINSEL_R = crate::BitReader;
 #[doc = "Field `TSINSEL` writer - TIMESTAMP mapping"]
-pub type TsinselW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TSINSEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALARMOUTTYPE` reader - AFO_ALARM output type"]
-pub type AlarmouttypeR = crate::BitReader;
+pub type ALARMOUTTYPE_R = crate::BitReader;
 #[doc = "Field `ALARMOUTTYPE` writer - AFO_ALARM output type"]
-pub type AlarmouttypeW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type ALARMOUTTYPE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Tamper 1 detection enable"]
     #[inline(always)]
-    pub fn tamp1e(&self) -> Tamp1eR {
-        Tamp1eR::new((self.bits & 1) != 0)
+    pub fn tamp1e(&self) -> TAMP1E_R {
+        TAMP1E_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Active level for tamper 1"]
     #[inline(always)]
-    pub fn tamp1trg(&self) -> Tamp1trgR {
-        Tamp1trgR::new(((self.bits >> 1) & 1) != 0)
+    pub fn tamp1trg(&self) -> TAMP1TRG_R {
+        TAMP1TRG_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Tamper interrupt enable"]
     #[inline(always)]
-    pub fn tampie(&self) -> TampieR {
-        TampieR::new(((self.bits >> 2) & 1) != 0)
+    pub fn tampie(&self) -> TAMPIE_R {
+        TAMPIE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Tamper 2 detection enable"]
     #[inline(always)]
-    pub fn tamp2e(&self) -> Tamp2eR {
-        Tamp2eR::new(((self.bits >> 3) & 1) != 0)
+    pub fn tamp2e(&self) -> TAMP2E_R {
+        TAMP2E_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Active level for tamper 2"]
     #[inline(always)]
-    pub fn tamp2trg(&self) -> Tamp2trgR {
-        Tamp2trgR::new(((self.bits >> 4) & 1) != 0)
+    pub fn tamp2trg(&self) -> TAMP2TRG_R {
+        TAMP2TRG_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 7 - Activate timestamp on tamper detection event"]
     #[inline(always)]
-    pub fn tampts(&self) -> TamptsR {
-        TamptsR::new(((self.bits >> 7) & 1) != 0)
+    pub fn tampts(&self) -> TAMPTS_R {
+        TAMPTS_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 8:10 - Tamper sampling frequency"]
     #[inline(always)]
-    pub fn tampfreq(&self) -> TampfreqR {
-        TampfreqR::new(((self.bits >> 8) & 7) as u8)
+    pub fn tampfreq(&self) -> TAMPFREQ_R {
+        TAMPFREQ_R::new(((self.bits >> 8) & 7) as u8)
     }
     #[doc = "Bits 11:12 - Tamper filter count"]
     #[inline(always)]
-    pub fn tampflt(&self) -> TampfltR {
-        TampfltR::new(((self.bits >> 11) & 3) as u8)
+    pub fn tampflt(&self) -> TAMPFLT_R {
+        TAMPFLT_R::new(((self.bits >> 11) & 3) as u8)
     }
     #[doc = "Bits 13:14 - Tamper precharge duration"]
     #[inline(always)]
-    pub fn tampprch(&self) -> TampprchR {
-        TampprchR::new(((self.bits >> 13) & 3) as u8)
+    pub fn tampprch(&self) -> TAMPPRCH_R {
+        TAMPPRCH_R::new(((self.bits >> 13) & 3) as u8)
     }
     #[doc = "Bit 15 - TAMPER pull-up disable"]
     #[inline(always)]
-    pub fn tamppudis(&self) -> TamppudisR {
-        TamppudisR::new(((self.bits >> 15) & 1) != 0)
+    pub fn tamppudis(&self) -> TAMPPUDIS_R {
+        TAMPPUDIS_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - TAMPER1 mapping"]
     #[inline(always)]
-    pub fn tamp1insel(&self) -> Tamp1inselR {
-        Tamp1inselR::new(((self.bits >> 16) & 1) != 0)
+    pub fn tamp1insel(&self) -> TAMP1INSEL_R {
+        TAMP1INSEL_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - TIMESTAMP mapping"]
     #[inline(always)]
-    pub fn tsinsel(&self) -> TsinselR {
-        TsinselR::new(((self.bits >> 17) & 1) != 0)
+    pub fn tsinsel(&self) -> TSINSEL_R {
+        TSINSEL_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - AFO_ALARM output type"]
     #[inline(always)]
-    pub fn alarmouttype(&self) -> AlarmouttypeR {
-        AlarmouttypeR::new(((self.bits >> 18) & 1) != 0)
+    pub fn alarmouttype(&self) -> ALARMOUTTYPE_R {
+        ALARMOUTTYPE_R::new(((self.bits >> 18) & 1) != 0)
+    }
+}
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TAFCR")
+            .field("alarmouttype", &self.alarmouttype())
+            .field("tsinsel", &self.tsinsel())
+            .field("tamp1insel", &self.tamp1insel())
+            .field("tamppudis", &self.tamppudis())
+            .field("tampprch", &self.tampprch())
+            .field("tampflt", &self.tampflt())
+            .field("tampfreq", &self.tampfreq())
+            .field("tampts", &self.tampts())
+            .field("tamp2trg", &self.tamp2trg())
+            .field("tamp2e", &self.tamp2e())
+            .field("tampie", &self.tampie())
+            .field("tamp1trg", &self.tamp1trg())
+            .field("tamp1e", &self.tamp1e())
+            .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - Tamper 1 detection enable"]
     #[inline(always)]
-    pub fn tamp1e(&mut self) -> Tamp1eW<TafcrSpec> {
-        Tamp1eW::new(self, 0)
+    pub fn tamp1e(&mut self) -> TAMP1E_W<TAFCRrs> {
+        TAMP1E_W::new(self, 0)
     }
     #[doc = "Bit 1 - Active level for tamper 1"]
     #[inline(always)]
-    pub fn tamp1trg(&mut self) -> Tamp1trgW<TafcrSpec> {
-        Tamp1trgW::new(self, 1)
+    pub fn tamp1trg(&mut self) -> TAMP1TRG_W<TAFCRrs> {
+        TAMP1TRG_W::new(self, 1)
     }
     #[doc = "Bit 2 - Tamper interrupt enable"]
     #[inline(always)]
-    pub fn tampie(&mut self) -> TampieW<TafcrSpec> {
-        TampieW::new(self, 2)
+    pub fn tampie(&mut self) -> TAMPIE_W<TAFCRrs> {
+        TAMPIE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Tamper 2 detection enable"]
     #[inline(always)]
-    pub fn tamp2e(&mut self) -> Tamp2eW<TafcrSpec> {
-        Tamp2eW::new(self, 3)
+    pub fn tamp2e(&mut self) -> TAMP2E_W<TAFCRrs> {
+        TAMP2E_W::new(self, 3)
     }
     #[doc = "Bit 4 - Active level for tamper 2"]
     #[inline(always)]
-    pub fn tamp2trg(&mut self) -> Tamp2trgW<TafcrSpec> {
-        Tamp2trgW::new(self, 4)
+    pub fn tamp2trg(&mut self) -> TAMP2TRG_W<TAFCRrs> {
+        TAMP2TRG_W::new(self, 4)
     }
     #[doc = "Bit 7 - Activate timestamp on tamper detection event"]
     #[inline(always)]
-    pub fn tampts(&mut self) -> TamptsW<TafcrSpec> {
-        TamptsW::new(self, 7)
+    pub fn tampts(&mut self) -> TAMPTS_W<TAFCRrs> {
+        TAMPTS_W::new(self, 7)
     }
     #[doc = "Bits 8:10 - Tamper sampling frequency"]
     #[inline(always)]
-    pub fn tampfreq(&mut self) -> TampfreqW<TafcrSpec> {
-        TampfreqW::new(self, 8)
+    pub fn tampfreq(&mut self) -> TAMPFREQ_W<TAFCRrs> {
+        TAMPFREQ_W::new(self, 8)
     }
     #[doc = "Bits 11:12 - Tamper filter count"]
     #[inline(always)]
-    pub fn tampflt(&mut self) -> TampfltW<TafcrSpec> {
-        TampfltW::new(self, 11)
+    pub fn tampflt(&mut self) -> TAMPFLT_W<TAFCRrs> {
+        TAMPFLT_W::new(self, 11)
     }
     #[doc = "Bits 13:14 - Tamper precharge duration"]
     #[inline(always)]
-    pub fn tampprch(&mut self) -> TampprchW<TafcrSpec> {
-        TampprchW::new(self, 13)
+    pub fn tampprch(&mut self) -> TAMPPRCH_W<TAFCRrs> {
+        TAMPPRCH_W::new(self, 13)
     }
     #[doc = "Bit 15 - TAMPER pull-up disable"]
     #[inline(always)]
-    pub fn tamppudis(&mut self) -> TamppudisW<TafcrSpec> {
-        TamppudisW::new(self, 15)
+    pub fn tamppudis(&mut self) -> TAMPPUDIS_W<TAFCRrs> {
+        TAMPPUDIS_W::new(self, 15)
     }
     #[doc = "Bit 16 - TAMPER1 mapping"]
     #[inline(always)]
-    pub fn tamp1insel(&mut self) -> Tamp1inselW<TafcrSpec> {
-        Tamp1inselW::new(self, 16)
+    pub fn tamp1insel(&mut self) -> TAMP1INSEL_W<TAFCRrs> {
+        TAMP1INSEL_W::new(self, 16)
     }
     #[doc = "Bit 17 - TIMESTAMP mapping"]
     #[inline(always)]
-    pub fn tsinsel(&mut self) -> TsinselW<TafcrSpec> {
-        TsinselW::new(self, 17)
+    pub fn tsinsel(&mut self) -> TSINSEL_W<TAFCRrs> {
+        TSINSEL_W::new(self, 17)
     }
     #[doc = "Bit 18 - AFO_ALARM output type"]
     #[inline(always)]
-    pub fn alarmouttype(&mut self) -> AlarmouttypeW<TafcrSpec> {
-        AlarmouttypeW::new(self, 18)
+    pub fn alarmouttype(&mut self) -> ALARMOUTTYPE_W<TAFCRrs> {
+        ALARMOUTTYPE_W::new(self, 18)
     }
 }
 #[doc = "tamper and alternate function configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`tafcr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tafcr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct TafcrSpec;
-impl crate::RegisterSpec for TafcrSpec {
+pub struct TAFCRrs;
+impl crate::RegisterSpec for TAFCRrs {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`tafcr::R`](R) reader structure"]
-impl crate::Readable for TafcrSpec {}
+impl crate::Readable for TAFCRrs {}
 #[doc = "`write(|w| ..)` method takes [`tafcr::W`](W) writer structure"]
-impl crate::Writable for TafcrSpec {
+impl crate::Writable for TAFCRrs {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TAFCR to value 0"]
-impl crate::Resettable for TafcrSpec {
+impl crate::Resettable for TAFCRrs {
     const RESET_VALUE: u32 = 0;
 }

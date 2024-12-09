@@ -1,165 +1,181 @@
 #[doc = "Register `APB2ENR` reader"]
-pub type R = crate::R<Apb2enrSpec>;
+pub type R = crate::R<APB2ENRrs>;
 #[doc = "Register `APB2ENR` writer"]
-pub type W = crate::W<Apb2enrSpec>;
+pub type W = crate::W<APB2ENRrs>;
 #[doc = "Field `TIM1EN` reader - TIM1 clock enable"]
-pub type Tim1enR = crate::BitReader;
+pub type TIM1EN_R = crate::BitReader;
 #[doc = "Field `TIM1EN` writer - TIM1 clock enable"]
-pub type Tim1enW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TIM1EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USART1EN` reader - USART1 clock enable"]
-pub type Usart1enR = crate::BitReader;
+pub type USART1EN_R = crate::BitReader;
 #[doc = "Field `USART1EN` writer - USART1 clock enable"]
-pub type Usart1enW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type USART1EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USART6EN` reader - USART6 clock enable"]
-pub type Usart6enR = crate::BitReader;
+pub type USART6EN_R = crate::BitReader;
 #[doc = "Field `USART6EN` writer - USART6 clock enable"]
-pub type Usart6enW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type USART6EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC1EN` reader - ADC1 clock enable"]
-pub type Adc1enR = crate::BitReader;
+pub type ADC1EN_R = crate::BitReader;
 #[doc = "Field `ADC1EN` writer - ADC1 clock enable"]
-pub type Adc1enW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type ADC1EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIOEN` reader - SDIO clock enable"]
-pub type SdioenR = crate::BitReader;
+pub type SDIOEN_R = crate::BitReader;
 #[doc = "Field `SDIOEN` writer - SDIO clock enable"]
-pub type SdioenW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SDIOEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI1EN` reader - SPI1 clock enable"]
-pub type Spi1enR = crate::BitReader;
+pub type SPI1EN_R = crate::BitReader;
 #[doc = "Field `SPI1EN` writer - SPI1 clock enable"]
-pub type Spi1enW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SPI1EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SYSCFGEN` reader - System configuration controller clock enable"]
-pub type SyscfgenR = crate::BitReader;
+pub type SYSCFGEN_R = crate::BitReader;
 #[doc = "Field `SYSCFGEN` writer - System configuration controller clock enable"]
-pub type SyscfgenW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SYSCFGEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIM9EN` reader - TIM9 clock enable"]
-pub type Tim9enR = crate::BitReader;
+pub type TIM9EN_R = crate::BitReader;
 #[doc = "Field `TIM9EN` writer - TIM9 clock enable"]
-pub type Tim9enW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TIM9EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIM10EN` reader - TIM10 clock enable"]
-pub type Tim10enR = crate::BitReader;
+pub type TIM10EN_R = crate::BitReader;
 #[doc = "Field `TIM10EN` writer - TIM10 clock enable"]
-pub type Tim10enW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TIM10EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIM11EN` reader - TIM11 clock enable"]
-pub type Tim11enR = crate::BitReader;
+pub type TIM11EN_R = crate::BitReader;
 #[doc = "Field `TIM11EN` writer - TIM11 clock enable"]
-pub type Tim11enW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TIM11EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - TIM1 clock enable"]
     #[inline(always)]
-    pub fn tim1en(&self) -> Tim1enR {
-        Tim1enR::new((self.bits & 1) != 0)
+    pub fn tim1en(&self) -> TIM1EN_R {
+        TIM1EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 4 - USART1 clock enable"]
     #[inline(always)]
-    pub fn usart1en(&self) -> Usart1enR {
-        Usart1enR::new(((self.bits >> 4) & 1) != 0)
+    pub fn usart1en(&self) -> USART1EN_R {
+        USART1EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - USART6 clock enable"]
     #[inline(always)]
-    pub fn usart6en(&self) -> Usart6enR {
-        Usart6enR::new(((self.bits >> 5) & 1) != 0)
+    pub fn usart6en(&self) -> USART6EN_R {
+        USART6EN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 8 - ADC1 clock enable"]
     #[inline(always)]
-    pub fn adc1en(&self) -> Adc1enR {
-        Adc1enR::new(((self.bits >> 8) & 1) != 0)
+    pub fn adc1en(&self) -> ADC1EN_R {
+        ADC1EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 11 - SDIO clock enable"]
     #[inline(always)]
-    pub fn sdioen(&self) -> SdioenR {
-        SdioenR::new(((self.bits >> 11) & 1) != 0)
+    pub fn sdioen(&self) -> SDIOEN_R {
+        SDIOEN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - SPI1 clock enable"]
     #[inline(always)]
-    pub fn spi1en(&self) -> Spi1enR {
-        Spi1enR::new(((self.bits >> 12) & 1) != 0)
+    pub fn spi1en(&self) -> SPI1EN_R {
+        SPI1EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 14 - System configuration controller clock enable"]
     #[inline(always)]
-    pub fn syscfgen(&self) -> SyscfgenR {
-        SyscfgenR::new(((self.bits >> 14) & 1) != 0)
+    pub fn syscfgen(&self) -> SYSCFGEN_R {
+        SYSCFGEN_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 16 - TIM9 clock enable"]
     #[inline(always)]
-    pub fn tim9en(&self) -> Tim9enR {
-        Tim9enR::new(((self.bits >> 16) & 1) != 0)
+    pub fn tim9en(&self) -> TIM9EN_R {
+        TIM9EN_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - TIM10 clock enable"]
     #[inline(always)]
-    pub fn tim10en(&self) -> Tim10enR {
-        Tim10enR::new(((self.bits >> 17) & 1) != 0)
+    pub fn tim10en(&self) -> TIM10EN_R {
+        TIM10EN_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - TIM11 clock enable"]
     #[inline(always)]
-    pub fn tim11en(&self) -> Tim11enR {
-        Tim11enR::new(((self.bits >> 18) & 1) != 0)
+    pub fn tim11en(&self) -> TIM11EN_R {
+        TIM11EN_R::new(((self.bits >> 18) & 1) != 0)
+    }
+}
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB2ENR")
+            .field("tim11en", &self.tim11en())
+            .field("tim10en", &self.tim10en())
+            .field("tim9en", &self.tim9en())
+            .field("syscfgen", &self.syscfgen())
+            .field("spi1en", &self.spi1en())
+            .field("sdioen", &self.sdioen())
+            .field("adc1en", &self.adc1en())
+            .field("usart6en", &self.usart6en())
+            .field("usart1en", &self.usart1en())
+            .field("tim1en", &self.tim1en())
+            .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - TIM1 clock enable"]
     #[inline(always)]
-    pub fn tim1en(&mut self) -> Tim1enW<Apb2enrSpec> {
-        Tim1enW::new(self, 0)
+    pub fn tim1en(&mut self) -> TIM1EN_W<APB2ENRrs> {
+        TIM1EN_W::new(self, 0)
     }
     #[doc = "Bit 4 - USART1 clock enable"]
     #[inline(always)]
-    pub fn usart1en(&mut self) -> Usart1enW<Apb2enrSpec> {
-        Usart1enW::new(self, 4)
+    pub fn usart1en(&mut self) -> USART1EN_W<APB2ENRrs> {
+        USART1EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - USART6 clock enable"]
     #[inline(always)]
-    pub fn usart6en(&mut self) -> Usart6enW<Apb2enrSpec> {
-        Usart6enW::new(self, 5)
+    pub fn usart6en(&mut self) -> USART6EN_W<APB2ENRrs> {
+        USART6EN_W::new(self, 5)
     }
     #[doc = "Bit 8 - ADC1 clock enable"]
     #[inline(always)]
-    pub fn adc1en(&mut self) -> Adc1enW<Apb2enrSpec> {
-        Adc1enW::new(self, 8)
+    pub fn adc1en(&mut self) -> ADC1EN_W<APB2ENRrs> {
+        ADC1EN_W::new(self, 8)
     }
     #[doc = "Bit 11 - SDIO clock enable"]
     #[inline(always)]
-    pub fn sdioen(&mut self) -> SdioenW<Apb2enrSpec> {
-        SdioenW::new(self, 11)
+    pub fn sdioen(&mut self) -> SDIOEN_W<APB2ENRrs> {
+        SDIOEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - SPI1 clock enable"]
     #[inline(always)]
-    pub fn spi1en(&mut self) -> Spi1enW<Apb2enrSpec> {
-        Spi1enW::new(self, 12)
+    pub fn spi1en(&mut self) -> SPI1EN_W<APB2ENRrs> {
+        SPI1EN_W::new(self, 12)
     }
     #[doc = "Bit 14 - System configuration controller clock enable"]
     #[inline(always)]
-    pub fn syscfgen(&mut self) -> SyscfgenW<Apb2enrSpec> {
-        SyscfgenW::new(self, 14)
+    pub fn syscfgen(&mut self) -> SYSCFGEN_W<APB2ENRrs> {
+        SYSCFGEN_W::new(self, 14)
     }
     #[doc = "Bit 16 - TIM9 clock enable"]
     #[inline(always)]
-    pub fn tim9en(&mut self) -> Tim9enW<Apb2enrSpec> {
-        Tim9enW::new(self, 16)
+    pub fn tim9en(&mut self) -> TIM9EN_W<APB2ENRrs> {
+        TIM9EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - TIM10 clock enable"]
     #[inline(always)]
-    pub fn tim10en(&mut self) -> Tim10enW<Apb2enrSpec> {
-        Tim10enW::new(self, 17)
+    pub fn tim10en(&mut self) -> TIM10EN_W<APB2ENRrs> {
+        TIM10EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - TIM11 clock enable"]
     #[inline(always)]
-    pub fn tim11en(&mut self) -> Tim11enW<Apb2enrSpec> {
-        Tim11enW::new(self, 18)
+    pub fn tim11en(&mut self) -> TIM11EN_W<APB2ENRrs> {
+        TIM11EN_W::new(self, 18)
     }
 }
 #[doc = "APB2 peripheral clock enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2enr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apb2enr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct Apb2enrSpec;
-impl crate::RegisterSpec for Apb2enrSpec {
+pub struct APB2ENRrs;
+impl crate::RegisterSpec for APB2ENRrs {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`apb2enr::R`](R) reader structure"]
-impl crate::Readable for Apb2enrSpec {}
+impl crate::Readable for APB2ENRrs {}
 #[doc = "`write(|w| ..)` method takes [`apb2enr::W`](W) writer structure"]
-impl crate::Writable for Apb2enrSpec {
+impl crate::Writable for APB2ENRrs {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APB2ENR to value 0"]
-impl crate::Resettable for Apb2enrSpec {
+impl crate::Resettable for APB2ENRrs {
     const RESET_VALUE: u32 = 0;
 }

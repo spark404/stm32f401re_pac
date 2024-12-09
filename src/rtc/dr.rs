@@ -1,123 +1,136 @@
 #[doc = "Register `DR` reader"]
-pub type R = crate::R<DrSpec>;
+pub type R = crate::R<DRrs>;
 #[doc = "Register `DR` writer"]
-pub type W = crate::W<DrSpec>;
+pub type W = crate::W<DRrs>;
 #[doc = "Field `DU` reader - Date units in BCD format"]
-pub type DuR = crate::FieldReader;
+pub type DU_R = crate::FieldReader;
 #[doc = "Field `DU` writer - Date units in BCD format"]
-pub type DuW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+pub type DU_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `DT` reader - Date tens in BCD format"]
-pub type DtR = crate::FieldReader;
+pub type DT_R = crate::FieldReader;
 #[doc = "Field `DT` writer - Date tens in BCD format"]
-pub type DtW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type DT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MU` reader - Month units in BCD format"]
-pub type MuR = crate::FieldReader;
+pub type MU_R = crate::FieldReader;
 #[doc = "Field `MU` writer - Month units in BCD format"]
-pub type MuW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+pub type MU_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `MT` reader - Month tens in BCD format"]
-pub type MtR = crate::BitReader;
+pub type MT_R = crate::BitReader;
 #[doc = "Field `MT` writer - Month tens in BCD format"]
-pub type MtW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type MT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDU` reader - Week day units"]
-pub type WduR = crate::FieldReader;
+pub type WDU_R = crate::FieldReader;
 #[doc = "Field `WDU` writer - Week day units"]
-pub type WduW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+pub type WDU_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `YU` reader - Year units in BCD format"]
-pub type YuR = crate::FieldReader;
+pub type YU_R = crate::FieldReader;
 #[doc = "Field `YU` writer - Year units in BCD format"]
-pub type YuW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+pub type YU_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `YT` reader - Year tens in BCD format"]
-pub type YtR = crate::FieldReader;
+pub type YT_R = crate::FieldReader;
 #[doc = "Field `YT` writer - Year tens in BCD format"]
-pub type YtW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+pub type YT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - Date units in BCD format"]
     #[inline(always)]
-    pub fn du(&self) -> DuR {
-        DuR::new((self.bits & 0x0f) as u8)
+    pub fn du(&self) -> DU_R {
+        DU_R::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bits 4:5 - Date tens in BCD format"]
     #[inline(always)]
-    pub fn dt(&self) -> DtR {
-        DtR::new(((self.bits >> 4) & 3) as u8)
+    pub fn dt(&self) -> DT_R {
+        DT_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 8:11 - Month units in BCD format"]
     #[inline(always)]
-    pub fn mu(&self) -> MuR {
-        MuR::new(((self.bits >> 8) & 0x0f) as u8)
+    pub fn mu(&self) -> MU_R {
+        MU_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
     #[doc = "Bit 12 - Month tens in BCD format"]
     #[inline(always)]
-    pub fn mt(&self) -> MtR {
-        MtR::new(((self.bits >> 12) & 1) != 0)
+    pub fn mt(&self) -> MT_R {
+        MT_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bits 13:15 - Week day units"]
     #[inline(always)]
-    pub fn wdu(&self) -> WduR {
-        WduR::new(((self.bits >> 13) & 7) as u8)
+    pub fn wdu(&self) -> WDU_R {
+        WDU_R::new(((self.bits >> 13) & 7) as u8)
     }
     #[doc = "Bits 16:19 - Year units in BCD format"]
     #[inline(always)]
-    pub fn yu(&self) -> YuR {
-        YuR::new(((self.bits >> 16) & 0x0f) as u8)
+    pub fn yu(&self) -> YU_R {
+        YU_R::new(((self.bits >> 16) & 0x0f) as u8)
     }
     #[doc = "Bits 20:23 - Year tens in BCD format"]
     #[inline(always)]
-    pub fn yt(&self) -> YtR {
-        YtR::new(((self.bits >> 20) & 0x0f) as u8)
+    pub fn yt(&self) -> YT_R {
+        YT_R::new(((self.bits >> 20) & 0x0f) as u8)
+    }
+}
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DR")
+            .field("yt", &self.yt())
+            .field("yu", &self.yu())
+            .field("wdu", &self.wdu())
+            .field("mt", &self.mt())
+            .field("mu", &self.mu())
+            .field("dt", &self.dt())
+            .field("du", &self.du())
+            .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:3 - Date units in BCD format"]
     #[inline(always)]
-    pub fn du(&mut self) -> DuW<DrSpec> {
-        DuW::new(self, 0)
+    pub fn du(&mut self) -> DU_W<DRrs> {
+        DU_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - Date tens in BCD format"]
     #[inline(always)]
-    pub fn dt(&mut self) -> DtW<DrSpec> {
-        DtW::new(self, 4)
+    pub fn dt(&mut self) -> DT_W<DRrs> {
+        DT_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - Month units in BCD format"]
     #[inline(always)]
-    pub fn mu(&mut self) -> MuW<DrSpec> {
-        MuW::new(self, 8)
+    pub fn mu(&mut self) -> MU_W<DRrs> {
+        MU_W::new(self, 8)
     }
     #[doc = "Bit 12 - Month tens in BCD format"]
     #[inline(always)]
-    pub fn mt(&mut self) -> MtW<DrSpec> {
-        MtW::new(self, 12)
+    pub fn mt(&mut self) -> MT_W<DRrs> {
+        MT_W::new(self, 12)
     }
     #[doc = "Bits 13:15 - Week day units"]
     #[inline(always)]
-    pub fn wdu(&mut self) -> WduW<DrSpec> {
-        WduW::new(self, 13)
+    pub fn wdu(&mut self) -> WDU_W<DRrs> {
+        WDU_W::new(self, 13)
     }
     #[doc = "Bits 16:19 - Year units in BCD format"]
     #[inline(always)]
-    pub fn yu(&mut self) -> YuW<DrSpec> {
-        YuW::new(self, 16)
+    pub fn yu(&mut self) -> YU_W<DRrs> {
+        YU_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - Year tens in BCD format"]
     #[inline(always)]
-    pub fn yt(&mut self) -> YtW<DrSpec> {
-        YtW::new(self, 20)
+    pub fn yt(&mut self) -> YT_W<DRrs> {
+        YT_W::new(self, 20)
     }
 }
 #[doc = "date register\n\nYou can [`read`](crate::Reg::read) this register and get [`dr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct DrSpec;
-impl crate::RegisterSpec for DrSpec {
+pub struct DRrs;
+impl crate::RegisterSpec for DRrs {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`dr::R`](R) reader structure"]
-impl crate::Readable for DrSpec {}
+impl crate::Readable for DRrs {}
 #[doc = "`write(|w| ..)` method takes [`dr::W`](W) writer structure"]
-impl crate::Writable for DrSpec {
+impl crate::Writable for DRrs {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DR to value 0x2101"]
-impl crate::Resettable for DrSpec {
+impl crate::Resettable for DRrs {
     const RESET_VALUE: u32 = 0x2101;
 }

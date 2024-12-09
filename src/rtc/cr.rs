@@ -1,319 +1,346 @@
 #[doc = "Register `CR` reader"]
-pub type R = crate::R<CrSpec>;
+pub type R = crate::R<CRrs>;
 #[doc = "Register `CR` writer"]
-pub type W = crate::W<CrSpec>;
+pub type W = crate::W<CRrs>;
 #[doc = "Field `WCKSEL` reader - Wakeup clock selection"]
-pub type WckselR = crate::FieldReader;
+pub type WCKSEL_R = crate::FieldReader;
 #[doc = "Field `WCKSEL` writer - Wakeup clock selection"]
-pub type WckselW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+pub type WCKSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TSEDGE` reader - Time-stamp event active edge"]
-pub type TsedgeR = crate::BitReader;
+pub type TSEDGE_R = crate::BitReader;
 #[doc = "Field `TSEDGE` writer - Time-stamp event active edge"]
-pub type TsedgeW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TSEDGE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REFCKON` reader - Reference clock detection enable (50 or 60 Hz)"]
-pub type RefckonR = crate::BitReader;
+pub type REFCKON_R = crate::BitReader;
 #[doc = "Field `REFCKON` writer - Reference clock detection enable (50 or 60 Hz)"]
-pub type RefckonW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type REFCKON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BYPSHAD` reader - Bypass the shadow registers"]
-pub type BypshadR = crate::BitReader;
+pub type BYPSHAD_R = crate::BitReader;
 #[doc = "Field `BYPSHAD` writer - Bypass the shadow registers"]
-pub type BypshadW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type BYPSHAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FMT` reader - Hour format"]
-pub type FmtR = crate::BitReader;
+pub type FMT_R = crate::BitReader;
 #[doc = "Field `FMT` writer - Hour format"]
-pub type FmtW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type FMT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCE` reader - Coarse digital calibration enable"]
-pub type DceR = crate::BitReader;
+pub type DCE_R = crate::BitReader;
 #[doc = "Field `DCE` writer - Coarse digital calibration enable"]
-pub type DceW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type DCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALRAE` reader - Alarm A enable"]
-pub type AlraeR = crate::BitReader;
+pub type ALRAE_R = crate::BitReader;
 #[doc = "Field `ALRAE` writer - Alarm A enable"]
-pub type AlraeW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type ALRAE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALRBE` reader - Alarm B enable"]
-pub type AlrbeR = crate::BitReader;
+pub type ALRBE_R = crate::BitReader;
 #[doc = "Field `ALRBE` writer - Alarm B enable"]
-pub type AlrbeW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type ALRBE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WUTE` reader - Wakeup timer enable"]
-pub type WuteR = crate::BitReader;
+pub type WUTE_R = crate::BitReader;
 #[doc = "Field `WUTE` writer - Wakeup timer enable"]
-pub type WuteW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type WUTE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSE` reader - Time stamp enable"]
-pub type TseR = crate::BitReader;
+pub type TSE_R = crate::BitReader;
 #[doc = "Field `TSE` writer - Time stamp enable"]
-pub type TseW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALRAIE` reader - Alarm A interrupt enable"]
-pub type AlraieR = crate::BitReader;
+pub type ALRAIE_R = crate::BitReader;
 #[doc = "Field `ALRAIE` writer - Alarm A interrupt enable"]
-pub type AlraieW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type ALRAIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALRBIE` reader - Alarm B interrupt enable"]
-pub type AlrbieR = crate::BitReader;
+pub type ALRBIE_R = crate::BitReader;
 #[doc = "Field `ALRBIE` writer - Alarm B interrupt enable"]
-pub type AlrbieW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type ALRBIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WUTIE` reader - Wakeup timer interrupt enable"]
-pub type WutieR = crate::BitReader;
+pub type WUTIE_R = crate::BitReader;
 #[doc = "Field `WUTIE` writer - Wakeup timer interrupt enable"]
-pub type WutieW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type WUTIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSIE` reader - Time-stamp interrupt enable"]
-pub type TsieR = crate::BitReader;
+pub type TSIE_R = crate::BitReader;
 #[doc = "Field `TSIE` writer - Time-stamp interrupt enable"]
-pub type TsieW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TSIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADD1H` reader - Add 1 hour (summer time change)"]
-pub type Add1hR = crate::BitReader;
+pub type ADD1H_R = crate::BitReader;
 #[doc = "Field `ADD1H` writer - Add 1 hour (summer time change)"]
-pub type Add1hW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type ADD1H_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SUB1H` reader - Subtract 1 hour (winter time change)"]
-pub type Sub1hR = crate::BitReader;
+pub type SUB1H_R = crate::BitReader;
 #[doc = "Field `SUB1H` writer - Subtract 1 hour (winter time change)"]
-pub type Sub1hW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SUB1H_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BKP` reader - Backup"]
-pub type BkpR = crate::BitReader;
+pub type BKP_R = crate::BitReader;
 #[doc = "Field `BKP` writer - Backup"]
-pub type BkpW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type BKP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `COSEL` reader - Calibration Output selection"]
-pub type CoselR = crate::BitReader;
+pub type COSEL_R = crate::BitReader;
 #[doc = "Field `COSEL` writer - Calibration Output selection"]
-pub type CoselW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type COSEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `POL` reader - Output polarity"]
-pub type PolR = crate::BitReader;
+pub type POL_R = crate::BitReader;
 #[doc = "Field `POL` writer - Output polarity"]
-pub type PolW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type POL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OSEL` reader - Output selection"]
-pub type OselR = crate::FieldReader;
+pub type OSEL_R = crate::FieldReader;
 #[doc = "Field `OSEL` writer - Output selection"]
-pub type OselW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type OSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `COE` reader - Calibration output enable"]
-pub type CoeR = crate::BitReader;
+pub type COE_R = crate::BitReader;
 #[doc = "Field `COE` writer - Calibration output enable"]
-pub type CoeW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type COE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - Wakeup clock selection"]
     #[inline(always)]
-    pub fn wcksel(&self) -> WckselR {
-        WckselR::new((self.bits & 7) as u8)
+    pub fn wcksel(&self) -> WCKSEL_R {
+        WCKSEL_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bit 3 - Time-stamp event active edge"]
     #[inline(always)]
-    pub fn tsedge(&self) -> TsedgeR {
-        TsedgeR::new(((self.bits >> 3) & 1) != 0)
+    pub fn tsedge(&self) -> TSEDGE_R {
+        TSEDGE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Reference clock detection enable (50 or 60 Hz)"]
     #[inline(always)]
-    pub fn refckon(&self) -> RefckonR {
-        RefckonR::new(((self.bits >> 4) & 1) != 0)
+    pub fn refckon(&self) -> REFCKON_R {
+        REFCKON_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Bypass the shadow registers"]
     #[inline(always)]
-    pub fn bypshad(&self) -> BypshadR {
-        BypshadR::new(((self.bits >> 5) & 1) != 0)
+    pub fn bypshad(&self) -> BYPSHAD_R {
+        BYPSHAD_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Hour format"]
     #[inline(always)]
-    pub fn fmt(&self) -> FmtR {
-        FmtR::new(((self.bits >> 6) & 1) != 0)
+    pub fn fmt(&self) -> FMT_R {
+        FMT_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Coarse digital calibration enable"]
     #[inline(always)]
-    pub fn dce(&self) -> DceR {
-        DceR::new(((self.bits >> 7) & 1) != 0)
+    pub fn dce(&self) -> DCE_R {
+        DCE_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Alarm A enable"]
     #[inline(always)]
-    pub fn alrae(&self) -> AlraeR {
-        AlraeR::new(((self.bits >> 8) & 1) != 0)
+    pub fn alrae(&self) -> ALRAE_R {
+        ALRAE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Alarm B enable"]
     #[inline(always)]
-    pub fn alrbe(&self) -> AlrbeR {
-        AlrbeR::new(((self.bits >> 9) & 1) != 0)
+    pub fn alrbe(&self) -> ALRBE_R {
+        ALRBE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Wakeup timer enable"]
     #[inline(always)]
-    pub fn wute(&self) -> WuteR {
-        WuteR::new(((self.bits >> 10) & 1) != 0)
+    pub fn wute(&self) -> WUTE_R {
+        WUTE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Time stamp enable"]
     #[inline(always)]
-    pub fn tse(&self) -> TseR {
-        TseR::new(((self.bits >> 11) & 1) != 0)
+    pub fn tse(&self) -> TSE_R {
+        TSE_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Alarm A interrupt enable"]
     #[inline(always)]
-    pub fn alraie(&self) -> AlraieR {
-        AlraieR::new(((self.bits >> 12) & 1) != 0)
+    pub fn alraie(&self) -> ALRAIE_R {
+        ALRAIE_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Alarm B interrupt enable"]
     #[inline(always)]
-    pub fn alrbie(&self) -> AlrbieR {
-        AlrbieR::new(((self.bits >> 13) & 1) != 0)
+    pub fn alrbie(&self) -> ALRBIE_R {
+        ALRBIE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Wakeup timer interrupt enable"]
     #[inline(always)]
-    pub fn wutie(&self) -> WutieR {
-        WutieR::new(((self.bits >> 14) & 1) != 0)
+    pub fn wutie(&self) -> WUTIE_R {
+        WUTIE_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Time-stamp interrupt enable"]
     #[inline(always)]
-    pub fn tsie(&self) -> TsieR {
-        TsieR::new(((self.bits >> 15) & 1) != 0)
+    pub fn tsie(&self) -> TSIE_R {
+        TSIE_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Add 1 hour (summer time change)"]
     #[inline(always)]
-    pub fn add1h(&self) -> Add1hR {
-        Add1hR::new(((self.bits >> 16) & 1) != 0)
+    pub fn add1h(&self) -> ADD1H_R {
+        ADD1H_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Subtract 1 hour (winter time change)"]
     #[inline(always)]
-    pub fn sub1h(&self) -> Sub1hR {
-        Sub1hR::new(((self.bits >> 17) & 1) != 0)
+    pub fn sub1h(&self) -> SUB1H_R {
+        SUB1H_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Backup"]
     #[inline(always)]
-    pub fn bkp(&self) -> BkpR {
-        BkpR::new(((self.bits >> 18) & 1) != 0)
+    pub fn bkp(&self) -> BKP_R {
+        BKP_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Calibration Output selection"]
     #[inline(always)]
-    pub fn cosel(&self) -> CoselR {
-        CoselR::new(((self.bits >> 19) & 1) != 0)
+    pub fn cosel(&self) -> COSEL_R {
+        COSEL_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Output polarity"]
     #[inline(always)]
-    pub fn pol(&self) -> PolR {
-        PolR::new(((self.bits >> 20) & 1) != 0)
+    pub fn pol(&self) -> POL_R {
+        POL_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bits 21:22 - Output selection"]
     #[inline(always)]
-    pub fn osel(&self) -> OselR {
-        OselR::new(((self.bits >> 21) & 3) as u8)
+    pub fn osel(&self) -> OSEL_R {
+        OSEL_R::new(((self.bits >> 21) & 3) as u8)
     }
     #[doc = "Bit 23 - Calibration output enable"]
     #[inline(always)]
-    pub fn coe(&self) -> CoeR {
-        CoeR::new(((self.bits >> 23) & 1) != 0)
+    pub fn coe(&self) -> COE_R {
+        COE_R::new(((self.bits >> 23) & 1) != 0)
+    }
+}
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CR")
+            .field("coe", &self.coe())
+            .field("osel", &self.osel())
+            .field("pol", &self.pol())
+            .field("cosel", &self.cosel())
+            .field("bkp", &self.bkp())
+            .field("sub1h", &self.sub1h())
+            .field("add1h", &self.add1h())
+            .field("tsie", &self.tsie())
+            .field("wutie", &self.wutie())
+            .field("alrbie", &self.alrbie())
+            .field("alraie", &self.alraie())
+            .field("tse", &self.tse())
+            .field("wute", &self.wute())
+            .field("alrbe", &self.alrbe())
+            .field("alrae", &self.alrae())
+            .field("dce", &self.dce())
+            .field("fmt", &self.fmt())
+            .field("bypshad", &self.bypshad())
+            .field("refckon", &self.refckon())
+            .field("tsedge", &self.tsedge())
+            .field("wcksel", &self.wcksel())
+            .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:2 - Wakeup clock selection"]
     #[inline(always)]
-    pub fn wcksel(&mut self) -> WckselW<CrSpec> {
-        WckselW::new(self, 0)
+    pub fn wcksel(&mut self) -> WCKSEL_W<CRrs> {
+        WCKSEL_W::new(self, 0)
     }
     #[doc = "Bit 3 - Time-stamp event active edge"]
     #[inline(always)]
-    pub fn tsedge(&mut self) -> TsedgeW<CrSpec> {
-        TsedgeW::new(self, 3)
+    pub fn tsedge(&mut self) -> TSEDGE_W<CRrs> {
+        TSEDGE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Reference clock detection enable (50 or 60 Hz)"]
     #[inline(always)]
-    pub fn refckon(&mut self) -> RefckonW<CrSpec> {
-        RefckonW::new(self, 4)
+    pub fn refckon(&mut self) -> REFCKON_W<CRrs> {
+        REFCKON_W::new(self, 4)
     }
     #[doc = "Bit 5 - Bypass the shadow registers"]
     #[inline(always)]
-    pub fn bypshad(&mut self) -> BypshadW<CrSpec> {
-        BypshadW::new(self, 5)
+    pub fn bypshad(&mut self) -> BYPSHAD_W<CRrs> {
+        BYPSHAD_W::new(self, 5)
     }
     #[doc = "Bit 6 - Hour format"]
     #[inline(always)]
-    pub fn fmt(&mut self) -> FmtW<CrSpec> {
-        FmtW::new(self, 6)
+    pub fn fmt(&mut self) -> FMT_W<CRrs> {
+        FMT_W::new(self, 6)
     }
     #[doc = "Bit 7 - Coarse digital calibration enable"]
     #[inline(always)]
-    pub fn dce(&mut self) -> DceW<CrSpec> {
-        DceW::new(self, 7)
+    pub fn dce(&mut self) -> DCE_W<CRrs> {
+        DCE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Alarm A enable"]
     #[inline(always)]
-    pub fn alrae(&mut self) -> AlraeW<CrSpec> {
-        AlraeW::new(self, 8)
+    pub fn alrae(&mut self) -> ALRAE_W<CRrs> {
+        ALRAE_W::new(self, 8)
     }
     #[doc = "Bit 9 - Alarm B enable"]
     #[inline(always)]
-    pub fn alrbe(&mut self) -> AlrbeW<CrSpec> {
-        AlrbeW::new(self, 9)
+    pub fn alrbe(&mut self) -> ALRBE_W<CRrs> {
+        ALRBE_W::new(self, 9)
     }
     #[doc = "Bit 10 - Wakeup timer enable"]
     #[inline(always)]
-    pub fn wute(&mut self) -> WuteW<CrSpec> {
-        WuteW::new(self, 10)
+    pub fn wute(&mut self) -> WUTE_W<CRrs> {
+        WUTE_W::new(self, 10)
     }
     #[doc = "Bit 11 - Time stamp enable"]
     #[inline(always)]
-    pub fn tse(&mut self) -> TseW<CrSpec> {
-        TseW::new(self, 11)
+    pub fn tse(&mut self) -> TSE_W<CRrs> {
+        TSE_W::new(self, 11)
     }
     #[doc = "Bit 12 - Alarm A interrupt enable"]
     #[inline(always)]
-    pub fn alraie(&mut self) -> AlraieW<CrSpec> {
-        AlraieW::new(self, 12)
+    pub fn alraie(&mut self) -> ALRAIE_W<CRrs> {
+        ALRAIE_W::new(self, 12)
     }
     #[doc = "Bit 13 - Alarm B interrupt enable"]
     #[inline(always)]
-    pub fn alrbie(&mut self) -> AlrbieW<CrSpec> {
-        AlrbieW::new(self, 13)
+    pub fn alrbie(&mut self) -> ALRBIE_W<CRrs> {
+        ALRBIE_W::new(self, 13)
     }
     #[doc = "Bit 14 - Wakeup timer interrupt enable"]
     #[inline(always)]
-    pub fn wutie(&mut self) -> WutieW<CrSpec> {
-        WutieW::new(self, 14)
+    pub fn wutie(&mut self) -> WUTIE_W<CRrs> {
+        WUTIE_W::new(self, 14)
     }
     #[doc = "Bit 15 - Time-stamp interrupt enable"]
     #[inline(always)]
-    pub fn tsie(&mut self) -> TsieW<CrSpec> {
-        TsieW::new(self, 15)
+    pub fn tsie(&mut self) -> TSIE_W<CRrs> {
+        TSIE_W::new(self, 15)
     }
     #[doc = "Bit 16 - Add 1 hour (summer time change)"]
     #[inline(always)]
-    pub fn add1h(&mut self) -> Add1hW<CrSpec> {
-        Add1hW::new(self, 16)
+    pub fn add1h(&mut self) -> ADD1H_W<CRrs> {
+        ADD1H_W::new(self, 16)
     }
     #[doc = "Bit 17 - Subtract 1 hour (winter time change)"]
     #[inline(always)]
-    pub fn sub1h(&mut self) -> Sub1hW<CrSpec> {
-        Sub1hW::new(self, 17)
+    pub fn sub1h(&mut self) -> SUB1H_W<CRrs> {
+        SUB1H_W::new(self, 17)
     }
     #[doc = "Bit 18 - Backup"]
     #[inline(always)]
-    pub fn bkp(&mut self) -> BkpW<CrSpec> {
-        BkpW::new(self, 18)
+    pub fn bkp(&mut self) -> BKP_W<CRrs> {
+        BKP_W::new(self, 18)
     }
     #[doc = "Bit 19 - Calibration Output selection"]
     #[inline(always)]
-    pub fn cosel(&mut self) -> CoselW<CrSpec> {
-        CoselW::new(self, 19)
+    pub fn cosel(&mut self) -> COSEL_W<CRrs> {
+        COSEL_W::new(self, 19)
     }
     #[doc = "Bit 20 - Output polarity"]
     #[inline(always)]
-    pub fn pol(&mut self) -> PolW<CrSpec> {
-        PolW::new(self, 20)
+    pub fn pol(&mut self) -> POL_W<CRrs> {
+        POL_W::new(self, 20)
     }
     #[doc = "Bits 21:22 - Output selection"]
     #[inline(always)]
-    pub fn osel(&mut self) -> OselW<CrSpec> {
-        OselW::new(self, 21)
+    pub fn osel(&mut self) -> OSEL_W<CRrs> {
+        OSEL_W::new(self, 21)
     }
     #[doc = "Bit 23 - Calibration output enable"]
     #[inline(always)]
-    pub fn coe(&mut self) -> CoeW<CrSpec> {
-        CoeW::new(self, 23)
+    pub fn coe(&mut self) -> COE_W<CRrs> {
+        COE_W::new(self, 23)
     }
 }
 #[doc = "control register\n\nYou can [`read`](crate::Reg::read) this register and get [`cr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct CrSpec;
-impl crate::RegisterSpec for CrSpec {
+pub struct CRrs;
+impl crate::RegisterSpec for CRrs {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`cr::R`](R) reader structure"]
-impl crate::Readable for CrSpec {}
+impl crate::Readable for CRrs {}
 #[doc = "`write(|w| ..)` method takes [`cr::W`](W) writer structure"]
-impl crate::Writable for CrSpec {
+impl crate::Writable for CRrs {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR to value 0"]
-impl crate::Resettable for CrSpec {
+impl crate::Resettable for CRrs {
     const RESET_VALUE: u32 = 0;
 }

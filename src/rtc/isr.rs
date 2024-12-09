@@ -1,207 +1,229 @@
 #[doc = "Register `ISR` reader"]
-pub type R = crate::R<IsrSpec>;
+pub type R = crate::R<ISRrs>;
 #[doc = "Register `ISR` writer"]
-pub type W = crate::W<IsrSpec>;
+pub type W = crate::W<ISRrs>;
 #[doc = "Field `ALRAWF` reader - Alarm A write flag"]
-pub type AlrawfR = crate::BitReader;
+pub type ALRAWF_R = crate::BitReader;
 #[doc = "Field `ALRBWF` reader - Alarm B write flag"]
-pub type AlrbwfR = crate::BitReader;
+pub type ALRBWF_R = crate::BitReader;
 #[doc = "Field `WUTWF` reader - Wakeup timer write flag"]
-pub type WutwfR = crate::BitReader;
+pub type WUTWF_R = crate::BitReader;
 #[doc = "Field `SHPF` reader - Shift operation pending"]
-pub type ShpfR = crate::BitReader;
+pub type SHPF_R = crate::BitReader;
 #[doc = "Field `SHPF` writer - Shift operation pending"]
-pub type ShpfW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SHPF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INITS` reader - Initialization status flag"]
-pub type InitsR = crate::BitReader;
+pub type INITS_R = crate::BitReader;
 #[doc = "Field `RSF` reader - Registers synchronization flag"]
-pub type RsfR = crate::BitReader;
+pub type RSF_R = crate::BitReader;
 #[doc = "Field `RSF` writer - Registers synchronization flag"]
-pub type RsfW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type RSF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INITF` reader - Initialization flag"]
-pub type InitfR = crate::BitReader;
+pub type INITF_R = crate::BitReader;
 #[doc = "Field `INIT` reader - Initialization mode"]
-pub type InitR = crate::BitReader;
+pub type INIT_R = crate::BitReader;
 #[doc = "Field `INIT` writer - Initialization mode"]
-pub type InitW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type INIT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALRAF` reader - Alarm A flag"]
-pub type AlrafR = crate::BitReader;
+pub type ALRAF_R = crate::BitReader;
 #[doc = "Field `ALRAF` writer - Alarm A flag"]
-pub type AlrafW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type ALRAF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALRBF` reader - Alarm B flag"]
-pub type AlrbfR = crate::BitReader;
+pub type ALRBF_R = crate::BitReader;
 #[doc = "Field `ALRBF` writer - Alarm B flag"]
-pub type AlrbfW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type ALRBF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WUTF` reader - Wakeup timer flag"]
-pub type WutfR = crate::BitReader;
+pub type WUTF_R = crate::BitReader;
 #[doc = "Field `WUTF` writer - Wakeup timer flag"]
-pub type WutfW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type WUTF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSF` reader - Time-stamp flag"]
-pub type TsfR = crate::BitReader;
+pub type TSF_R = crate::BitReader;
 #[doc = "Field `TSF` writer - Time-stamp flag"]
-pub type TsfW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TSF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSOVF` reader - Time-stamp overflow flag"]
-pub type TsovfR = crate::BitReader;
+pub type TSOVF_R = crate::BitReader;
 #[doc = "Field `TSOVF` writer - Time-stamp overflow flag"]
-pub type TsovfW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TSOVF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TAMP1F` reader - Tamper detection flag"]
-pub type Tamp1fR = crate::BitReader;
+pub type TAMP1F_R = crate::BitReader;
 #[doc = "Field `TAMP1F` writer - Tamper detection flag"]
-pub type Tamp1fW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TAMP1F_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TAMP2F` reader - TAMPER2 detection flag"]
-pub type Tamp2fR = crate::BitReader;
+pub type TAMP2F_R = crate::BitReader;
 #[doc = "Field `TAMP2F` writer - TAMPER2 detection flag"]
-pub type Tamp2fW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TAMP2F_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECALPF` reader - Recalibration pending Flag"]
-pub type RecalpfR = crate::BitReader;
+pub type RECALPF_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Alarm A write flag"]
     #[inline(always)]
-    pub fn alrawf(&self) -> AlrawfR {
-        AlrawfR::new((self.bits & 1) != 0)
+    pub fn alrawf(&self) -> ALRAWF_R {
+        ALRAWF_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Alarm B write flag"]
     #[inline(always)]
-    pub fn alrbwf(&self) -> AlrbwfR {
-        AlrbwfR::new(((self.bits >> 1) & 1) != 0)
+    pub fn alrbwf(&self) -> ALRBWF_R {
+        ALRBWF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Wakeup timer write flag"]
     #[inline(always)]
-    pub fn wutwf(&self) -> WutwfR {
-        WutwfR::new(((self.bits >> 2) & 1) != 0)
+    pub fn wutwf(&self) -> WUTWF_R {
+        WUTWF_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Shift operation pending"]
     #[inline(always)]
-    pub fn shpf(&self) -> ShpfR {
-        ShpfR::new(((self.bits >> 3) & 1) != 0)
+    pub fn shpf(&self) -> SHPF_R {
+        SHPF_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Initialization status flag"]
     #[inline(always)]
-    pub fn inits(&self) -> InitsR {
-        InitsR::new(((self.bits >> 4) & 1) != 0)
+    pub fn inits(&self) -> INITS_R {
+        INITS_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Registers synchronization flag"]
     #[inline(always)]
-    pub fn rsf(&self) -> RsfR {
-        RsfR::new(((self.bits >> 5) & 1) != 0)
+    pub fn rsf(&self) -> RSF_R {
+        RSF_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Initialization flag"]
     #[inline(always)]
-    pub fn initf(&self) -> InitfR {
-        InitfR::new(((self.bits >> 6) & 1) != 0)
+    pub fn initf(&self) -> INITF_R {
+        INITF_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Initialization mode"]
     #[inline(always)]
-    pub fn init(&self) -> InitR {
-        InitR::new(((self.bits >> 7) & 1) != 0)
+    pub fn init(&self) -> INIT_R {
+        INIT_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Alarm A flag"]
     #[inline(always)]
-    pub fn alraf(&self) -> AlrafR {
-        AlrafR::new(((self.bits >> 8) & 1) != 0)
+    pub fn alraf(&self) -> ALRAF_R {
+        ALRAF_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Alarm B flag"]
     #[inline(always)]
-    pub fn alrbf(&self) -> AlrbfR {
-        AlrbfR::new(((self.bits >> 9) & 1) != 0)
+    pub fn alrbf(&self) -> ALRBF_R {
+        ALRBF_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Wakeup timer flag"]
     #[inline(always)]
-    pub fn wutf(&self) -> WutfR {
-        WutfR::new(((self.bits >> 10) & 1) != 0)
+    pub fn wutf(&self) -> WUTF_R {
+        WUTF_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Time-stamp flag"]
     #[inline(always)]
-    pub fn tsf(&self) -> TsfR {
-        TsfR::new(((self.bits >> 11) & 1) != 0)
+    pub fn tsf(&self) -> TSF_R {
+        TSF_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Time-stamp overflow flag"]
     #[inline(always)]
-    pub fn tsovf(&self) -> TsovfR {
-        TsovfR::new(((self.bits >> 12) & 1) != 0)
+    pub fn tsovf(&self) -> TSOVF_R {
+        TSOVF_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Tamper detection flag"]
     #[inline(always)]
-    pub fn tamp1f(&self) -> Tamp1fR {
-        Tamp1fR::new(((self.bits >> 13) & 1) != 0)
+    pub fn tamp1f(&self) -> TAMP1F_R {
+        TAMP1F_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - TAMPER2 detection flag"]
     #[inline(always)]
-    pub fn tamp2f(&self) -> Tamp2fR {
-        Tamp2fR::new(((self.bits >> 14) & 1) != 0)
+    pub fn tamp2f(&self) -> TAMP2F_R {
+        TAMP2F_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 16 - Recalibration pending Flag"]
     #[inline(always)]
-    pub fn recalpf(&self) -> RecalpfR {
-        RecalpfR::new(((self.bits >> 16) & 1) != 0)
+    pub fn recalpf(&self) -> RECALPF_R {
+        RECALPF_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ISR")
+            .field("alrawf", &self.alrawf())
+            .field("alrbwf", &self.alrbwf())
+            .field("wutwf", &self.wutwf())
+            .field("shpf", &self.shpf())
+            .field("inits", &self.inits())
+            .field("rsf", &self.rsf())
+            .field("initf", &self.initf())
+            .field("init", &self.init())
+            .field("alraf", &self.alraf())
+            .field("alrbf", &self.alrbf())
+            .field("wutf", &self.wutf())
+            .field("tsf", &self.tsf())
+            .field("tsovf", &self.tsovf())
+            .field("tamp1f", &self.tamp1f())
+            .field("tamp2f", &self.tamp2f())
+            .field("recalpf", &self.recalpf())
+            .finish()
     }
 }
 impl W {
     #[doc = "Bit 3 - Shift operation pending"]
     #[inline(always)]
-    pub fn shpf(&mut self) -> ShpfW<IsrSpec> {
-        ShpfW::new(self, 3)
+    pub fn shpf(&mut self) -> SHPF_W<ISRrs> {
+        SHPF_W::new(self, 3)
     }
     #[doc = "Bit 5 - Registers synchronization flag"]
     #[inline(always)]
-    pub fn rsf(&mut self) -> RsfW<IsrSpec> {
-        RsfW::new(self, 5)
+    pub fn rsf(&mut self) -> RSF_W<ISRrs> {
+        RSF_W::new(self, 5)
     }
     #[doc = "Bit 7 - Initialization mode"]
     #[inline(always)]
-    pub fn init(&mut self) -> InitW<IsrSpec> {
-        InitW::new(self, 7)
+    pub fn init(&mut self) -> INIT_W<ISRrs> {
+        INIT_W::new(self, 7)
     }
     #[doc = "Bit 8 - Alarm A flag"]
     #[inline(always)]
-    pub fn alraf(&mut self) -> AlrafW<IsrSpec> {
-        AlrafW::new(self, 8)
+    pub fn alraf(&mut self) -> ALRAF_W<ISRrs> {
+        ALRAF_W::new(self, 8)
     }
     #[doc = "Bit 9 - Alarm B flag"]
     #[inline(always)]
-    pub fn alrbf(&mut self) -> AlrbfW<IsrSpec> {
-        AlrbfW::new(self, 9)
+    pub fn alrbf(&mut self) -> ALRBF_W<ISRrs> {
+        ALRBF_W::new(self, 9)
     }
     #[doc = "Bit 10 - Wakeup timer flag"]
     #[inline(always)]
-    pub fn wutf(&mut self) -> WutfW<IsrSpec> {
-        WutfW::new(self, 10)
+    pub fn wutf(&mut self) -> WUTF_W<ISRrs> {
+        WUTF_W::new(self, 10)
     }
     #[doc = "Bit 11 - Time-stamp flag"]
     #[inline(always)]
-    pub fn tsf(&mut self) -> TsfW<IsrSpec> {
-        TsfW::new(self, 11)
+    pub fn tsf(&mut self) -> TSF_W<ISRrs> {
+        TSF_W::new(self, 11)
     }
     #[doc = "Bit 12 - Time-stamp overflow flag"]
     #[inline(always)]
-    pub fn tsovf(&mut self) -> TsovfW<IsrSpec> {
-        TsovfW::new(self, 12)
+    pub fn tsovf(&mut self) -> TSOVF_W<ISRrs> {
+        TSOVF_W::new(self, 12)
     }
     #[doc = "Bit 13 - Tamper detection flag"]
     #[inline(always)]
-    pub fn tamp1f(&mut self) -> Tamp1fW<IsrSpec> {
-        Tamp1fW::new(self, 13)
+    pub fn tamp1f(&mut self) -> TAMP1F_W<ISRrs> {
+        TAMP1F_W::new(self, 13)
     }
     #[doc = "Bit 14 - TAMPER2 detection flag"]
     #[inline(always)]
-    pub fn tamp2f(&mut self) -> Tamp2fW<IsrSpec> {
-        Tamp2fW::new(self, 14)
+    pub fn tamp2f(&mut self) -> TAMP2F_W<ISRrs> {
+        TAMP2F_W::new(self, 14)
     }
 }
 #[doc = "initialization and status register\n\nYou can [`read`](crate::Reg::read) this register and get [`isr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`isr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct IsrSpec;
-impl crate::RegisterSpec for IsrSpec {
+pub struct ISRrs;
+impl crate::RegisterSpec for ISRrs {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`isr::R`](R) reader structure"]
-impl crate::Readable for IsrSpec {}
+impl crate::Readable for ISRrs {}
 #[doc = "`write(|w| ..)` method takes [`isr::W`](W) writer structure"]
-impl crate::Writable for IsrSpec {
+impl crate::Writable for ISRrs {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ISR to value 0x07"]
-impl crate::Resettable for IsrSpec {
+impl crate::Resettable for ISRrs {
     const RESET_VALUE: u32 = 0x07;
 }

@@ -1,64 +1,77 @@
 #[doc = "Register `TSTR` reader"]
-pub type R = crate::R<TstrSpec>;
+pub type R = crate::R<TSTRrs>;
 #[doc = "Field `SU` reader - Second units in BCD format"]
-pub type SuR = crate::FieldReader;
+pub type SU_R = crate::FieldReader;
 #[doc = "Field `ST` reader - Second tens in BCD format"]
-pub type StR = crate::FieldReader;
+pub type ST_R = crate::FieldReader;
 #[doc = "Field `MNU` reader - Minute units in BCD format"]
-pub type MnuR = crate::FieldReader;
+pub type MNU_R = crate::FieldReader;
 #[doc = "Field `MNT` reader - Minute tens in BCD format"]
-pub type MntR = crate::FieldReader;
+pub type MNT_R = crate::FieldReader;
 #[doc = "Field `HU` reader - Hour units in BCD format"]
-pub type HuR = crate::FieldReader;
+pub type HU_R = crate::FieldReader;
 #[doc = "Field `HT` reader - Hour tens in BCD format"]
-pub type HtR = crate::FieldReader;
+pub type HT_R = crate::FieldReader;
 #[doc = "Field `PM` reader - AM/PM notation"]
-pub type PmR = crate::BitReader;
+pub type PM_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:3 - Second units in BCD format"]
     #[inline(always)]
-    pub fn su(&self) -> SuR {
-        SuR::new((self.bits & 0x0f) as u8)
+    pub fn su(&self) -> SU_R {
+        SU_R::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bits 4:6 - Second tens in BCD format"]
     #[inline(always)]
-    pub fn st(&self) -> StR {
-        StR::new(((self.bits >> 4) & 7) as u8)
+    pub fn st(&self) -> ST_R {
+        ST_R::new(((self.bits >> 4) & 7) as u8)
     }
     #[doc = "Bits 8:11 - Minute units in BCD format"]
     #[inline(always)]
-    pub fn mnu(&self) -> MnuR {
-        MnuR::new(((self.bits >> 8) & 0x0f) as u8)
+    pub fn mnu(&self) -> MNU_R {
+        MNU_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
     #[doc = "Bits 12:14 - Minute tens in BCD format"]
     #[inline(always)]
-    pub fn mnt(&self) -> MntR {
-        MntR::new(((self.bits >> 12) & 7) as u8)
+    pub fn mnt(&self) -> MNT_R {
+        MNT_R::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Bits 16:19 - Hour units in BCD format"]
     #[inline(always)]
-    pub fn hu(&self) -> HuR {
-        HuR::new(((self.bits >> 16) & 0x0f) as u8)
+    pub fn hu(&self) -> HU_R {
+        HU_R::new(((self.bits >> 16) & 0x0f) as u8)
     }
     #[doc = "Bits 20:21 - Hour tens in BCD format"]
     #[inline(always)]
-    pub fn ht(&self) -> HtR {
-        HtR::new(((self.bits >> 20) & 3) as u8)
+    pub fn ht(&self) -> HT_R {
+        HT_R::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bit 22 - AM/PM notation"]
     #[inline(always)]
-    pub fn pm(&self) -> PmR {
-        PmR::new(((self.bits >> 22) & 1) != 0)
+    pub fn pm(&self) -> PM_R {
+        PM_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TSTR")
+            .field("pm", &self.pm())
+            .field("ht", &self.ht())
+            .field("hu", &self.hu())
+            .field("mnt", &self.mnt())
+            .field("mnu", &self.mnu())
+            .field("st", &self.st())
+            .field("su", &self.su())
+            .finish()
     }
 }
 #[doc = "time stamp time register\n\nYou can [`read`](crate::Reg::read) this register and get [`tstr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct TstrSpec;
-impl crate::RegisterSpec for TstrSpec {
+pub struct TSTRrs;
+impl crate::RegisterSpec for TSTRrs {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`tstr::R`](R) reader structure"]
-impl crate::Readable for TstrSpec {}
+impl crate::Readable for TSTRrs {}
 #[doc = "`reset()` method sets TSTR to value 0"]
-impl crate::Resettable for TstrSpec {
+impl crate::Resettable for TSTRrs {
     const RESET_VALUE: u32 = 0;
 }

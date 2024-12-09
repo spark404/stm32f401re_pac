@@ -1,22 +1,29 @@
 #[doc = "Register `DTXFSTS0` reader"]
-pub type R = crate::R<Dtxfsts0Spec>;
+pub type R = crate::R<DTXFSTS0rs>;
 #[doc = "Field `INEPTFSAV` reader - IN endpoint TxFIFO space available"]
-pub type IneptfsavR = crate::FieldReader<u16>;
+pub type INEPTFSAV_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - IN endpoint TxFIFO space available"]
     #[inline(always)]
-    pub fn ineptfsav(&self) -> IneptfsavR {
-        IneptfsavR::new((self.bits & 0xffff) as u16)
+    pub fn ineptfsav(&self) -> INEPTFSAV_R {
+        INEPTFSAV_R::new((self.bits & 0xffff) as u16)
+    }
+}
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DTXFSTS0")
+            .field("ineptfsav", &self.ineptfsav())
+            .finish()
     }
 }
 #[doc = "OTG_FS device IN endpoint transmit FIFO status register\n\nYou can [`read`](crate::Reg::read) this register and get [`dtxfsts0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct Dtxfsts0Spec;
-impl crate::RegisterSpec for Dtxfsts0Spec {
+pub struct DTXFSTS0rs;
+impl crate::RegisterSpec for DTXFSTS0rs {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`dtxfsts0::R`](R) reader structure"]
-impl crate::Readable for Dtxfsts0Spec {}
+impl crate::Readable for DTXFSTS0rs {}
 #[doc = "`reset()` method sets DTXFSTS0 to value 0"]
-impl crate::Resettable for Dtxfsts0Spec {
+impl crate::Resettable for DTXFSTS0rs {
     const RESET_VALUE: u32 = 0;
 }

@@ -728,3 +728,5 @@ where
         core::fmt::Debug::fmt(&self.read(), f)
     }
 }
+#[cfg(feature = "atomics")]
+mod atomic;

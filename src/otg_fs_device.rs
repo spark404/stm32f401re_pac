@@ -1,493 +1,456 @@
 #[repr(C)]
+#[derive(Debug)]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    fs_dcfg: FsDcfg,
-    fs_dctl: FsDctl,
-    fs_dsts: FsDsts,
+    fs_dcfg: FS_DCFG,
+    fs_dctl: FS_DCTL,
+    fs_dsts: FS_DSTS,
     _reserved3: [u8; 0x04],
-    fs_diepmsk: FsDiepmsk,
-    fs_doepmsk: FsDoepmsk,
-    fs_daint: FsDaint,
-    fs_daintmsk: FsDaintmsk,
+    fs_diepmsk: FS_DIEPMSK,
+    fs_doepmsk: FS_DOEPMSK,
+    fs_daint: FS_DAINT,
+    fs_daintmsk: FS_DAINTMSK,
     _reserved7: [u8; 0x08],
-    dvbusdis: Dvbusdis,
-    dvbuspulse: Dvbuspulse,
+    dvbusdis: DVBUSDIS,
+    dvbuspulse: DVBUSPULSE,
     _reserved9: [u8; 0x04],
-    diepempmsk: Diepempmsk,
+    diepempmsk: DIEPEMPMSK,
     _reserved10: [u8; 0xc8],
-    fs_diepctl0: FsDiepctl0,
+    fs_diepctl0: FS_DIEPCTL0,
     _reserved11: [u8; 0x04],
-    diepint0: Diepint0,
+    diepint0: DIEPINT0,
     _reserved12: [u8; 0x04],
-    dieptsiz0: Dieptsiz0,
+    dieptsiz0: DIEPTSIZ0,
     _reserved13: [u8; 0x04],
-    dtxfsts0: Dtxfsts0,
+    dtxfsts0: DTXFSTS0,
     _reserved14: [u8; 0x04],
-    diepctl1: Diepctl1,
+    diepctl1: DIEPCTL1,
     _reserved15: [u8; 0x04],
-    diepint1: Diepint1,
+    diepint1: DIEPINT1,
     _reserved16: [u8; 0x04],
-    dieptsiz1: Dieptsiz1,
+    dieptsiz1: DIEPTSIZ1,
     _reserved17: [u8; 0x04],
-    dtxfsts1: Dtxfsts1,
+    dtxfsts1: DTXFSTS1,
     _reserved18: [u8; 0x04],
-    diepctl2: Diepctl2,
+    diepctl2: DIEPCTL2,
     _reserved19: [u8; 0x04],
-    diepint2: Diepint2,
+    diepint2: DIEPINT2,
     _reserved20: [u8; 0x04],
-    dieptsiz2: Dieptsiz2,
+    dieptsiz2: DIEPTSIZ2,
     _reserved21: [u8; 0x04],
-    dtxfsts2: Dtxfsts2,
+    dtxfsts2: DTXFSTS2,
     _reserved22: [u8; 0x04],
-    diepctl3: Diepctl3,
+    diepctl3: DIEPCTL3,
     _reserved23: [u8; 0x04],
-    diepint3: Diepint3,
+    diepint3: DIEPINT3,
     _reserved24: [u8; 0x04],
-    dieptsiz3: Dieptsiz3,
+    dieptsiz3: DIEPTSIZ3,
     _reserved25: [u8; 0x04],
-    dtxfsts3: Dtxfsts3,
+    dtxfsts3: DTXFSTS3,
     _reserved26: [u8; 0x0184],
-    doepctl0: Doepctl0,
+    doepctl0: DOEPCTL0,
     _reserved27: [u8; 0x04],
-    doepint0: Doepint0,
+    doepint0: DOEPINT0,
     _reserved28: [u8; 0x04],
-    doeptsiz0: Doeptsiz0,
+    doeptsiz0: DOEPTSIZ0,
     _reserved29: [u8; 0x0c],
-    doepctl1: Doepctl1,
+    doepctl1: DOEPCTL1,
     _reserved30: [u8; 0x04],
-    doepint1: Doepint1,
+    doepint1: DOEPINT1,
     _reserved31: [u8; 0x04],
-    doeptsiz1: Doeptsiz1,
+    doeptsiz1: DOEPTSIZ1,
     _reserved32: [u8; 0x0c],
-    doepctl2: Doepctl2,
+    doepctl2: DOEPCTL2,
     _reserved33: [u8; 0x04],
-    doepint2: Doepint2,
+    doepint2: DOEPINT2,
     _reserved34: [u8; 0x04],
-    doeptsiz2: Doeptsiz2,
+    doeptsiz2: DOEPTSIZ2,
     _reserved35: [u8; 0x0c],
-    doepctl3: Doepctl3,
+    doepctl3: DOEPCTL3,
     _reserved36: [u8; 0x04],
-    doepint3: Doepint3,
+    doepint3: DOEPINT3,
     _reserved37: [u8; 0x04],
-    doeptsiz3: Doeptsiz3,
+    doeptsiz3: DOEPTSIZ3,
 }
 impl RegisterBlock {
     #[doc = "0x00 - OTG_FS device configuration register (OTG_FS_DCFG)"]
     #[inline(always)]
-    pub const fn fs_dcfg(&self) -> &FsDcfg {
+    pub const fn fs_dcfg(&self) -> &FS_DCFG {
         &self.fs_dcfg
     }
     #[doc = "0x04 - OTG_FS device control register (OTG_FS_DCTL)"]
     #[inline(always)]
-    pub const fn fs_dctl(&self) -> &FsDctl {
+    pub const fn fs_dctl(&self) -> &FS_DCTL {
         &self.fs_dctl
     }
     #[doc = "0x08 - OTG_FS device status register (OTG_FS_DSTS)"]
     #[inline(always)]
-    pub const fn fs_dsts(&self) -> &FsDsts {
+    pub const fn fs_dsts(&self) -> &FS_DSTS {
         &self.fs_dsts
     }
     #[doc = "0x10 - OTG_FS device IN endpoint common interrupt mask register (OTG_FS_DIEPMSK)"]
     #[inline(always)]
-    pub const fn fs_diepmsk(&self) -> &FsDiepmsk {
+    pub const fn fs_diepmsk(&self) -> &FS_DIEPMSK {
         &self.fs_diepmsk
     }
     #[doc = "0x14 - OTG_FS device OUT endpoint common interrupt mask register (OTG_FS_DOEPMSK)"]
     #[inline(always)]
-    pub const fn fs_doepmsk(&self) -> &FsDoepmsk {
+    pub const fn fs_doepmsk(&self) -> &FS_DOEPMSK {
         &self.fs_doepmsk
     }
     #[doc = "0x18 - OTG_FS device all endpoints interrupt register (OTG_FS_DAINT)"]
     #[inline(always)]
-    pub const fn fs_daint(&self) -> &FsDaint {
+    pub const fn fs_daint(&self) -> &FS_DAINT {
         &self.fs_daint
     }
     #[doc = "0x1c - OTG_FS all endpoints interrupt mask register (OTG_FS_DAINTMSK)"]
     #[inline(always)]
-    pub const fn fs_daintmsk(&self) -> &FsDaintmsk {
+    pub const fn fs_daintmsk(&self) -> &FS_DAINTMSK {
         &self.fs_daintmsk
     }
     #[doc = "0x28 - OTG_FS device VBUS discharge time register"]
     #[inline(always)]
-    pub const fn dvbusdis(&self) -> &Dvbusdis {
+    pub const fn dvbusdis(&self) -> &DVBUSDIS {
         &self.dvbusdis
     }
     #[doc = "0x2c - OTG_FS device VBUS pulsing time register"]
     #[inline(always)]
-    pub const fn dvbuspulse(&self) -> &Dvbuspulse {
+    pub const fn dvbuspulse(&self) -> &DVBUSPULSE {
         &self.dvbuspulse
     }
     #[doc = "0x34 - OTG_FS device IN endpoint FIFO empty interrupt mask register"]
     #[inline(always)]
-    pub const fn diepempmsk(&self) -> &Diepempmsk {
+    pub const fn diepempmsk(&self) -> &DIEPEMPMSK {
         &self.diepempmsk
     }
     #[doc = "0x100 - OTG_FS device control IN endpoint 0 control register (OTG_FS_DIEPCTL0)"]
     #[inline(always)]
-    pub const fn fs_diepctl0(&self) -> &FsDiepctl0 {
+    pub const fn fs_diepctl0(&self) -> &FS_DIEPCTL0 {
         &self.fs_diepctl0
     }
     #[doc = "0x108 - device endpoint-x interrupt register"]
     #[inline(always)]
-    pub const fn diepint0(&self) -> &Diepint0 {
+    pub const fn diepint0(&self) -> &DIEPINT0 {
         &self.diepint0
     }
     #[doc = "0x110 - device endpoint-0 transfer size register"]
     #[inline(always)]
-    pub const fn dieptsiz0(&self) -> &Dieptsiz0 {
+    pub const fn dieptsiz0(&self) -> &DIEPTSIZ0 {
         &self.dieptsiz0
     }
     #[doc = "0x118 - OTG_FS device IN endpoint transmit FIFO status register"]
     #[inline(always)]
-    pub const fn dtxfsts0(&self) -> &Dtxfsts0 {
+    pub const fn dtxfsts0(&self) -> &DTXFSTS0 {
         &self.dtxfsts0
     }
     #[doc = "0x120 - OTG device endpoint-1 control register"]
     #[inline(always)]
-    pub const fn diepctl1(&self) -> &Diepctl1 {
+    pub const fn diepctl1(&self) -> &DIEPCTL1 {
         &self.diepctl1
     }
     #[doc = "0x128 - device endpoint-1 interrupt register"]
     #[inline(always)]
-    pub const fn diepint1(&self) -> &Diepint1 {
+    pub const fn diepint1(&self) -> &DIEPINT1 {
         &self.diepint1
     }
     #[doc = "0x130 - device endpoint-1 transfer size register"]
     #[inline(always)]
-    pub const fn dieptsiz1(&self) -> &Dieptsiz1 {
+    pub const fn dieptsiz1(&self) -> &DIEPTSIZ1 {
         &self.dieptsiz1
     }
     #[doc = "0x138 - OTG_FS device IN endpoint transmit FIFO status register"]
     #[inline(always)]
-    pub const fn dtxfsts1(&self) -> &Dtxfsts1 {
+    pub const fn dtxfsts1(&self) -> &DTXFSTS1 {
         &self.dtxfsts1
     }
     #[doc = "0x140 - OTG device endpoint-2 control register"]
     #[inline(always)]
-    pub const fn diepctl2(&self) -> &Diepctl2 {
+    pub const fn diepctl2(&self) -> &DIEPCTL2 {
         &self.diepctl2
     }
     #[doc = "0x148 - device endpoint-2 interrupt register"]
     #[inline(always)]
-    pub const fn diepint2(&self) -> &Diepint2 {
+    pub const fn diepint2(&self) -> &DIEPINT2 {
         &self.diepint2
     }
     #[doc = "0x150 - device endpoint-2 transfer size register"]
     #[inline(always)]
-    pub const fn dieptsiz2(&self) -> &Dieptsiz2 {
+    pub const fn dieptsiz2(&self) -> &DIEPTSIZ2 {
         &self.dieptsiz2
     }
     #[doc = "0x158 - OTG_FS device IN endpoint transmit FIFO status register"]
     #[inline(always)]
-    pub const fn dtxfsts2(&self) -> &Dtxfsts2 {
+    pub const fn dtxfsts2(&self) -> &DTXFSTS2 {
         &self.dtxfsts2
     }
     #[doc = "0x160 - OTG device endpoint-3 control register"]
     #[inline(always)]
-    pub const fn diepctl3(&self) -> &Diepctl3 {
+    pub const fn diepctl3(&self) -> &DIEPCTL3 {
         &self.diepctl3
     }
     #[doc = "0x168 - device endpoint-3 interrupt register"]
     #[inline(always)]
-    pub const fn diepint3(&self) -> &Diepint3 {
+    pub const fn diepint3(&self) -> &DIEPINT3 {
         &self.diepint3
     }
     #[doc = "0x170 - device endpoint-3 transfer size register"]
     #[inline(always)]
-    pub const fn dieptsiz3(&self) -> &Dieptsiz3 {
+    pub const fn dieptsiz3(&self) -> &DIEPTSIZ3 {
         &self.dieptsiz3
     }
     #[doc = "0x178 - OTG_FS device IN endpoint transmit FIFO status register"]
     #[inline(always)]
-    pub const fn dtxfsts3(&self) -> &Dtxfsts3 {
+    pub const fn dtxfsts3(&self) -> &DTXFSTS3 {
         &self.dtxfsts3
     }
     #[doc = "0x300 - device endpoint-0 control register"]
     #[inline(always)]
-    pub const fn doepctl0(&self) -> &Doepctl0 {
+    pub const fn doepctl0(&self) -> &DOEPCTL0 {
         &self.doepctl0
     }
     #[doc = "0x308 - device endpoint-0 interrupt register"]
     #[inline(always)]
-    pub const fn doepint0(&self) -> &Doepint0 {
+    pub const fn doepint0(&self) -> &DOEPINT0 {
         &self.doepint0
     }
     #[doc = "0x310 - device OUT endpoint-0 transfer size register"]
     #[inline(always)]
-    pub const fn doeptsiz0(&self) -> &Doeptsiz0 {
+    pub const fn doeptsiz0(&self) -> &DOEPTSIZ0 {
         &self.doeptsiz0
     }
     #[doc = "0x320 - device endpoint-1 control register"]
     #[inline(always)]
-    pub const fn doepctl1(&self) -> &Doepctl1 {
+    pub const fn doepctl1(&self) -> &DOEPCTL1 {
         &self.doepctl1
     }
     #[doc = "0x328 - device endpoint-1 interrupt register"]
     #[inline(always)]
-    pub const fn doepint1(&self) -> &Doepint1 {
+    pub const fn doepint1(&self) -> &DOEPINT1 {
         &self.doepint1
     }
     #[doc = "0x330 - device OUT endpoint-1 transfer size register"]
     #[inline(always)]
-    pub const fn doeptsiz1(&self) -> &Doeptsiz1 {
+    pub const fn doeptsiz1(&self) -> &DOEPTSIZ1 {
         &self.doeptsiz1
     }
     #[doc = "0x340 - device endpoint-2 control register"]
     #[inline(always)]
-    pub const fn doepctl2(&self) -> &Doepctl2 {
+    pub const fn doepctl2(&self) -> &DOEPCTL2 {
         &self.doepctl2
     }
     #[doc = "0x348 - device endpoint-2 interrupt register"]
     #[inline(always)]
-    pub const fn doepint2(&self) -> &Doepint2 {
+    pub const fn doepint2(&self) -> &DOEPINT2 {
         &self.doepint2
     }
     #[doc = "0x350 - device OUT endpoint-2 transfer size register"]
     #[inline(always)]
-    pub const fn doeptsiz2(&self) -> &Doeptsiz2 {
+    pub const fn doeptsiz2(&self) -> &DOEPTSIZ2 {
         &self.doeptsiz2
     }
     #[doc = "0x360 - device endpoint-3 control register"]
     #[inline(always)]
-    pub const fn doepctl3(&self) -> &Doepctl3 {
+    pub const fn doepctl3(&self) -> &DOEPCTL3 {
         &self.doepctl3
     }
     #[doc = "0x368 - device endpoint-3 interrupt register"]
     #[inline(always)]
-    pub const fn doepint3(&self) -> &Doepint3 {
+    pub const fn doepint3(&self) -> &DOEPINT3 {
         &self.doepint3
     }
     #[doc = "0x370 - device OUT endpoint-3 transfer size register"]
     #[inline(always)]
-    pub const fn doeptsiz3(&self) -> &Doeptsiz3 {
+    pub const fn doeptsiz3(&self) -> &DOEPTSIZ3 {
         &self.doeptsiz3
     }
 }
 #[doc = "FS_DCFG (rw) register accessor: OTG_FS device configuration register (OTG_FS_DCFG)\n\nYou can [`read`](crate::Reg::read) this register and get [`fs_dcfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fs_dcfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fs_dcfg`]
 module"]
-#[doc(alias = "FS_DCFG")]
-pub type FsDcfg = crate::Reg<fs_dcfg::FsDcfgSpec>;
+pub type FS_DCFG = crate::Reg<fs_dcfg::FS_DCFGrs>;
 #[doc = "OTG_FS device configuration register (OTG_FS_DCFG)"]
 pub mod fs_dcfg;
 #[doc = "FS_DCTL (rw) register accessor: OTG_FS device control register (OTG_FS_DCTL)\n\nYou can [`read`](crate::Reg::read) this register and get [`fs_dctl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fs_dctl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fs_dctl`]
 module"]
-#[doc(alias = "FS_DCTL")]
-pub type FsDctl = crate::Reg<fs_dctl::FsDctlSpec>;
+pub type FS_DCTL = crate::Reg<fs_dctl::FS_DCTLrs>;
 #[doc = "OTG_FS device control register (OTG_FS_DCTL)"]
 pub mod fs_dctl;
 #[doc = "FS_DSTS (r) register accessor: OTG_FS device status register (OTG_FS_DSTS)\n\nYou can [`read`](crate::Reg::read) this register and get [`fs_dsts::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fs_dsts`]
 module"]
-#[doc(alias = "FS_DSTS")]
-pub type FsDsts = crate::Reg<fs_dsts::FsDstsSpec>;
+pub type FS_DSTS = crate::Reg<fs_dsts::FS_DSTSrs>;
 #[doc = "OTG_FS device status register (OTG_FS_DSTS)"]
 pub mod fs_dsts;
 #[doc = "FS_DIEPMSK (rw) register accessor: OTG_FS device IN endpoint common interrupt mask register (OTG_FS_DIEPMSK)\n\nYou can [`read`](crate::Reg::read) this register and get [`fs_diepmsk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fs_diepmsk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fs_diepmsk`]
 module"]
-#[doc(alias = "FS_DIEPMSK")]
-pub type FsDiepmsk = crate::Reg<fs_diepmsk::FsDiepmskSpec>;
+pub type FS_DIEPMSK = crate::Reg<fs_diepmsk::FS_DIEPMSKrs>;
 #[doc = "OTG_FS device IN endpoint common interrupt mask register (OTG_FS_DIEPMSK)"]
 pub mod fs_diepmsk;
 #[doc = "FS_DOEPMSK (rw) register accessor: OTG_FS device OUT endpoint common interrupt mask register (OTG_FS_DOEPMSK)\n\nYou can [`read`](crate::Reg::read) this register and get [`fs_doepmsk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fs_doepmsk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fs_doepmsk`]
 module"]
-#[doc(alias = "FS_DOEPMSK")]
-pub type FsDoepmsk = crate::Reg<fs_doepmsk::FsDoepmskSpec>;
+pub type FS_DOEPMSK = crate::Reg<fs_doepmsk::FS_DOEPMSKrs>;
 #[doc = "OTG_FS device OUT endpoint common interrupt mask register (OTG_FS_DOEPMSK)"]
 pub mod fs_doepmsk;
 #[doc = "FS_DAINT (r) register accessor: OTG_FS device all endpoints interrupt register (OTG_FS_DAINT)\n\nYou can [`read`](crate::Reg::read) this register and get [`fs_daint::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fs_daint`]
 module"]
-#[doc(alias = "FS_DAINT")]
-pub type FsDaint = crate::Reg<fs_daint::FsDaintSpec>;
+pub type FS_DAINT = crate::Reg<fs_daint::FS_DAINTrs>;
 #[doc = "OTG_FS device all endpoints interrupt register (OTG_FS_DAINT)"]
 pub mod fs_daint;
 #[doc = "FS_DAINTMSK (rw) register accessor: OTG_FS all endpoints interrupt mask register (OTG_FS_DAINTMSK)\n\nYou can [`read`](crate::Reg::read) this register and get [`fs_daintmsk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fs_daintmsk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fs_daintmsk`]
 module"]
-#[doc(alias = "FS_DAINTMSK")]
-pub type FsDaintmsk = crate::Reg<fs_daintmsk::FsDaintmskSpec>;
+pub type FS_DAINTMSK = crate::Reg<fs_daintmsk::FS_DAINTMSKrs>;
 #[doc = "OTG_FS all endpoints interrupt mask register (OTG_FS_DAINTMSK)"]
 pub mod fs_daintmsk;
 #[doc = "DVBUSDIS (rw) register accessor: OTG_FS device VBUS discharge time register\n\nYou can [`read`](crate::Reg::read) this register and get [`dvbusdis::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dvbusdis::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dvbusdis`]
 module"]
-#[doc(alias = "DVBUSDIS")]
-pub type Dvbusdis = crate::Reg<dvbusdis::DvbusdisSpec>;
+pub type DVBUSDIS = crate::Reg<dvbusdis::DVBUSDISrs>;
 #[doc = "OTG_FS device VBUS discharge time register"]
 pub mod dvbusdis;
 #[doc = "DVBUSPULSE (rw) register accessor: OTG_FS device VBUS pulsing time register\n\nYou can [`read`](crate::Reg::read) this register and get [`dvbuspulse::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dvbuspulse::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dvbuspulse`]
 module"]
-#[doc(alias = "DVBUSPULSE")]
-pub type Dvbuspulse = crate::Reg<dvbuspulse::DvbuspulseSpec>;
+pub type DVBUSPULSE = crate::Reg<dvbuspulse::DVBUSPULSErs>;
 #[doc = "OTG_FS device VBUS pulsing time register"]
 pub mod dvbuspulse;
 #[doc = "DIEPEMPMSK (rw) register accessor: OTG_FS device IN endpoint FIFO empty interrupt mask register\n\nYou can [`read`](crate::Reg::read) this register and get [`diepempmsk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`diepempmsk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepempmsk`]
 module"]
-#[doc(alias = "DIEPEMPMSK")]
-pub type Diepempmsk = crate::Reg<diepempmsk::DiepempmskSpec>;
+pub type DIEPEMPMSK = crate::Reg<diepempmsk::DIEPEMPMSKrs>;
 #[doc = "OTG_FS device IN endpoint FIFO empty interrupt mask register"]
 pub mod diepempmsk;
 #[doc = "FS_DIEPCTL0 (rw) register accessor: OTG_FS device control IN endpoint 0 control register (OTG_FS_DIEPCTL0)\n\nYou can [`read`](crate::Reg::read) this register and get [`fs_diepctl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fs_diepctl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fs_diepctl0`]
 module"]
-#[doc(alias = "FS_DIEPCTL0")]
-pub type FsDiepctl0 = crate::Reg<fs_diepctl0::FsDiepctl0Spec>;
+pub type FS_DIEPCTL0 = crate::Reg<fs_diepctl0::FS_DIEPCTL0rs>;
 #[doc = "OTG_FS device control IN endpoint 0 control register (OTG_FS_DIEPCTL0)"]
 pub mod fs_diepctl0;
 #[doc = "DIEPCTL1 (rw) register accessor: OTG device endpoint-1 control register\n\nYou can [`read`](crate::Reg::read) this register and get [`diepctl1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`diepctl1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepctl1`]
 module"]
-#[doc(alias = "DIEPCTL1")]
-pub type Diepctl1 = crate::Reg<diepctl1::Diepctl1Spec>;
+pub type DIEPCTL1 = crate::Reg<diepctl1::DIEPCTL1rs>;
 #[doc = "OTG device endpoint-1 control register"]
 pub mod diepctl1;
 #[doc = "DIEPCTL2 (rw) register accessor: OTG device endpoint-2 control register\n\nYou can [`read`](crate::Reg::read) this register and get [`diepctl2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`diepctl2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepctl2`]
 module"]
-#[doc(alias = "DIEPCTL2")]
-pub type Diepctl2 = crate::Reg<diepctl2::Diepctl2Spec>;
+pub type DIEPCTL2 = crate::Reg<diepctl2::DIEPCTL2rs>;
 #[doc = "OTG device endpoint-2 control register"]
 pub mod diepctl2;
 #[doc = "DIEPCTL3 (rw) register accessor: OTG device endpoint-3 control register\n\nYou can [`read`](crate::Reg::read) this register and get [`diepctl3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`diepctl3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepctl3`]
 module"]
-#[doc(alias = "DIEPCTL3")]
-pub type Diepctl3 = crate::Reg<diepctl3::Diepctl3Spec>;
+pub type DIEPCTL3 = crate::Reg<diepctl3::DIEPCTL3rs>;
 #[doc = "OTG device endpoint-3 control register"]
 pub mod diepctl3;
 #[doc = "DOEPCTL0 (rw) register accessor: device endpoint-0 control register\n\nYou can [`read`](crate::Reg::read) this register and get [`doepctl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepctl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepctl0`]
 module"]
-#[doc(alias = "DOEPCTL0")]
-pub type Doepctl0 = crate::Reg<doepctl0::Doepctl0Spec>;
+pub type DOEPCTL0 = crate::Reg<doepctl0::DOEPCTL0rs>;
 #[doc = "device endpoint-0 control register"]
 pub mod doepctl0;
 #[doc = "DOEPCTL1 (rw) register accessor: device endpoint-1 control register\n\nYou can [`read`](crate::Reg::read) this register and get [`doepctl1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepctl1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepctl1`]
 module"]
-#[doc(alias = "DOEPCTL1")]
-pub type Doepctl1 = crate::Reg<doepctl1::Doepctl1Spec>;
+pub type DOEPCTL1 = crate::Reg<doepctl1::DOEPCTL1rs>;
 #[doc = "device endpoint-1 control register"]
 pub mod doepctl1;
 #[doc = "DOEPCTL2 (rw) register accessor: device endpoint-2 control register\n\nYou can [`read`](crate::Reg::read) this register and get [`doepctl2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepctl2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepctl2`]
 module"]
-#[doc(alias = "DOEPCTL2")]
-pub type Doepctl2 = crate::Reg<doepctl2::Doepctl2Spec>;
+pub type DOEPCTL2 = crate::Reg<doepctl2::DOEPCTL2rs>;
 #[doc = "device endpoint-2 control register"]
 pub mod doepctl2;
 #[doc = "DOEPCTL3 (rw) register accessor: device endpoint-3 control register\n\nYou can [`read`](crate::Reg::read) this register and get [`doepctl3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepctl3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepctl3`]
 module"]
-#[doc(alias = "DOEPCTL3")]
-pub type Doepctl3 = crate::Reg<doepctl3::Doepctl3Spec>;
+pub type DOEPCTL3 = crate::Reg<doepctl3::DOEPCTL3rs>;
 #[doc = "device endpoint-3 control register"]
 pub mod doepctl3;
 #[doc = "DIEPINT0 (rw) register accessor: device endpoint-x interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`diepint0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`diepint0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepint0`]
 module"]
-#[doc(alias = "DIEPINT0")]
-pub type Diepint0 = crate::Reg<diepint0::Diepint0Spec>;
+pub type DIEPINT0 = crate::Reg<diepint0::DIEPINT0rs>;
 #[doc = "device endpoint-x interrupt register"]
 pub mod diepint0;
 #[doc = "DIEPINT1 (rw) register accessor: device endpoint-1 interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`diepint1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`diepint1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepint1`]
 module"]
-#[doc(alias = "DIEPINT1")]
-pub type Diepint1 = crate::Reg<diepint1::Diepint1Spec>;
+pub type DIEPINT1 = crate::Reg<diepint1::DIEPINT1rs>;
 #[doc = "device endpoint-1 interrupt register"]
 pub mod diepint1;
 #[doc = "DIEPINT2 (rw) register accessor: device endpoint-2 interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`diepint2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`diepint2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepint2`]
 module"]
-#[doc(alias = "DIEPINT2")]
-pub type Diepint2 = crate::Reg<diepint2::Diepint2Spec>;
+pub type DIEPINT2 = crate::Reg<diepint2::DIEPINT2rs>;
 #[doc = "device endpoint-2 interrupt register"]
 pub mod diepint2;
 #[doc = "DIEPINT3 (rw) register accessor: device endpoint-3 interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`diepint3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`diepint3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepint3`]
 module"]
-#[doc(alias = "DIEPINT3")]
-pub type Diepint3 = crate::Reg<diepint3::Diepint3Spec>;
+pub type DIEPINT3 = crate::Reg<diepint3::DIEPINT3rs>;
 #[doc = "device endpoint-3 interrupt register"]
 pub mod diepint3;
 #[doc = "DOEPINT0 (rw) register accessor: device endpoint-0 interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`doepint0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepint0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepint0`]
 module"]
-#[doc(alias = "DOEPINT0")]
-pub type Doepint0 = crate::Reg<doepint0::Doepint0Spec>;
+pub type DOEPINT0 = crate::Reg<doepint0::DOEPINT0rs>;
 #[doc = "device endpoint-0 interrupt register"]
 pub mod doepint0;
 #[doc = "DOEPINT1 (rw) register accessor: device endpoint-1 interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`doepint1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepint1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepint1`]
 module"]
-#[doc(alias = "DOEPINT1")]
-pub type Doepint1 = crate::Reg<doepint1::Doepint1Spec>;
+pub type DOEPINT1 = crate::Reg<doepint1::DOEPINT1rs>;
 #[doc = "device endpoint-1 interrupt register"]
 pub mod doepint1;
 #[doc = "DOEPINT2 (rw) register accessor: device endpoint-2 interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`doepint2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepint2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepint2`]
 module"]
-#[doc(alias = "DOEPINT2")]
-pub type Doepint2 = crate::Reg<doepint2::Doepint2Spec>;
+pub type DOEPINT2 = crate::Reg<doepint2::DOEPINT2rs>;
 #[doc = "device endpoint-2 interrupt register"]
 pub mod doepint2;
 #[doc = "DOEPINT3 (rw) register accessor: device endpoint-3 interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`doepint3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepint3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepint3`]
 module"]
-#[doc(alias = "DOEPINT3")]
-pub type Doepint3 = crate::Reg<doepint3::Doepint3Spec>;
+pub type DOEPINT3 = crate::Reg<doepint3::DOEPINT3rs>;
 #[doc = "device endpoint-3 interrupt register"]
 pub mod doepint3;
 #[doc = "DIEPTSIZ0 (rw) register accessor: device endpoint-0 transfer size register\n\nYou can [`read`](crate::Reg::read) this register and get [`dieptsiz0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dieptsiz0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dieptsiz0`]
 module"]
-#[doc(alias = "DIEPTSIZ0")]
-pub type Dieptsiz0 = crate::Reg<dieptsiz0::Dieptsiz0Spec>;
+pub type DIEPTSIZ0 = crate::Reg<dieptsiz0::DIEPTSIZ0rs>;
 #[doc = "device endpoint-0 transfer size register"]
 pub mod dieptsiz0;
 #[doc = "DOEPTSIZ0 (rw) register accessor: device OUT endpoint-0 transfer size register\n\nYou can [`read`](crate::Reg::read) this register and get [`doeptsiz0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doeptsiz0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doeptsiz0`]
 module"]
-#[doc(alias = "DOEPTSIZ0")]
-pub type Doeptsiz0 = crate::Reg<doeptsiz0::Doeptsiz0Spec>;
+pub type DOEPTSIZ0 = crate::Reg<doeptsiz0::DOEPTSIZ0rs>;
 #[doc = "device OUT endpoint-0 transfer size register"]
 pub mod doeptsiz0;
 #[doc = "DIEPTSIZ1 (rw) register accessor: device endpoint-1 transfer size register\n\nYou can [`read`](crate::Reg::read) this register and get [`dieptsiz1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dieptsiz1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dieptsiz1`]
 module"]
-#[doc(alias = "DIEPTSIZ1")]
-pub type Dieptsiz1 = crate::Reg<dieptsiz1::Dieptsiz1Spec>;
+pub type DIEPTSIZ1 = crate::Reg<dieptsiz1::DIEPTSIZ1rs>;
 #[doc = "device endpoint-1 transfer size register"]
 pub mod dieptsiz1;
 #[doc = "DIEPTSIZ2 (rw) register accessor: device endpoint-2 transfer size register\n\nYou can [`read`](crate::Reg::read) this register and get [`dieptsiz2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dieptsiz2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dieptsiz2`]
 module"]
-#[doc(alias = "DIEPTSIZ2")]
-pub type Dieptsiz2 = crate::Reg<dieptsiz2::Dieptsiz2Spec>;
+pub type DIEPTSIZ2 = crate::Reg<dieptsiz2::DIEPTSIZ2rs>;
 #[doc = "device endpoint-2 transfer size register"]
 pub mod dieptsiz2;
 #[doc = "DIEPTSIZ3 (rw) register accessor: device endpoint-3 transfer size register\n\nYou can [`read`](crate::Reg::read) this register and get [`dieptsiz3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dieptsiz3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dieptsiz3`]
 module"]
-#[doc(alias = "DIEPTSIZ3")]
-pub type Dieptsiz3 = crate::Reg<dieptsiz3::Dieptsiz3Spec>;
+pub type DIEPTSIZ3 = crate::Reg<dieptsiz3::DIEPTSIZ3rs>;
 #[doc = "device endpoint-3 transfer size register"]
 pub mod dieptsiz3;
 #[doc = "DTXFSTS0 (r) register accessor: OTG_FS device IN endpoint transmit FIFO status register\n\nYou can [`read`](crate::Reg::read) this register and get [`dtxfsts0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dtxfsts0`]
 module"]
-#[doc(alias = "DTXFSTS0")]
-pub type Dtxfsts0 = crate::Reg<dtxfsts0::Dtxfsts0Spec>;
+pub type DTXFSTS0 = crate::Reg<dtxfsts0::DTXFSTS0rs>;
 #[doc = "OTG_FS device IN endpoint transmit FIFO status register"]
 pub mod dtxfsts0;
 #[doc = "DTXFSTS1 (r) register accessor: OTG_FS device IN endpoint transmit FIFO status register\n\nYou can [`read`](crate::Reg::read) this register and get [`dtxfsts1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dtxfsts1`]
 module"]
-#[doc(alias = "DTXFSTS1")]
-pub type Dtxfsts1 = crate::Reg<dtxfsts1::Dtxfsts1Spec>;
+pub type DTXFSTS1 = crate::Reg<dtxfsts1::DTXFSTS1rs>;
 #[doc = "OTG_FS device IN endpoint transmit FIFO status register"]
 pub mod dtxfsts1;
 #[doc = "DTXFSTS2 (r) register accessor: OTG_FS device IN endpoint transmit FIFO status register\n\nYou can [`read`](crate::Reg::read) this register and get [`dtxfsts2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dtxfsts2`]
 module"]
-#[doc(alias = "DTXFSTS2")]
-pub type Dtxfsts2 = crate::Reg<dtxfsts2::Dtxfsts2Spec>;
+pub type DTXFSTS2 = crate::Reg<dtxfsts2::DTXFSTS2rs>;
 #[doc = "OTG_FS device IN endpoint transmit FIFO status register"]
 pub mod dtxfsts2;
 #[doc = "DTXFSTS3 (r) register accessor: OTG_FS device IN endpoint transmit FIFO status register\n\nYou can [`read`](crate::Reg::read) this register and get [`dtxfsts3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dtxfsts3`]
 module"]
-#[doc(alias = "DTXFSTS3")]
-pub type Dtxfsts3 = crate::Reg<dtxfsts3::Dtxfsts3Spec>;
+pub type DTXFSTS3 = crate::Reg<dtxfsts3::DTXFSTS3rs>;
 #[doc = "OTG_FS device IN endpoint transmit FIFO status register"]
 pub mod dtxfsts3;
 #[doc = "DOEPTSIZ1 (rw) register accessor: device OUT endpoint-1 transfer size register\n\nYou can [`read`](crate::Reg::read) this register and get [`doeptsiz1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doeptsiz1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doeptsiz1`]
 module"]
-#[doc(alias = "DOEPTSIZ1")]
-pub type Doeptsiz1 = crate::Reg<doeptsiz1::Doeptsiz1Spec>;
+pub type DOEPTSIZ1 = crate::Reg<doeptsiz1::DOEPTSIZ1rs>;
 #[doc = "device OUT endpoint-1 transfer size register"]
 pub mod doeptsiz1;
 #[doc = "DOEPTSIZ2 (rw) register accessor: device OUT endpoint-2 transfer size register\n\nYou can [`read`](crate::Reg::read) this register and get [`doeptsiz2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doeptsiz2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doeptsiz2`]
 module"]
-#[doc(alias = "DOEPTSIZ2")]
-pub type Doeptsiz2 = crate::Reg<doeptsiz2::Doeptsiz2Spec>;
+pub type DOEPTSIZ2 = crate::Reg<doeptsiz2::DOEPTSIZ2rs>;
 #[doc = "device OUT endpoint-2 transfer size register"]
 pub mod doeptsiz2;
 #[doc = "DOEPTSIZ3 (rw) register accessor: device OUT endpoint-3 transfer size register\n\nYou can [`read`](crate::Reg::read) this register and get [`doeptsiz3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doeptsiz3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doeptsiz3`]
 module"]
-#[doc(alias = "DOEPTSIZ3")]
-pub type Doeptsiz3 = crate::Reg<doeptsiz3::Doeptsiz3Spec>;
+pub type DOEPTSIZ3 = crate::Reg<doeptsiz3::DOEPTSIZ3rs>;
 #[doc = "device OUT endpoint-3 transfer size register"]
 pub mod doeptsiz3;

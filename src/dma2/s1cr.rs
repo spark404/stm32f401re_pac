@@ -1,305 +1,331 @@
 #[doc = "Register `S1CR` reader"]
-pub type R = crate::R<S1crSpec>;
+pub type R = crate::R<S1CRrs>;
 #[doc = "Register `S1CR` writer"]
-pub type W = crate::W<S1crSpec>;
+pub type W = crate::W<S1CRrs>;
 #[doc = "Field `EN` reader - Stream enable / flag stream ready when read low"]
-pub type EnR = crate::BitReader;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - Stream enable / flag stream ready when read low"]
-pub type EnW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMEIE` reader - Direct mode error interrupt enable"]
-pub type DmeieR = crate::BitReader;
+pub type DMEIE_R = crate::BitReader;
 #[doc = "Field `DMEIE` writer - Direct mode error interrupt enable"]
-pub type DmeieW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type DMEIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TEIE` reader - Transfer error interrupt enable"]
-pub type TeieR = crate::BitReader;
+pub type TEIE_R = crate::BitReader;
 #[doc = "Field `TEIE` writer - Transfer error interrupt enable"]
-pub type TeieW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TEIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HTIE` reader - Half transfer interrupt enable"]
-pub type HtieR = crate::BitReader;
+pub type HTIE_R = crate::BitReader;
 #[doc = "Field `HTIE` writer - Half transfer interrupt enable"]
-pub type HtieW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type HTIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TCIE` reader - Transfer complete interrupt enable"]
-pub type TcieR = crate::BitReader;
+pub type TCIE_R = crate::BitReader;
 #[doc = "Field `TCIE` writer - Transfer complete interrupt enable"]
-pub type TcieW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TCIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PFCTRL` reader - Peripheral flow controller"]
-pub type PfctrlR = crate::BitReader;
+pub type PFCTRL_R = crate::BitReader;
 #[doc = "Field `PFCTRL` writer - Peripheral flow controller"]
-pub type PfctrlW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type PFCTRL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR` reader - Data transfer direction"]
-pub type DirR = crate::FieldReader;
+pub type DIR_R = crate::FieldReader;
 #[doc = "Field `DIR` writer - Data transfer direction"]
-pub type DirW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type DIR_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CIRC` reader - Circular mode"]
-pub type CircR = crate::BitReader;
+pub type CIRC_R = crate::BitReader;
 #[doc = "Field `CIRC` writer - Circular mode"]
-pub type CircW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CIRC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PINC` reader - Peripheral increment mode"]
-pub type PincR = crate::BitReader;
+pub type PINC_R = crate::BitReader;
 #[doc = "Field `PINC` writer - Peripheral increment mode"]
-pub type PincW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type PINC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MINC` reader - Memory increment mode"]
-pub type MincR = crate::BitReader;
+pub type MINC_R = crate::BitReader;
 #[doc = "Field `MINC` writer - Memory increment mode"]
-pub type MincW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type MINC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PSIZE` reader - Peripheral data size"]
-pub type PsizeR = crate::FieldReader;
+pub type PSIZE_R = crate::FieldReader;
 #[doc = "Field `PSIZE` writer - Peripheral data size"]
-pub type PsizeW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type PSIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MSIZE` reader - Memory data size"]
-pub type MsizeR = crate::FieldReader;
+pub type MSIZE_R = crate::FieldReader;
 #[doc = "Field `MSIZE` writer - Memory data size"]
-pub type MsizeW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type MSIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PINCOS` reader - Peripheral increment offset size"]
-pub type PincosR = crate::BitReader;
+pub type PINCOS_R = crate::BitReader;
 #[doc = "Field `PINCOS` writer - Peripheral increment offset size"]
-pub type PincosW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type PINCOS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PL` reader - Priority level"]
-pub type PlR = crate::FieldReader;
+pub type PL_R = crate::FieldReader;
 #[doc = "Field `PL` writer - Priority level"]
-pub type PlW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type PL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DBM` reader - Double buffer mode"]
-pub type DbmR = crate::BitReader;
+pub type DBM_R = crate::BitReader;
 #[doc = "Field `DBM` writer - Double buffer mode"]
-pub type DbmW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type DBM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CT` reader - Current target (only in double buffer mode)"]
-pub type CtR = crate::BitReader;
+pub type CT_R = crate::BitReader;
 #[doc = "Field `CT` writer - Current target (only in double buffer mode)"]
-pub type CtW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACK` reader - ACK"]
-pub type AckR = crate::BitReader;
+pub type ACK_R = crate::BitReader;
 #[doc = "Field `ACK` writer - ACK"]
-pub type AckW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type ACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBURST` reader - Peripheral burst transfer configuration"]
-pub type PburstR = crate::FieldReader;
+pub type PBURST_R = crate::FieldReader;
 #[doc = "Field `PBURST` writer - Peripheral burst transfer configuration"]
-pub type PburstW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type PBURST_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MBURST` reader - Memory burst transfer configuration"]
-pub type MburstR = crate::FieldReader;
+pub type MBURST_R = crate::FieldReader;
 #[doc = "Field `MBURST` writer - Memory burst transfer configuration"]
-pub type MburstW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type MBURST_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CHSEL` reader - Channel selection"]
-pub type ChselR = crate::FieldReader;
+pub type CHSEL_R = crate::FieldReader;
 #[doc = "Field `CHSEL` writer - Channel selection"]
-pub type ChselW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+pub type CHSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 0 - Stream enable / flag stream ready when read low"]
     #[inline(always)]
-    pub fn en(&self) -> EnR {
-        EnR::new((self.bits & 1) != 0)
+    pub fn en(&self) -> EN_R {
+        EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Direct mode error interrupt enable"]
     #[inline(always)]
-    pub fn dmeie(&self) -> DmeieR {
-        DmeieR::new(((self.bits >> 1) & 1) != 0)
+    pub fn dmeie(&self) -> DMEIE_R {
+        DMEIE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Transfer error interrupt enable"]
     #[inline(always)]
-    pub fn teie(&self) -> TeieR {
-        TeieR::new(((self.bits >> 2) & 1) != 0)
+    pub fn teie(&self) -> TEIE_R {
+        TEIE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Half transfer interrupt enable"]
     #[inline(always)]
-    pub fn htie(&self) -> HtieR {
-        HtieR::new(((self.bits >> 3) & 1) != 0)
+    pub fn htie(&self) -> HTIE_R {
+        HTIE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Transfer complete interrupt enable"]
     #[inline(always)]
-    pub fn tcie(&self) -> TcieR {
-        TcieR::new(((self.bits >> 4) & 1) != 0)
+    pub fn tcie(&self) -> TCIE_R {
+        TCIE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Peripheral flow controller"]
     #[inline(always)]
-    pub fn pfctrl(&self) -> PfctrlR {
-        PfctrlR::new(((self.bits >> 5) & 1) != 0)
+    pub fn pfctrl(&self) -> PFCTRL_R {
+        PFCTRL_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:7 - Data transfer direction"]
     #[inline(always)]
-    pub fn dir(&self) -> DirR {
-        DirR::new(((self.bits >> 6) & 3) as u8)
+    pub fn dir(&self) -> DIR_R {
+        DIR_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bit 8 - Circular mode"]
     #[inline(always)]
-    pub fn circ(&self) -> CircR {
-        CircR::new(((self.bits >> 8) & 1) != 0)
+    pub fn circ(&self) -> CIRC_R {
+        CIRC_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Peripheral increment mode"]
     #[inline(always)]
-    pub fn pinc(&self) -> PincR {
-        PincR::new(((self.bits >> 9) & 1) != 0)
+    pub fn pinc(&self) -> PINC_R {
+        PINC_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Memory increment mode"]
     #[inline(always)]
-    pub fn minc(&self) -> MincR {
-        MincR::new(((self.bits >> 10) & 1) != 0)
+    pub fn minc(&self) -> MINC_R {
+        MINC_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bits 11:12 - Peripheral data size"]
     #[inline(always)]
-    pub fn psize(&self) -> PsizeR {
-        PsizeR::new(((self.bits >> 11) & 3) as u8)
+    pub fn psize(&self) -> PSIZE_R {
+        PSIZE_R::new(((self.bits >> 11) & 3) as u8)
     }
     #[doc = "Bits 13:14 - Memory data size"]
     #[inline(always)]
-    pub fn msize(&self) -> MsizeR {
-        MsizeR::new(((self.bits >> 13) & 3) as u8)
+    pub fn msize(&self) -> MSIZE_R {
+        MSIZE_R::new(((self.bits >> 13) & 3) as u8)
     }
     #[doc = "Bit 15 - Peripheral increment offset size"]
     #[inline(always)]
-    pub fn pincos(&self) -> PincosR {
-        PincosR::new(((self.bits >> 15) & 1) != 0)
+    pub fn pincos(&self) -> PINCOS_R {
+        PINCOS_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:17 - Priority level"]
     #[inline(always)]
-    pub fn pl(&self) -> PlR {
-        PlR::new(((self.bits >> 16) & 3) as u8)
+    pub fn pl(&self) -> PL_R {
+        PL_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bit 18 - Double buffer mode"]
     #[inline(always)]
-    pub fn dbm(&self) -> DbmR {
-        DbmR::new(((self.bits >> 18) & 1) != 0)
+    pub fn dbm(&self) -> DBM_R {
+        DBM_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Current target (only in double buffer mode)"]
     #[inline(always)]
-    pub fn ct(&self) -> CtR {
-        CtR::new(((self.bits >> 19) & 1) != 0)
+    pub fn ct(&self) -> CT_R {
+        CT_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - ACK"]
     #[inline(always)]
-    pub fn ack(&self) -> AckR {
-        AckR::new(((self.bits >> 20) & 1) != 0)
+    pub fn ack(&self) -> ACK_R {
+        ACK_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bits 21:22 - Peripheral burst transfer configuration"]
     #[inline(always)]
-    pub fn pburst(&self) -> PburstR {
-        PburstR::new(((self.bits >> 21) & 3) as u8)
+    pub fn pburst(&self) -> PBURST_R {
+        PBURST_R::new(((self.bits >> 21) & 3) as u8)
     }
     #[doc = "Bits 23:24 - Memory burst transfer configuration"]
     #[inline(always)]
-    pub fn mburst(&self) -> MburstR {
-        MburstR::new(((self.bits >> 23) & 3) as u8)
+    pub fn mburst(&self) -> MBURST_R {
+        MBURST_R::new(((self.bits >> 23) & 3) as u8)
     }
     #[doc = "Bits 25:27 - Channel selection"]
     #[inline(always)]
-    pub fn chsel(&self) -> ChselR {
-        ChselR::new(((self.bits >> 25) & 7) as u8)
+    pub fn chsel(&self) -> CHSEL_R {
+        CHSEL_R::new(((self.bits >> 25) & 7) as u8)
+    }
+}
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("S1CR")
+            .field("chsel", &self.chsel())
+            .field("mburst", &self.mburst())
+            .field("pburst", &self.pburst())
+            .field("ack", &self.ack())
+            .field("ct", &self.ct())
+            .field("dbm", &self.dbm())
+            .field("pl", &self.pl())
+            .field("pincos", &self.pincos())
+            .field("msize", &self.msize())
+            .field("psize", &self.psize())
+            .field("minc", &self.minc())
+            .field("pinc", &self.pinc())
+            .field("circ", &self.circ())
+            .field("dir", &self.dir())
+            .field("pfctrl", &self.pfctrl())
+            .field("tcie", &self.tcie())
+            .field("htie", &self.htie())
+            .field("teie", &self.teie())
+            .field("dmeie", &self.dmeie())
+            .field("en", &self.en())
+            .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - Stream enable / flag stream ready when read low"]
     #[inline(always)]
-    pub fn en(&mut self) -> EnW<S1crSpec> {
-        EnW::new(self, 0)
+    pub fn en(&mut self) -> EN_W<S1CRrs> {
+        EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Direct mode error interrupt enable"]
     #[inline(always)]
-    pub fn dmeie(&mut self) -> DmeieW<S1crSpec> {
-        DmeieW::new(self, 1)
+    pub fn dmeie(&mut self) -> DMEIE_W<S1CRrs> {
+        DMEIE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Transfer error interrupt enable"]
     #[inline(always)]
-    pub fn teie(&mut self) -> TeieW<S1crSpec> {
-        TeieW::new(self, 2)
+    pub fn teie(&mut self) -> TEIE_W<S1CRrs> {
+        TEIE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Half transfer interrupt enable"]
     #[inline(always)]
-    pub fn htie(&mut self) -> HtieW<S1crSpec> {
-        HtieW::new(self, 3)
+    pub fn htie(&mut self) -> HTIE_W<S1CRrs> {
+        HTIE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Transfer complete interrupt enable"]
     #[inline(always)]
-    pub fn tcie(&mut self) -> TcieW<S1crSpec> {
-        TcieW::new(self, 4)
+    pub fn tcie(&mut self) -> TCIE_W<S1CRrs> {
+        TCIE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Peripheral flow controller"]
     #[inline(always)]
-    pub fn pfctrl(&mut self) -> PfctrlW<S1crSpec> {
-        PfctrlW::new(self, 5)
+    pub fn pfctrl(&mut self) -> PFCTRL_W<S1CRrs> {
+        PFCTRL_W::new(self, 5)
     }
     #[doc = "Bits 6:7 - Data transfer direction"]
     #[inline(always)]
-    pub fn dir(&mut self) -> DirW<S1crSpec> {
-        DirW::new(self, 6)
+    pub fn dir(&mut self) -> DIR_W<S1CRrs> {
+        DIR_W::new(self, 6)
     }
     #[doc = "Bit 8 - Circular mode"]
     #[inline(always)]
-    pub fn circ(&mut self) -> CircW<S1crSpec> {
-        CircW::new(self, 8)
+    pub fn circ(&mut self) -> CIRC_W<S1CRrs> {
+        CIRC_W::new(self, 8)
     }
     #[doc = "Bit 9 - Peripheral increment mode"]
     #[inline(always)]
-    pub fn pinc(&mut self) -> PincW<S1crSpec> {
-        PincW::new(self, 9)
+    pub fn pinc(&mut self) -> PINC_W<S1CRrs> {
+        PINC_W::new(self, 9)
     }
     #[doc = "Bit 10 - Memory increment mode"]
     #[inline(always)]
-    pub fn minc(&mut self) -> MincW<S1crSpec> {
-        MincW::new(self, 10)
+    pub fn minc(&mut self) -> MINC_W<S1CRrs> {
+        MINC_W::new(self, 10)
     }
     #[doc = "Bits 11:12 - Peripheral data size"]
     #[inline(always)]
-    pub fn psize(&mut self) -> PsizeW<S1crSpec> {
-        PsizeW::new(self, 11)
+    pub fn psize(&mut self) -> PSIZE_W<S1CRrs> {
+        PSIZE_W::new(self, 11)
     }
     #[doc = "Bits 13:14 - Memory data size"]
     #[inline(always)]
-    pub fn msize(&mut self) -> MsizeW<S1crSpec> {
-        MsizeW::new(self, 13)
+    pub fn msize(&mut self) -> MSIZE_W<S1CRrs> {
+        MSIZE_W::new(self, 13)
     }
     #[doc = "Bit 15 - Peripheral increment offset size"]
     #[inline(always)]
-    pub fn pincos(&mut self) -> PincosW<S1crSpec> {
-        PincosW::new(self, 15)
+    pub fn pincos(&mut self) -> PINCOS_W<S1CRrs> {
+        PINCOS_W::new(self, 15)
     }
     #[doc = "Bits 16:17 - Priority level"]
     #[inline(always)]
-    pub fn pl(&mut self) -> PlW<S1crSpec> {
-        PlW::new(self, 16)
+    pub fn pl(&mut self) -> PL_W<S1CRrs> {
+        PL_W::new(self, 16)
     }
     #[doc = "Bit 18 - Double buffer mode"]
     #[inline(always)]
-    pub fn dbm(&mut self) -> DbmW<S1crSpec> {
-        DbmW::new(self, 18)
+    pub fn dbm(&mut self) -> DBM_W<S1CRrs> {
+        DBM_W::new(self, 18)
     }
     #[doc = "Bit 19 - Current target (only in double buffer mode)"]
     #[inline(always)]
-    pub fn ct(&mut self) -> CtW<S1crSpec> {
-        CtW::new(self, 19)
+    pub fn ct(&mut self) -> CT_W<S1CRrs> {
+        CT_W::new(self, 19)
     }
     #[doc = "Bit 20 - ACK"]
     #[inline(always)]
-    pub fn ack(&mut self) -> AckW<S1crSpec> {
-        AckW::new(self, 20)
+    pub fn ack(&mut self) -> ACK_W<S1CRrs> {
+        ACK_W::new(self, 20)
     }
     #[doc = "Bits 21:22 - Peripheral burst transfer configuration"]
     #[inline(always)]
-    pub fn pburst(&mut self) -> PburstW<S1crSpec> {
-        PburstW::new(self, 21)
+    pub fn pburst(&mut self) -> PBURST_W<S1CRrs> {
+        PBURST_W::new(self, 21)
     }
     #[doc = "Bits 23:24 - Memory burst transfer configuration"]
     #[inline(always)]
-    pub fn mburst(&mut self) -> MburstW<S1crSpec> {
-        MburstW::new(self, 23)
+    pub fn mburst(&mut self) -> MBURST_W<S1CRrs> {
+        MBURST_W::new(self, 23)
     }
     #[doc = "Bits 25:27 - Channel selection"]
     #[inline(always)]
-    pub fn chsel(&mut self) -> ChselW<S1crSpec> {
-        ChselW::new(self, 25)
+    pub fn chsel(&mut self) -> CHSEL_W<S1CRrs> {
+        CHSEL_W::new(self, 25)
     }
 }
 #[doc = "stream x configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`s1cr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`s1cr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct S1crSpec;
-impl crate::RegisterSpec for S1crSpec {
+pub struct S1CRrs;
+impl crate::RegisterSpec for S1CRrs {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`s1cr::R`](R) reader structure"]
-impl crate::Readable for S1crSpec {}
+impl crate::Readable for S1CRrs {}
 #[doc = "`write(|w| ..)` method takes [`s1cr::W`](W) writer structure"]
-impl crate::Writable for S1crSpec {
+impl crate::Writable for S1CRrs {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets S1CR to value 0"]
-impl crate::Resettable for S1crSpec {
+impl crate::Resettable for S1CRrs {
     const RESET_VALUE: u32 = 0;
 }

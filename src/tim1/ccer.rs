@@ -1,221 +1,241 @@
 #[doc = "Register `CCER` reader"]
-pub type R = crate::R<CcerSpec>;
+pub type R = crate::R<CCERrs>;
 #[doc = "Register `CCER` writer"]
-pub type W = crate::W<CcerSpec>;
+pub type W = crate::W<CCERrs>;
 #[doc = "Field `CC1E` reader - Capture/Compare 1 output enable"]
-pub type Cc1eR = crate::BitReader;
+pub type CC1E_R = crate::BitReader;
 #[doc = "Field `CC1E` writer - Capture/Compare 1 output enable"]
-pub type Cc1eW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CC1E_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CC1P` reader - Capture/Compare 1 output Polarity"]
-pub type Cc1pR = crate::BitReader;
+pub type CC1P_R = crate::BitReader;
 #[doc = "Field `CC1P` writer - Capture/Compare 1 output Polarity"]
-pub type Cc1pW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CC1P_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CC1NE` reader - Capture/Compare 1 complementary output enable"]
-pub type Cc1neR = crate::BitReader;
+pub type CC1NE_R = crate::BitReader;
 #[doc = "Field `CC1NE` writer - Capture/Compare 1 complementary output enable"]
-pub type Cc1neW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CC1NE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CC1NP` reader - Capture/Compare 1 output Polarity"]
-pub type Cc1npR = crate::BitReader;
+pub type CC1NP_R = crate::BitReader;
 #[doc = "Field `CC1NP` writer - Capture/Compare 1 output Polarity"]
-pub type Cc1npW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CC1NP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CC2E` reader - Capture/Compare 2 output enable"]
-pub type Cc2eR = crate::BitReader;
+pub type CC2E_R = crate::BitReader;
 #[doc = "Field `CC2E` writer - Capture/Compare 2 output enable"]
-pub type Cc2eW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CC2E_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CC2P` reader - Capture/Compare 2 output Polarity"]
-pub type Cc2pR = crate::BitReader;
+pub type CC2P_R = crate::BitReader;
 #[doc = "Field `CC2P` writer - Capture/Compare 2 output Polarity"]
-pub type Cc2pW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CC2P_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CC2NE` reader - Capture/Compare 2 complementary output enable"]
-pub type Cc2neR = crate::BitReader;
+pub type CC2NE_R = crate::BitReader;
 #[doc = "Field `CC2NE` writer - Capture/Compare 2 complementary output enable"]
-pub type Cc2neW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CC2NE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CC2NP` reader - Capture/Compare 2 output Polarity"]
-pub type Cc2npR = crate::BitReader;
+pub type CC2NP_R = crate::BitReader;
 #[doc = "Field `CC2NP` writer - Capture/Compare 2 output Polarity"]
-pub type Cc2npW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CC2NP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CC3E` reader - Capture/Compare 3 output enable"]
-pub type Cc3eR = crate::BitReader;
+pub type CC3E_R = crate::BitReader;
 #[doc = "Field `CC3E` writer - Capture/Compare 3 output enable"]
-pub type Cc3eW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CC3E_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CC3P` reader - Capture/Compare 3 output Polarity"]
-pub type Cc3pR = crate::BitReader;
+pub type CC3P_R = crate::BitReader;
 #[doc = "Field `CC3P` writer - Capture/Compare 3 output Polarity"]
-pub type Cc3pW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CC3P_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CC3NE` reader - Capture/Compare 3 complementary output enable"]
-pub type Cc3neR = crate::BitReader;
+pub type CC3NE_R = crate::BitReader;
 #[doc = "Field `CC3NE` writer - Capture/Compare 3 complementary output enable"]
-pub type Cc3neW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CC3NE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CC3NP` reader - Capture/Compare 3 output Polarity"]
-pub type Cc3npR = crate::BitReader;
+pub type CC3NP_R = crate::BitReader;
 #[doc = "Field `CC3NP` writer - Capture/Compare 3 output Polarity"]
-pub type Cc3npW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CC3NP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CC4E` reader - Capture/Compare 4 output enable"]
-pub type Cc4eR = crate::BitReader;
+pub type CC4E_R = crate::BitReader;
 #[doc = "Field `CC4E` writer - Capture/Compare 4 output enable"]
-pub type Cc4eW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CC4E_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CC4P` reader - Capture/Compare 3 output Polarity"]
-pub type Cc4pR = crate::BitReader;
+pub type CC4P_R = crate::BitReader;
 #[doc = "Field `CC4P` writer - Capture/Compare 3 output Polarity"]
-pub type Cc4pW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CC4P_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Capture/Compare 1 output enable"]
     #[inline(always)]
-    pub fn cc1e(&self) -> Cc1eR {
-        Cc1eR::new((self.bits & 1) != 0)
+    pub fn cc1e(&self) -> CC1E_R {
+        CC1E_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Capture/Compare 1 output Polarity"]
     #[inline(always)]
-    pub fn cc1p(&self) -> Cc1pR {
-        Cc1pR::new(((self.bits >> 1) & 1) != 0)
+    pub fn cc1p(&self) -> CC1P_R {
+        CC1P_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Capture/Compare 1 complementary output enable"]
     #[inline(always)]
-    pub fn cc1ne(&self) -> Cc1neR {
-        Cc1neR::new(((self.bits >> 2) & 1) != 0)
+    pub fn cc1ne(&self) -> CC1NE_R {
+        CC1NE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Capture/Compare 1 output Polarity"]
     #[inline(always)]
-    pub fn cc1np(&self) -> Cc1npR {
-        Cc1npR::new(((self.bits >> 3) & 1) != 0)
+    pub fn cc1np(&self) -> CC1NP_R {
+        CC1NP_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Capture/Compare 2 output enable"]
     #[inline(always)]
-    pub fn cc2e(&self) -> Cc2eR {
-        Cc2eR::new(((self.bits >> 4) & 1) != 0)
+    pub fn cc2e(&self) -> CC2E_R {
+        CC2E_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Capture/Compare 2 output Polarity"]
     #[inline(always)]
-    pub fn cc2p(&self) -> Cc2pR {
-        Cc2pR::new(((self.bits >> 5) & 1) != 0)
+    pub fn cc2p(&self) -> CC2P_R {
+        CC2P_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Capture/Compare 2 complementary output enable"]
     #[inline(always)]
-    pub fn cc2ne(&self) -> Cc2neR {
-        Cc2neR::new(((self.bits >> 6) & 1) != 0)
+    pub fn cc2ne(&self) -> CC2NE_R {
+        CC2NE_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Capture/Compare 2 output Polarity"]
     #[inline(always)]
-    pub fn cc2np(&self) -> Cc2npR {
-        Cc2npR::new(((self.bits >> 7) & 1) != 0)
+    pub fn cc2np(&self) -> CC2NP_R {
+        CC2NP_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Capture/Compare 3 output enable"]
     #[inline(always)]
-    pub fn cc3e(&self) -> Cc3eR {
-        Cc3eR::new(((self.bits >> 8) & 1) != 0)
+    pub fn cc3e(&self) -> CC3E_R {
+        CC3E_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Capture/Compare 3 output Polarity"]
     #[inline(always)]
-    pub fn cc3p(&self) -> Cc3pR {
-        Cc3pR::new(((self.bits >> 9) & 1) != 0)
+    pub fn cc3p(&self) -> CC3P_R {
+        CC3P_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Capture/Compare 3 complementary output enable"]
     #[inline(always)]
-    pub fn cc3ne(&self) -> Cc3neR {
-        Cc3neR::new(((self.bits >> 10) & 1) != 0)
+    pub fn cc3ne(&self) -> CC3NE_R {
+        CC3NE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Capture/Compare 3 output Polarity"]
     #[inline(always)]
-    pub fn cc3np(&self) -> Cc3npR {
-        Cc3npR::new(((self.bits >> 11) & 1) != 0)
+    pub fn cc3np(&self) -> CC3NP_R {
+        CC3NP_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Capture/Compare 4 output enable"]
     #[inline(always)]
-    pub fn cc4e(&self) -> Cc4eR {
-        Cc4eR::new(((self.bits >> 12) & 1) != 0)
+    pub fn cc4e(&self) -> CC4E_R {
+        CC4E_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Capture/Compare 3 output Polarity"]
     #[inline(always)]
-    pub fn cc4p(&self) -> Cc4pR {
-        Cc4pR::new(((self.bits >> 13) & 1) != 0)
+    pub fn cc4p(&self) -> CC4P_R {
+        CC4P_R::new(((self.bits >> 13) & 1) != 0)
+    }
+}
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CCER")
+            .field("cc4p", &self.cc4p())
+            .field("cc4e", &self.cc4e())
+            .field("cc3np", &self.cc3np())
+            .field("cc3ne", &self.cc3ne())
+            .field("cc3p", &self.cc3p())
+            .field("cc3e", &self.cc3e())
+            .field("cc2np", &self.cc2np())
+            .field("cc2ne", &self.cc2ne())
+            .field("cc2p", &self.cc2p())
+            .field("cc2e", &self.cc2e())
+            .field("cc1np", &self.cc1np())
+            .field("cc1ne", &self.cc1ne())
+            .field("cc1p", &self.cc1p())
+            .field("cc1e", &self.cc1e())
+            .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - Capture/Compare 1 output enable"]
     #[inline(always)]
-    pub fn cc1e(&mut self) -> Cc1eW<CcerSpec> {
-        Cc1eW::new(self, 0)
+    pub fn cc1e(&mut self) -> CC1E_W<CCERrs> {
+        CC1E_W::new(self, 0)
     }
     #[doc = "Bit 1 - Capture/Compare 1 output Polarity"]
     #[inline(always)]
-    pub fn cc1p(&mut self) -> Cc1pW<CcerSpec> {
-        Cc1pW::new(self, 1)
+    pub fn cc1p(&mut self) -> CC1P_W<CCERrs> {
+        CC1P_W::new(self, 1)
     }
     #[doc = "Bit 2 - Capture/Compare 1 complementary output enable"]
     #[inline(always)]
-    pub fn cc1ne(&mut self) -> Cc1neW<CcerSpec> {
-        Cc1neW::new(self, 2)
+    pub fn cc1ne(&mut self) -> CC1NE_W<CCERrs> {
+        CC1NE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Capture/Compare 1 output Polarity"]
     #[inline(always)]
-    pub fn cc1np(&mut self) -> Cc1npW<CcerSpec> {
-        Cc1npW::new(self, 3)
+    pub fn cc1np(&mut self) -> CC1NP_W<CCERrs> {
+        CC1NP_W::new(self, 3)
     }
     #[doc = "Bit 4 - Capture/Compare 2 output enable"]
     #[inline(always)]
-    pub fn cc2e(&mut self) -> Cc2eW<CcerSpec> {
-        Cc2eW::new(self, 4)
+    pub fn cc2e(&mut self) -> CC2E_W<CCERrs> {
+        CC2E_W::new(self, 4)
     }
     #[doc = "Bit 5 - Capture/Compare 2 output Polarity"]
     #[inline(always)]
-    pub fn cc2p(&mut self) -> Cc2pW<CcerSpec> {
-        Cc2pW::new(self, 5)
+    pub fn cc2p(&mut self) -> CC2P_W<CCERrs> {
+        CC2P_W::new(self, 5)
     }
     #[doc = "Bit 6 - Capture/Compare 2 complementary output enable"]
     #[inline(always)]
-    pub fn cc2ne(&mut self) -> Cc2neW<CcerSpec> {
-        Cc2neW::new(self, 6)
+    pub fn cc2ne(&mut self) -> CC2NE_W<CCERrs> {
+        CC2NE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Capture/Compare 2 output Polarity"]
     #[inline(always)]
-    pub fn cc2np(&mut self) -> Cc2npW<CcerSpec> {
-        Cc2npW::new(self, 7)
+    pub fn cc2np(&mut self) -> CC2NP_W<CCERrs> {
+        CC2NP_W::new(self, 7)
     }
     #[doc = "Bit 8 - Capture/Compare 3 output enable"]
     #[inline(always)]
-    pub fn cc3e(&mut self) -> Cc3eW<CcerSpec> {
-        Cc3eW::new(self, 8)
+    pub fn cc3e(&mut self) -> CC3E_W<CCERrs> {
+        CC3E_W::new(self, 8)
     }
     #[doc = "Bit 9 - Capture/Compare 3 output Polarity"]
     #[inline(always)]
-    pub fn cc3p(&mut self) -> Cc3pW<CcerSpec> {
-        Cc3pW::new(self, 9)
+    pub fn cc3p(&mut self) -> CC3P_W<CCERrs> {
+        CC3P_W::new(self, 9)
     }
     #[doc = "Bit 10 - Capture/Compare 3 complementary output enable"]
     #[inline(always)]
-    pub fn cc3ne(&mut self) -> Cc3neW<CcerSpec> {
-        Cc3neW::new(self, 10)
+    pub fn cc3ne(&mut self) -> CC3NE_W<CCERrs> {
+        CC3NE_W::new(self, 10)
     }
     #[doc = "Bit 11 - Capture/Compare 3 output Polarity"]
     #[inline(always)]
-    pub fn cc3np(&mut self) -> Cc3npW<CcerSpec> {
-        Cc3npW::new(self, 11)
+    pub fn cc3np(&mut self) -> CC3NP_W<CCERrs> {
+        CC3NP_W::new(self, 11)
     }
     #[doc = "Bit 12 - Capture/Compare 4 output enable"]
     #[inline(always)]
-    pub fn cc4e(&mut self) -> Cc4eW<CcerSpec> {
-        Cc4eW::new(self, 12)
+    pub fn cc4e(&mut self) -> CC4E_W<CCERrs> {
+        CC4E_W::new(self, 12)
     }
     #[doc = "Bit 13 - Capture/Compare 3 output Polarity"]
     #[inline(always)]
-    pub fn cc4p(&mut self) -> Cc4pW<CcerSpec> {
-        Cc4pW::new(self, 13)
+    pub fn cc4p(&mut self) -> CC4P_W<CCERrs> {
+        CC4P_W::new(self, 13)
     }
 }
 #[doc = "capture/compare enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`ccer::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ccer::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct CcerSpec;
-impl crate::RegisterSpec for CcerSpec {
+pub struct CCERrs;
+impl crate::RegisterSpec for CCERrs {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`ccer::R`](R) reader structure"]
-impl crate::Readable for CcerSpec {}
+impl crate::Readable for CCERrs {}
 #[doc = "`write(|w| ..)` method takes [`ccer::W`](W) writer structure"]
-impl crate::Writable for CcerSpec {
+impl crate::Writable for CCERrs {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CCER to value 0"]
-impl crate::Resettable for CcerSpec {
+impl crate::Resettable for CCERrs {
     const RESET_VALUE: u32 = 0;
 }

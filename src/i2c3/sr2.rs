@@ -1,71 +1,85 @@
 #[doc = "Register `SR2` reader"]
-pub type R = crate::R<Sr2Spec>;
+pub type R = crate::R<SR2rs>;
 #[doc = "Field `MSL` reader - Master/slave"]
-pub type MslR = crate::BitReader;
+pub type MSL_R = crate::BitReader;
 #[doc = "Field `BUSY` reader - Bus busy"]
-pub type BusyR = crate::BitReader;
+pub type BUSY_R = crate::BitReader;
 #[doc = "Field `TRA` reader - Transmitter/receiver"]
-pub type TraR = crate::BitReader;
+pub type TRA_R = crate::BitReader;
 #[doc = "Field `GENCALL` reader - General call address (Slave mode)"]
-pub type GencallR = crate::BitReader;
+pub type GENCALL_R = crate::BitReader;
 #[doc = "Field `SMBDEFAULT` reader - SMBus device default address (Slave mode)"]
-pub type SmbdefaultR = crate::BitReader;
+pub type SMBDEFAULT_R = crate::BitReader;
 #[doc = "Field `SMBHOST` reader - SMBus host header (Slave mode)"]
-pub type SmbhostR = crate::BitReader;
+pub type SMBHOST_R = crate::BitReader;
 #[doc = "Field `DUALF` reader - Dual flag (Slave mode)"]
-pub type DualfR = crate::BitReader;
+pub type DUALF_R = crate::BitReader;
 #[doc = "Field `PEC` reader - acket error checking register"]
-pub type PecR = crate::FieldReader;
+pub type PEC_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - Master/slave"]
     #[inline(always)]
-    pub fn msl(&self) -> MslR {
-        MslR::new((self.bits & 1) != 0)
+    pub fn msl(&self) -> MSL_R {
+        MSL_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Bus busy"]
     #[inline(always)]
-    pub fn busy(&self) -> BusyR {
-        BusyR::new(((self.bits >> 1) & 1) != 0)
+    pub fn busy(&self) -> BUSY_R {
+        BUSY_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Transmitter/receiver"]
     #[inline(always)]
-    pub fn tra(&self) -> TraR {
-        TraR::new(((self.bits >> 2) & 1) != 0)
+    pub fn tra(&self) -> TRA_R {
+        TRA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 4 - General call address (Slave mode)"]
     #[inline(always)]
-    pub fn gencall(&self) -> GencallR {
-        GencallR::new(((self.bits >> 4) & 1) != 0)
+    pub fn gencall(&self) -> GENCALL_R {
+        GENCALL_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - SMBus device default address (Slave mode)"]
     #[inline(always)]
-    pub fn smbdefault(&self) -> SmbdefaultR {
-        SmbdefaultR::new(((self.bits >> 5) & 1) != 0)
+    pub fn smbdefault(&self) -> SMBDEFAULT_R {
+        SMBDEFAULT_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - SMBus host header (Slave mode)"]
     #[inline(always)]
-    pub fn smbhost(&self) -> SmbhostR {
-        SmbhostR::new(((self.bits >> 6) & 1) != 0)
+    pub fn smbhost(&self) -> SMBHOST_R {
+        SMBHOST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Dual flag (Slave mode)"]
     #[inline(always)]
-    pub fn dualf(&self) -> DualfR {
-        DualfR::new(((self.bits >> 7) & 1) != 0)
+    pub fn dualf(&self) -> DUALF_R {
+        DUALF_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 8:15 - acket error checking register"]
     #[inline(always)]
-    pub fn pec(&self) -> PecR {
-        PecR::new(((self.bits >> 8) & 0xff) as u8)
+    pub fn pec(&self) -> PEC_R {
+        PEC_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+}
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SR2")
+            .field("pec", &self.pec())
+            .field("dualf", &self.dualf())
+            .field("smbhost", &self.smbhost())
+            .field("smbdefault", &self.smbdefault())
+            .field("gencall", &self.gencall())
+            .field("tra", &self.tra())
+            .field("busy", &self.busy())
+            .field("msl", &self.msl())
+            .finish()
     }
 }
 #[doc = "Status register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`sr2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct Sr2Spec;
-impl crate::RegisterSpec for Sr2Spec {
+pub struct SR2rs;
+impl crate::RegisterSpec for SR2rs {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`sr2::R`](R) reader structure"]
-impl crate::Readable for Sr2Spec {}
+impl crate::Readable for SR2rs {}
 #[doc = "`reset()` method sets SR2 to value 0"]
-impl crate::Resettable for Sr2Spec {
+impl crate::Resettable for SR2rs {
     const RESET_VALUE: u32 = 0;
 }

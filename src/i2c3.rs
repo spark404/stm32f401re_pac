@@ -1,114 +1,106 @@
 #[repr(C)]
+#[derive(Debug)]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    cr1: Cr1,
-    cr2: Cr2,
-    oar1: Oar1,
-    oar2: Oar2,
-    dr: Dr,
-    sr1: Sr1,
-    sr2: Sr2,
-    ccr: Ccr,
-    trise: Trise,
+    cr1: CR1,
+    cr2: CR2,
+    oar1: OAR1,
+    oar2: OAR2,
+    dr: DR,
+    sr1: SR1,
+    sr2: SR2,
+    ccr: CCR,
+    trise: TRISE,
 }
 impl RegisterBlock {
     #[doc = "0x00 - Control register 1"]
     #[inline(always)]
-    pub const fn cr1(&self) -> &Cr1 {
+    pub const fn cr1(&self) -> &CR1 {
         &self.cr1
     }
     #[doc = "0x04 - Control register 2"]
     #[inline(always)]
-    pub const fn cr2(&self) -> &Cr2 {
+    pub const fn cr2(&self) -> &CR2 {
         &self.cr2
     }
     #[doc = "0x08 - Own address register 1"]
     #[inline(always)]
-    pub const fn oar1(&self) -> &Oar1 {
+    pub const fn oar1(&self) -> &OAR1 {
         &self.oar1
     }
     #[doc = "0x0c - Own address register 2"]
     #[inline(always)]
-    pub const fn oar2(&self) -> &Oar2 {
+    pub const fn oar2(&self) -> &OAR2 {
         &self.oar2
     }
     #[doc = "0x10 - Data register"]
     #[inline(always)]
-    pub const fn dr(&self) -> &Dr {
+    pub const fn dr(&self) -> &DR {
         &self.dr
     }
     #[doc = "0x14 - Status register 1"]
     #[inline(always)]
-    pub const fn sr1(&self) -> &Sr1 {
+    pub const fn sr1(&self) -> &SR1 {
         &self.sr1
     }
     #[doc = "0x18 - Status register 2"]
     #[inline(always)]
-    pub const fn sr2(&self) -> &Sr2 {
+    pub const fn sr2(&self) -> &SR2 {
         &self.sr2
     }
     #[doc = "0x1c - Clock control register"]
     #[inline(always)]
-    pub const fn ccr(&self) -> &Ccr {
+    pub const fn ccr(&self) -> &CCR {
         &self.ccr
     }
     #[doc = "0x20 - TRISE register"]
     #[inline(always)]
-    pub const fn trise(&self) -> &Trise {
+    pub const fn trise(&self) -> &TRISE {
         &self.trise
     }
 }
 #[doc = "CR1 (rw) register accessor: Control register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`cr1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cr1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cr1`]
 module"]
-#[doc(alias = "CR1")]
-pub type Cr1 = crate::Reg<cr1::Cr1Spec>;
+pub type CR1 = crate::Reg<cr1::CR1rs>;
 #[doc = "Control register 1"]
 pub mod cr1;
 #[doc = "CR2 (rw) register accessor: Control register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`cr2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cr2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cr2`]
 module"]
-#[doc(alias = "CR2")]
-pub type Cr2 = crate::Reg<cr2::Cr2Spec>;
+pub type CR2 = crate::Reg<cr2::CR2rs>;
 #[doc = "Control register 2"]
 pub mod cr2;
 #[doc = "OAR1 (rw) register accessor: Own address register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`oar1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`oar1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@oar1`]
 module"]
-#[doc(alias = "OAR1")]
-pub type Oar1 = crate::Reg<oar1::Oar1Spec>;
+pub type OAR1 = crate::Reg<oar1::OAR1rs>;
 #[doc = "Own address register 1"]
 pub mod oar1;
 #[doc = "OAR2 (rw) register accessor: Own address register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`oar2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`oar2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@oar2`]
 module"]
-#[doc(alias = "OAR2")]
-pub type Oar2 = crate::Reg<oar2::Oar2Spec>;
+pub type OAR2 = crate::Reg<oar2::OAR2rs>;
 #[doc = "Own address register 2"]
 pub mod oar2;
 #[doc = "DR (rw) register accessor: Data register\n\nYou can [`read`](crate::Reg::read) this register and get [`dr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dr`]
 module"]
-#[doc(alias = "DR")]
-pub type Dr = crate::Reg<dr::DrSpec>;
+pub type DR = crate::Reg<dr::DRrs>;
 #[doc = "Data register"]
 pub mod dr;
 #[doc = "SR1 (rw) register accessor: Status register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`sr1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sr1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sr1`]
 module"]
-#[doc(alias = "SR1")]
-pub type Sr1 = crate::Reg<sr1::Sr1Spec>;
+pub type SR1 = crate::Reg<sr1::SR1rs>;
 #[doc = "Status register 1"]
 pub mod sr1;
 #[doc = "SR2 (r) register accessor: Status register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`sr2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sr2`]
 module"]
-#[doc(alias = "SR2")]
-pub type Sr2 = crate::Reg<sr2::Sr2Spec>;
+pub type SR2 = crate::Reg<sr2::SR2rs>;
 #[doc = "Status register 2"]
 pub mod sr2;
 #[doc = "CCR (rw) register accessor: Clock control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ccr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ccr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ccr`]
 module"]
-#[doc(alias = "CCR")]
-pub type Ccr = crate::Reg<ccr::CcrSpec>;
+pub type CCR = crate::Reg<ccr::CCRrs>;
 #[doc = "Clock control register"]
 pub mod ccr;
 #[doc = "TRISE (rw) register accessor: TRISE register\n\nYou can [`read`](crate::Reg::read) this register and get [`trise::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`trise::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@trise`]
 module"]
-#[doc(alias = "TRISE")]
-pub type Trise = crate::Reg<trise::TriseSpec>;
+pub type TRISE = crate::Reg<trise::TRISErs>;
 #[doc = "TRISE register"]
 pub mod trise;
